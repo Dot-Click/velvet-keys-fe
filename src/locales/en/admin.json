@@ -1,0 +1,440 @@
+{
+  "accountStatus": {
+    "active": "Active",
+    "readonly": "Read-only",
+    "banned": "Banned"
+  },
+  "accountType": {
+    "owner": "Owner",
+    "conciergerie": "Conciergerie"
+  },
+  "offers": {
+    "none": "No offer",
+    "str": "STR",
+    "ltr": "LTR",
+    "str_ltr": "STR + LTR",
+    "str_sync_ltr": "Full bundle"
+  },
+  "products": {
+    "str": "STR",
+    "ltr": "LTR",
+    "sync": "Sync"
+  },
+  "actions": {
+    "cancel": "Cancel",
+    "saving": "Saving…"
+  },
+  "errors": {
+    "saveFailed": "That change couldn't be saved. Try again."
+  },
+  "filters": {
+    "all": "All",
+    "clear": "Clear filters"
+  },
+  "reason": {
+    "label": "Reason (required)",
+    "placeholder": "Why are you doing this? It is kept on the client's record.",
+    "hint": "Kept in the audit trail. At least {{count}} characters.",
+    "tooShort": "Write at least {{count}} characters."
+  },
+  "clients": {
+    "eyebrow": "Accounts",
+    "title": "Clients",
+    "count_one": "{{shown}} of {{count}} client",
+    "count_other": "{{shown}} of {{count}} clients",
+    "search": "Search clients",
+    "searchPlaceholder": "Name or email",
+    "filterType": "Type",
+    "filterStatus": "Status",
+    "filterOffer": "Offer",
+    "noMatchTitle": "No clients match",
+    "noMatchBody": "Try another search or clear the filters.",
+    "colClient": "Client",
+    "colType": "Type",
+    "colSignup": "Signup",
+    "colUnits": "Units",
+    "unitsBreakdown": "STR / LTR / Sync",
+    "unitsLabel": "{{str}} STR, {{ltr}} LTR, {{synced}} synced",
+    "colSynced": "Synced",
+    "colOffer": "Offer",
+    "colFreeUntil": "Free until",
+    "colStatus": "Status",
+    "colLanguage": "Lang.",
+    "freeRunning": "Free period running",
+    "freeEnded": "Free period over"
+  },
+  "client": {
+    "back": "All clients",
+    "signedUp": "Signed up {{date}}",
+    "grantOffer": "Grant free months",
+    "ban": "Ban",
+    "unban": "Unban",
+    "profile": "Profile",
+    "units": "Units",
+    "holder": "Account holder",
+    "email": "Email",
+    "phone": "Phone",
+    "issuer": "Invoices tenants as",
+    "accountId": "Account ID",
+    "properties": "Listed properties",
+    "thisMonth": "{{month}} estimate",
+    "exclVat": "excl. VAT",
+    "overdue": "Overdue invoices",
+    "tabInvoices": "Invoices ({{count}})",
+    "tabProperties": "Properties ({{count}})",
+    "tabUsers": "Users ({{count}})",
+    "noInvoices": "No invoices yet.",
+    "noProperties": "No properties yet.",
+    "noUsers": "No users yet."
+  },
+  "timeline": {
+    "title": "Offer timeline",
+    "today": "Today",
+    "signup": "Signed up · {{offer}}",
+    "freeEnds": "{{product}} free months end",
+    "freeEnded": "{{product}} free months ended",
+    "monthsOf_one": "+{{count}} month {{product}}",
+    "monthsOf_other": "+{{count}} months {{product}}",
+    "action": {
+      "manual_offer": "Free months granted: {{months}}",
+      "ban": "Account banned",
+      "unban": "Account unbanned",
+      "delist": "Property delisted",
+      "relist": "Property relisted"
+    },
+    "kind": {
+      "signup": "Account created"
+    }
+  },
+  "grant": {
+    "title": "Grant free months",
+    "description": "Extra free months for {{client}}. Each product's months start today, or when its current free period ends.",
+    "months": "Free months per product",
+    "freeUntil": "Free until {{date}}",
+    "currentlyUntil": "Currently free until {{date}}",
+    "notFree": "Billed at the normal price",
+    "pickMonths": "Add at least one month.",
+    "monthCount_one": "{{count}} mo",
+    "monthCount_other": "{{count}} mo",
+    "fewer": "One month less of {{product}}",
+    "more": "One month more of {{product}}",
+    "confirm_one": "Grant {{count}} month",
+    "confirm_other": "Grant {{count}} months",
+    "granted": "Free months granted to {{client}}"
+  },
+  "ban": {
+    "banTitle": "Ban {{client}}?",
+    "banBody": "Everyone in this account is blocked at sign-in until you unban it. Their data is kept.",
+    "unbanTitle": "Unban {{client}}?",
+    "unbanBody": "The account can sign in again. If an invoice is still overdue, it stays read-only until paid.",
+    "banned": "{{client}} is banned",
+    "unbanned": "{{client}} can sign in again"
+  },
+  "invoices": {
+    "colPeriod": "Period",
+    "colNumber": "Invoice",
+    "colTotal": "Total incl. VAT",
+    "colStatus": "Status",
+    "colIssued": "Issued",
+    "colDue": "Due",
+    "colPaid": "Paid",
+    "eyebrow": "Billing",
+    "title": "Invoices",
+    "count": "{{shown}} of {{count}} invoices · {{amount}} outstanding",
+    "search": "Search invoices",
+    "searchPlaceholder": "Invoice number or client",
+    "filterLabel": "Filter by status",
+    "chip": {
+      "all": "All",
+      "sent": "Sent",
+      "overdue": "Overdue",
+      "paid": "Paid",
+      "proforma": "Pro-forma"
+    },
+    "colClient": "Client",
+    "colDaysOverdue": "Days overdue",
+    "colActions": "Actions",
+    "proForma": "Pro-forma",
+    "markPaid": "Mark paid",
+    "noMatchTitle": "No invoices match",
+    "noMatchBody": "Try another search or clear the filter."
+  },
+  "users": {
+    "colName": "Name",
+    "colRole": "Role",
+    "colEmail": "Email",
+    "colPhone": "Phone",
+    "colLanguage": "Lang.",
+    "colAccess": "Access",
+    "role": {
+      "holder": "Account holder",
+      "team": "Team",
+      "owner": "Owner",
+      "tenant": "Tenant"
+    },
+    "access": {
+      "active": "Can sign in",
+      "invited": "Invited",
+      "not_invited": "Not invited"
+    }
+  },
+  "properties": {
+    "eyebrow": "Platform",
+    "title": "Properties",
+    "count_one": "{{shown}} of {{count}} property · {{delisted}} delisted",
+    "count_other": "{{shown}} of {{count}} properties · {{delisted}} delisted",
+    "search": "Search properties",
+    "searchPlaceholder": "Property, client, owner or city",
+    "filterStatus": "Status",
+    "filterClient": "Client",
+    "listed": "Listed",
+    "delisted": "Delisted",
+    "noMatchTitle": "No properties match",
+    "noMatchBody": "Try another search or clear the filters.",
+    "colProperty": "Property",
+    "colClient": "Client",
+    "colOwner": "Owner",
+    "colCity": "City",
+    "colUnits": "Units",
+    "colStatus": "Status",
+    "colModeration": "Last moderation",
+    "colActions": "Actions",
+    "unitsMix": "{{total}} · {{str}} STR / {{ltr}} LTR",
+    "moderationNote": "{{action}} {{date}}:",
+    "delist": "Delist",
+    "relist": "Relist",
+    "delistTitle": "Delist {{property}}?",
+    "delistBody": "The property is hidden from {{client}}'s panels. Its bookings, leases and invoices are kept.",
+    "relistTitle": "Relist {{property}}?",
+    "relistBody": "The property shows again in {{client}}'s panels.",
+    "delistedToast": "{{property}} delisted",
+    "relisted": "{{property}} relisted"
+  },
+  "invoice": {
+    "eyebrow": "Invoice",
+    "back": "All invoices",
+    "print": "Print / PDF",
+    "markPaid": "Mark as paid",
+    "previewTitle": "Invoice preview",
+    "summaryTitle": "Summary",
+    "client": "Client",
+    "openClient": "Open client",
+    "accountStatus": "Account",
+    "period": "Billing period",
+    "total": "Total incl. VAT",
+    "due": "Due",
+    "daysOverdue": "Days overdue",
+    "kind": "Type",
+    "kindProForma": "Pro-forma",
+    "kindFinal": "Final invoice",
+    "timelineTitle": "Status timeline",
+    "paymentTitle": "Payment received",
+    "paidOn": "Payment date",
+    "reference": "Bank reference",
+    "note": "Note",
+    "recordedBy": "Recorded by {{name}} on {{date}}",
+    "notFoundTitle": "Invoice not found",
+    "state": {
+      "done": "Done",
+      "pending": "Pending",
+      "skipped": "Skipped"
+    },
+    "steps": {
+      "issued": {
+        "title": "Invoice issued",
+        "detail": "Payment due {{date}}"
+      },
+      "reminder": {
+        "title": "Reminder email · day {{day}}",
+        "done": "Sent to the account holder",
+        "pending": "Sent only if still unpaid",
+        "skipped": "Not needed: paid before the reminder"
+      },
+      "readonly": {
+        "title": "Read-only · day {{day}}",
+        "done": "The client's team can view but not edit",
+        "doneRestored": "The client's team was read-only until payment",
+        "pending": "Starts if still unpaid",
+        "skipped": "Not reached: paid in time"
+      },
+      "paid": {
+        "title": "Paid",
+        "done": "Bank reference {{reference}}",
+        "doneNoReference": "Payment received",
+        "pending": "Awaiting the bank transfer"
+      }
+    },
+    "scheduled": "Scheduled · {{date}}",
+    "notPaidYet": "Not paid yet"
+  },
+  "markPaid": {
+    "title": "Mark invoice as paid",
+    "description": "Record the bank transfer received for {{number}}.",
+    "invoice": "Invoice",
+    "client": "Client",
+    "amount": "Amount due",
+    "paidOn": "Payment date",
+    "paidOnError": "Pick a date between {{from}} and today.",
+    "reference": "Bank reference",
+    "referencePlaceholder": "As shown on the bank statement",
+    "referenceError": "Enter the bank reference (at least {{count}} characters).",
+    "note": "Note (optional)",
+    "notePlaceholder": "Anything the next Admin should know",
+    "restores": "{{client}} goes back from read-only to active.",
+    "stillReadOnly": "{{client}} stays read-only while other invoices are overdue.",
+    "confirm": "Mark as paid",
+    "done": "{{number}} marked as paid.",
+    "doneRestored": "{{number}} marked as paid. {{client}} is active again.",
+    "doneStillReadOnly": "{{number}} marked as paid. {{client}} stays read-only: other invoices are still overdue."
+  },
+  "pricing": {
+    "eyebrow": "Billing",
+    "title": "Pricing & offers",
+    "subtitle": "Unit prices, the launch offer and free channel sync.",
+    "prices": {
+      "title": "Unit prices",
+      "perUnit": "MAD per unit / month, excl. VAT",
+      "inForce": "In force",
+      "newPrice": "New price",
+      "upcoming": "From {{month}}: {{price}}",
+      "invalid": "Enter a price above 0, with up to 2 decimals.",
+      "tooHigh": "The maximum is {{max}}.",
+      "save": "Save prices",
+      "reset": "Discard changes",
+      "hint": {
+        "str": "Short-term rental unit",
+        "ltr": "Long-term rental unit",
+        "sync": "Per synced STR unit"
+      }
+    },
+    "confirm": {
+      "title": "Apply new prices?",
+      "body": "Applies to new billing periods only.",
+      "effective": "New prices start with the {{month}} billing period. Invoices already issued keep their prices.",
+      "confirm": "Apply prices"
+    },
+    "saved": "Prices saved. They apply from {{month}}.",
+    "history": {
+      "title": "Price history",
+      "colDate": "Changed",
+      "colProduct": "Product",
+      "colChange": "Change",
+      "colEffective": "Applies from",
+      "colBy": "By",
+      "initial": "Launch price",
+      "scheduled": "Scheduled",
+      "current": "In force"
+    },
+    "launch": {
+      "title": "Launch offer",
+      "description": "Clients who sign up before the deadline get the launch offer.",
+      "deadline": "Signup deadline",
+      "zone": "Casablanca time ({{offset}})",
+      "date": "Date",
+      "time": "Time",
+      "save": "Save deadline",
+      "saved": "Launch offer deadline updated.",
+      "open": "Open: signups until {{date}}",
+      "closed": "Closed since {{date}}",
+      "invalid": "Pick a date and a time.",
+      "rulesTitle": "Offer rules",
+      "colSignup": "Signs up with",
+      "colFree": "Free months",
+      "rules": {
+        "str": "STR units only",
+        "ltr": "LTR units only",
+        "str_ltr": "STR and LTR units",
+        "str_sync_ltr": "STR units with channel sync, and LTR units",
+        "sync": "Channel sync (first {{total}} synced units platform-wide)"
+      },
+      "rulesNote": "Free months start on the signup day. These rules are fixed."
+    },
+    "freeSync": {
+      "title": "Free channel sync",
+      "slots": "Free sync slots",
+      "used": "<figures>{{used}} / {{total}}</figures> used",
+      "total": "Total slots",
+      "totalHint": "It can't go below the {{used}} slots in use.",
+      "save": "Save slots",
+      "saved": "Free sync slots set to {{total}}.",
+      "invalid": "Enter a whole number of at least {{min}}.",
+      "unitsTitle": "Units using a free slot",
+      "colUnit": "Unit",
+      "colProperty": "Property",
+      "colClient": "Client",
+      "colUntil": "Free sync until",
+      "statusActive": "Free",
+      "statusEnded": "Ended",
+      "none": "No unit is using a free slot yet."
+    }
+  },
+  "settings": {
+    "eyebrow": "Platform",
+    "title": "Settings",
+    "subtitle": "Company legal details and billing rules.",
+    "banner": {
+      "proforma": "Invoices are issued as PRO-FORMA until all legal details are filled in.",
+      "missing": "Still to fill in: {{fields}}.",
+      "complete": "All legal details are filled in. Invoices are issued as final invoices.",
+      "unsaved": "Save to apply this."
+    },
+    "form": {
+      "title": "Company legal details",
+      "fields": {
+        "name": "Company name",
+        "address": "Registered address",
+        "ice": "ICE",
+        "if": "IF",
+        "rc": "RC",
+        "patente": "Patente",
+        "rib": "RIB (bank account)"
+      },
+      "hint": {
+        "ice": "15 digits",
+        "rib": "24 digits",
+        "code": "Registry number"
+      },
+      "invalid": {
+        "ice": "The ICE has 15 digits.",
+        "rib": "A RIB has 24 digits.",
+        "code": "Use letters, digits and - / . only."
+      },
+      "save": "Save details",
+      "reset": "Discard changes",
+      "saved": "Legal details saved. Invoices stay pro-forma until every field is filled in.",
+      "savedFinal": "Legal details saved. Invoices are issued as final invoices from now on.",
+      "savedFinalReissued": "Legal details saved. Invoices are final from now on, and the pro-forma ones already issued were re-issued as final."
+    },
+    "preview": {
+      "title": "Invoice header preview",
+      "caption": "Updates as you type. Clients see this on every invoice.",
+      "sampleClient": "Sample client",
+      "sampleHolder": "Account holder"
+    },
+    "rules": {
+      "title": "Billing rules",
+      "note": "Read-only",
+      "due": "Payment due",
+      "dueValue": "{{days}} days after issue",
+      "reminder": "Reminder email",
+      "reminderValue": "Day {{day}}",
+      "readOnly": "Account goes read-only",
+      "readOnlyValue": "Day {{day}}",
+      "hint": "Day 0 is the day the invoice is issued. Marking an invoice paid restores full access."
+    }
+  },
+  "dataTable": {
+    "search": "Search…",
+    "comfortable": "Comfortable rows",
+    "compact": "Compact rows",
+    "columns": "Columns",
+    "export": "Export CSV",
+    "actions": "Row actions",
+    "open": "Open",
+    "loadError": "This table couldn't load.",
+    "retry": "Try again",
+    "empty": "Nothing to show.",
+    "selectAll": "Select all on this page",
+    "selectRow": "Select row"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "eyebrow": "Plateforme",
+  "title": "Vue d'ensemble",
+  "asOf": "Au {{date}}",
+  "kpis": "Chiffres clés",
+  "kpi": {
+    "mrr": "MRR hors TVA",
+    "mrrDetail": "Mois gratuits déduits",
+    "clients": "Clients actifs",
+    "newThisMonth_one": "+{{count}} nouveau ce mois-ci",
+    "newThisMonth_other": "+{{count}} nouveaux ce mois-ci",
+    "units": "Unités",
+    "str": "CD",
+    "ltr": "LD",
+    "synced": "Synchronisées",
+    "unitsLabel": "{{str}} unités courte durée, {{ltr}} longue durée, {{synced}} synchronisées",
+    "outstanding": "Impayés",
+    "overdueCount_one": "{{count}} en retard (au total) · {{amount}}",
+    "overdueCount_other": "{{count}} en retard (au total) · {{amount}}",
+    "noOverdue": "Aucun retard",
+    "freeSync": "Places de synchro gratuites",
+    "slotsLeft_one": "{{count}} place restante",
+    "slotsLeft_other": "{{count}} places restantes",
+    "vsLastMonth": "vs mois dernier",
+    "vsPrevious": "vs période précédente",
+    "points": "{{value}} pts"
+  },
+  "mrrChart": {
+    "title": "MRR, 12 derniers mois",
+    "label": "Revenu mensuel récurrent hors TVA sur les 12 derniers mois, en MAD",
+    "sync": "Synchro"
+  },
+  "cycle": {
+    "title": "Ce cycle de facturation",
+    "empty": "Aucune facture n'a encore été émise.",
+    "caption": "Période {{period}} · émises le {{date}}",
+    "issued": "Émises",
+    "paid": "Payées",
+    "dueThisWeek": "À payer cette semaine",
+    "overdue": "En retard (ce cycle)"
+  },
+  "upcoming": {
+    "title": "À venir dans les 30 prochains jours",
+    "today": "Aujourd'hui",
+    "more_one": "+{{count}} autre ce jour-là",
+    "more_other": "+{{count}} autres ce jour-là",
+    "empty": "Rien de prévu dans les 30 prochains jours.",
+    "legend": {
+      "free_end": "Fin de période gratuite",
+      "invoice_due": "Échéance de facture",
+      "read_only": "Passage en lecture seule"
+    },
+    "kind": {
+      "free_end": "Fin de la période gratuite {{product}}",
+      "invoice_due": "Échéance de facture",
+      "read_only": "Passage en lecture seule si impayée"
+    },
+    "product": {
+      "str": "CD",
+      "ltr": "LD",
+      "sync": "Synchro"
+    }
+  },
+  "alerts": {
+    "title": "À traiter",
+    "overdue": "Factures en retard",
+    "read_only": "Comptes en lecture seule",
+    "ending": "Périodes gratuites qui se terminent sous 7 jours",
+    "none": "Rien à signaler.",
+    "sendReminder": "Envoyer un rappel",
+    "reminded": "Rappel envoyé",
+    "markPaid": "Marquer payée",
+    "openClient": "Ouvrir le client",
+    "reminderSent": "Rappel envoyé à {{client}}.",
+    "reminderFailed": "Le rappel n'a pas pu être envoyé.",
+    "daysOverdue_one": "{{count}} jour de retard",
+    "daysOverdue_other": "{{count}} jours de retard",
+    "readOnlySince": "Lecture seule jusqu'au paiement de {{amount}}",
+    "readOnlyNoInvoice": "Lecture seule · aucune facture impayée",
+    "freeEnds": "{{product}} gratuit jusqu'au {{date}} ·",
+    "daysLeft_one": "{{count}} jour restant",
+    "daysLeft_other": "{{count}} jours restants",
+    "lastDayToday": "dernier jour gratuit aujourd'hui"
+  },
+  "activity": {
+    "title": "Activité récente",
+    "empty": "Aucune activité pour le moment.",
+    "signup": "a rejoint Velvet Keys :",
+    "payment": "a marqué comme payée",
+    "offer": "a accordé une offre gratuite à",
+    "ban": "a banni",
+    "unban": "a réactivé",
+    "delist": "a retiré un bien de",
+    "relist": "a remis en ligne un bien de",
+    "price": "a modifié le prix des",
+    "reminder": "a envoyé un rappel de paiement pour",
+    "priceTarget": "unités {{product}}",
+    "someone": "Un administrateur",
+    "loadingMore": "Chargement des événements de modération et de paiement…"
+  },
+  "revenue": {
+    "eyebrow": "Facturation",
+    "title": "Revenus",
+    "subtitle": "Factures d'abonnement par mois d'émission.",
+    "kpiBilled": "Facturé",
+    "kpiBilledDetail": "TVA incluse",
+    "kpiCollected": "Encaissé",
+    "kpiOutstanding": "Pas encore encaissé",
+    "kpiRate": "Taux d'encaissement",
+    "emptyTitle": "Aucune facture pour l'instant",
+    "emptyBody": "Les revenus apparaîtront dès l'émission de la première facture."
+  },
+  "range": {
+    "label": "Période",
+    "3": "3M",
+    "6": "6M",
+    "12": "12M",
+    "ytd": "Cumul annuel",
+    "custom": "Personnalisée",
+    "from": "Du",
+    "to": "Au",
+    "summary": "{{from}} – {{to}}"
+  },
+  "revenueChart": {
+    "title": "Revenus par produit, hors TVA",
+    "label": "Revenus d'abonnement par produit hors TVA, avec le montant encaissé, chaque mois en MAD",
+    "sync": "Synchro",
+    "collected": "Encaissé (TVA incl.)",
+    "noInvoices": "Aucune facture émise",
+    "rate": "{{rate}} encaissé"
+  },
+  "table": {
+    "title": "Détail par mois",
+    "note": "CD, LD et synchro sont hors TVA ; facturé et encaissé incluent la TVA. Cliquez sur un mois pour voir ses factures.",
+    "month": "Mois",
+    "str": "CD",
+    "ltr": "LD",
+    "sync": "Synchro",
+    "vat": "TVA",
+    "billed": "Facturé",
+    "collected": "Encaissé",
+    "rate": "Taux",
+    "total": "Total"
+  }
+}

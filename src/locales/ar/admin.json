@@ -1,0 +1,460 @@
+{
+  "accountStatus": {
+    "active": "نشط",
+    "readonly": "للقراءة فقط",
+    "banned": "محظور"
+  },
+  "accountType": {
+    "owner": "مالك",
+    "conciergerie": "كونسيرجري"
+  },
+  "offers": {
+    "none": "بدون عرض",
+    "str": "STR",
+    "ltr": "LTR",
+    "str_ltr": "STR + LTR",
+    "str_sync_ltr": "الباقة الكاملة"
+  },
+  "products": {
+    "str": "STR",
+    "ltr": "LTR",
+    "sync": "المزامنة"
+  },
+  "actions": {
+    "cancel": "إلغاء",
+    "saving": "جارٍ الحفظ…"
+  },
+  "errors": {
+    "saveFailed": "تعذر حفظ هذا التغيير. حاول مرة أخرى."
+  },
+  "filters": {
+    "all": "الكل",
+    "clear": "مسح الفلاتر"
+  },
+  "reason": {
+    "label": "السبب (إلزامي)",
+    "placeholder": "لماذا تتخذ هذا الإجراء؟ يُحفظ في ملف العميل.",
+    "hint": "يُحفظ في سجل التدقيق. {{count}} أحرف على الأقل.",
+    "tooShort": "اكتب {{count}} أحرف على الأقل."
+  },
+  "clients": {
+    "eyebrow": "الحسابات",
+    "title": "العملاء",
+    "search": "البحث عن عميل",
+    "searchPlaceholder": "الاسم أو البريد الإلكتروني",
+    "filterType": "النوع",
+    "filterStatus": "الحالة",
+    "filterOffer": "العرض",
+    "noMatchTitle": "لا يوجد عملاء مطابقون",
+    "noMatchBody": "جرّب بحثًا آخر أو امسح الفلاتر.",
+    "colClient": "العميل",
+    "colType": "النوع",
+    "colSignup": "التسجيل",
+    "colUnits": "الوحدات",
+    "unitsBreakdown": "STR / LTR / مزامنة",
+    "unitsLabel": "{{str}} STR، {{ltr}} LTR، {{synced}} متزامنة",
+    "colSynced": "متزامنة",
+    "colOffer": "العرض",
+    "colFreeUntil": "مجاني حتى",
+    "colStatus": "الحالة",
+    "colLanguage": "اللغة",
+    "freeRunning": "الفترة المجانية جارية",
+    "freeEnded": "انتهت الفترة المجانية",
+    "count_zero": "{{shown}} من {{count}} عميل",
+    "count_one": "{{shown}} من {{count}} عميل",
+    "count_two": "{{shown}} من {{count}} عميل",
+    "count_few": "{{shown}} من {{count}} عملاء",
+    "count_many": "{{shown}} من {{count}} عميلًا",
+    "count_other": "{{shown}} من {{count}} عميل"
+  },
+  "client": {
+    "back": "كل العملاء",
+    "signedUp": "سجّل في {{date}}",
+    "grantOffer": "منح أشهر مجانية",
+    "ban": "حظر",
+    "unban": "رفع الحظر",
+    "profile": "الملف",
+    "units": "الوحدات",
+    "holder": "صاحب الحساب",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "issuer": "يفوتر المستأجرين باسم",
+    "accountId": "معرّف الحساب",
+    "properties": "العقارات المعروضة",
+    "thisMonth": "تقدير {{month}}",
+    "exclVat": "دون ضريبة",
+    "overdue": "الفواتير المتأخرة",
+    "tabInvoices": "الفواتير ({{count}})",
+    "tabProperties": "العقارات ({{count}})",
+    "tabUsers": "المستخدمون ({{count}})",
+    "noInvoices": "لا توجد فواتير بعد.",
+    "noProperties": "لا توجد عقارات بعد.",
+    "noUsers": "لا يوجد مستخدمون بعد."
+  },
+  "timeline": {
+    "title": "الجدول الزمني للعرض",
+    "today": "اليوم",
+    "signup": "التسجيل · {{offer}}",
+    "freeEnds": "تنتهي أشهر {{product}} المجانية",
+    "freeEnded": "انتهت أشهر {{product}} المجانية",
+    "action": {
+      "manual_offer": "منح أشهر مجانية: {{months}}",
+      "ban": "تم حظر الحساب",
+      "unban": "تم رفع الحظر عن الحساب",
+      "delist": "تم سحب العقار",
+      "relist": "تمت إعادة عرض العقار"
+    },
+    "monthsOf_zero": "+0 شهر {{product}}",
+    "monthsOf_one": "+شهر واحد {{product}}",
+    "monthsOf_two": "+شهران {{product}}",
+    "monthsOf_few": "+{{count}} أشهر {{product}}",
+    "monthsOf_many": "+{{count}} شهرًا {{product}}",
+    "monthsOf_other": "+{{count}} شهر {{product}}",
+    "kind": {
+      "signup": "تم إنشاء الحساب"
+    }
+  },
+  "grant": {
+    "title": "منح أشهر مجانية",
+    "description": "أشهر مجانية إضافية لـ{{client}}. تبدأ أشهر كل منتج اليوم، أو عند انتهاء فترته المجانية الحالية.",
+    "months": "الأشهر المجانية لكل منتج",
+    "freeUntil": "مجاني حتى {{date}}",
+    "currentlyUntil": "مجاني حاليًا حتى {{date}}",
+    "notFree": "يُفوتر بالسعر العادي",
+    "pickMonths": "أضف شهرًا واحدًا على الأقل.",
+    "fewer": "شهر أقل من {{product}}",
+    "more": "شهر إضافي من {{product}}",
+    "granted": "تم منح أشهر مجانية لـ{{client}}",
+    "monthCount_zero": "0 شهر",
+    "monthCount_one": "شهر واحد",
+    "monthCount_two": "شهران",
+    "monthCount_few": "{{count}} أشهر",
+    "monthCount_many": "{{count}} شهرًا",
+    "monthCount_other": "{{count}} شهر",
+    "confirm_zero": "منح 0 شهر",
+    "confirm_one": "منح شهر واحد",
+    "confirm_two": "منح شهرين",
+    "confirm_few": "منح {{count}} أشهر",
+    "confirm_many": "منح {{count}} شهرًا",
+    "confirm_other": "منح {{count}} شهر"
+  },
+  "ban": {
+    "banTitle": "حظر {{client}}؟",
+    "banBody": "يُمنع جميع أفراد هذا الحساب من تسجيل الدخول إلى أن ترفع الحظر. تُحفظ بياناتهم.",
+    "unbanTitle": "رفع الحظر عن {{client}}؟",
+    "unbanBody": "يمكن للحساب تسجيل الدخول مجددًا. إذا كانت هناك فاتورة متأخرة، يبقى للقراءة فقط حتى سدادها.",
+    "banned": "تم حظر {{client}}",
+    "unbanned": "يمكن لـ{{client}} تسجيل الدخول مجددًا"
+  },
+  "invoices": {
+    "colPeriod": "الفترة",
+    "colNumber": "الفاتورة",
+    "colTotal": "الإجمالي شامل الضريبة",
+    "colStatus": "الحالة",
+    "colIssued": "الإصدار",
+    "colDue": "الاستحقاق",
+    "colPaid": "الدفع",
+    "eyebrow": "الفوترة",
+    "title": "الفواتير",
+    "count": "{{shown}} من {{count}} فاتورة · {{amount}} غير مسدد",
+    "search": "ابحث في الفواتير",
+    "searchPlaceholder": "رقم الفاتورة أو العميل",
+    "filterLabel": "التصفية حسب الحالة",
+    "chip": {
+      "all": "الكل",
+      "sent": "مُرسلة",
+      "overdue": "متأخرة",
+      "paid": "مدفوعة",
+      "proforma": "مبدئية"
+    },
+    "colClient": "العميل",
+    "colDaysOverdue": "أيام التأخر",
+    "colActions": "الإجراءات",
+    "proForma": "مبدئية",
+    "markPaid": "تسجيل الدفع",
+    "noMatchTitle": "لا توجد فواتير مطابقة",
+    "noMatchBody": "جرّب بحثًا آخر أو أزل التصفية."
+  },
+  "users": {
+    "colName": "الاسم",
+    "colRole": "الدور",
+    "colEmail": "البريد الإلكتروني",
+    "colPhone": "الهاتف",
+    "colLanguage": "اللغة",
+    "colAccess": "الوصول",
+    "role": {
+      "holder": "صاحب الحساب",
+      "team": "الفريق",
+      "owner": "مالك",
+      "tenant": "مستأجر"
+    },
+    "access": {
+      "active": "يمكنه الدخول",
+      "invited": "مدعو",
+      "not_invited": "غير مدعو"
+    }
+  },
+  "properties": {
+    "eyebrow": "المنصة",
+    "title": "العقارات",
+    "search": "البحث عن عقار",
+    "searchPlaceholder": "العقار أو العميل أو المالك أو المدينة",
+    "filterStatus": "الحالة",
+    "filterClient": "العميل",
+    "listed": "معروض",
+    "delisted": "مسحوب",
+    "noMatchTitle": "لا توجد عقارات مطابقة",
+    "noMatchBody": "جرّب بحثًا آخر أو امسح الفلاتر.",
+    "colProperty": "العقار",
+    "colClient": "العميل",
+    "colOwner": "المالك",
+    "colCity": "المدينة",
+    "colUnits": "الوحدات",
+    "colStatus": "الحالة",
+    "colModeration": "آخر إجراء إشرافي",
+    "colActions": "الإجراءات",
+    "unitsMix": "{{total}} · {{str}} STR / {{ltr}} LTR",
+    "moderationNote": "{{action}} في {{date}}:",
+    "delist": "سحب",
+    "relist": "إعادة العرض",
+    "delistTitle": "سحب {{property}}؟",
+    "delistBody": "يختفي العقار من لوحات {{client}}. تُحفظ حجوزاته وعقوده وفواتيره.",
+    "relistTitle": "إعادة عرض {{property}}؟",
+    "relistBody": "يظهر العقار مجددًا في لوحات {{client}}.",
+    "delistedToast": "تم سحب {{property}}",
+    "relisted": "تمت إعادة عرض {{property}}",
+    "count_zero": "{{shown}} من {{count}} عقار · {{delisted}} مسحوب",
+    "count_one": "{{shown}} من {{count}} عقار · {{delisted}} مسحوب",
+    "count_two": "{{shown}} من {{count}} عقار · {{delisted}} مسحوب",
+    "count_few": "{{shown}} من {{count}} عقارات · {{delisted}} مسحوب",
+    "count_many": "{{shown}} من {{count}} عقارًا · {{delisted}} مسحوب",
+    "count_other": "{{shown}} من {{count}} عقار · {{delisted}} مسحوب"
+  },
+  "invoice": {
+    "eyebrow": "فاتورة",
+    "back": "كل الفواتير",
+    "print": "طباعة / PDF",
+    "markPaid": "تسجيل كمدفوعة",
+    "previewTitle": "معاينة الفاتورة",
+    "summaryTitle": "الملخص",
+    "client": "العميل",
+    "openClient": "فتح ملف العميل",
+    "accountStatus": "الحساب",
+    "period": "فترة الفوترة",
+    "total": "الإجمالي شامل الضريبة",
+    "due": "الاستحقاق",
+    "daysOverdue": "أيام التأخر",
+    "kind": "النوع",
+    "kindProForma": "مبدئية",
+    "kindFinal": "فاتورة نهائية",
+    "timelineTitle": "الجدول الزمني للحالة",
+    "paymentTitle": "الدفعة المستلمة",
+    "paidOn": "تاريخ الدفع",
+    "reference": "مرجع التحويل البنكي",
+    "note": "ملاحظة",
+    "recordedBy": "سجّلها {{name}} في {{date}}",
+    "notFoundTitle": "الفاتورة غير موجودة",
+    "state": {
+      "done": "تم",
+      "pending": "قيد الانتظار",
+      "skipped": "تم تخطيها"
+    },
+    "steps": {
+      "issued": {
+        "title": "صدرت الفاتورة",
+        "detail": "الدفع مستحق في {{date}}"
+      },
+      "reminder": {
+        "title": "رسالة التذكير · اليوم {{day}}",
+        "done": "أُرسلت إلى صاحب الحساب",
+        "pending": "تُرسل فقط إذا بقيت غير مدفوعة",
+        "skipped": "غير لازمة: دُفعت قبل التذكير"
+      },
+      "readonly": {
+        "title": "للقراءة فقط · اليوم {{day}}",
+        "done": "يمكن لفريق العميل العرض دون التعديل",
+        "doneRestored": "بقي فريق العميل للقراءة فقط حتى الدفع",
+        "pending": "يبدأ إذا بقيت غير مدفوعة",
+        "skipped": "لم يُبلغ: دُفعت في الوقت المناسب"
+      },
+      "paid": {
+        "title": "مدفوعة",
+        "done": "مرجع التحويل {{reference}}",
+        "doneNoReference": "تم استلام الدفعة",
+        "pending": "بانتظار التحويل البنكي"
+      }
+    },
+    "scheduled": "مجدول · {{date}}",
+    "notPaidYet": "لم تُدفع بعد"
+  },
+  "markPaid": {
+    "title": "تسجيل الفاتورة كمدفوعة",
+    "description": "سجّل التحويل البنكي المستلم للفاتورة {{number}}.",
+    "invoice": "الفاتورة",
+    "client": "العميل",
+    "amount": "المبلغ المستحق",
+    "paidOn": "تاريخ الدفع",
+    "paidOnError": "اختر تاريخًا بين {{from}} واليوم.",
+    "reference": "مرجع التحويل البنكي",
+    "referencePlaceholder": "كما يظهر في كشف الحساب البنكي",
+    "referenceError": "أدخل مرجع التحويل ({{count}} أحرف على الأقل).",
+    "note": "ملاحظة (اختياري)",
+    "notePlaceholder": "أي معلومة مفيدة للمسؤول التالي",
+    "restores": "يعود {{client}} من وضع القراءة فقط إلى نشط.",
+    "stillReadOnly": "يبقى {{client}} للقراءة فقط ما دامت هناك فواتير متأخرة أخرى.",
+    "confirm": "تسجيل كمدفوعة",
+    "done": "سُجّلت الفاتورة {{number}} كمدفوعة.",
+    "doneRestored": "سُجّلت الفاتورة {{number}} كمدفوعة. عاد {{client}} إلى وضع نشط.",
+    "doneStillReadOnly": "سُجّلت الفاتورة {{number}} كمدفوعة. يبقى {{client}} للقراءة فقط: لا تزال هناك فواتير متأخرة أخرى."
+  },
+  "pricing": {
+    "eyebrow": "الفوترة",
+    "title": "الأسعار والعروض",
+    "subtitle": "أسعار الوحدات وعرض الإطلاق والمزامنة المجانية للقنوات.",
+    "prices": {
+      "title": "أسعار الوحدات",
+      "perUnit": "درهم لكل وحدة شهريًا، دون الضريبة",
+      "inForce": "الساري حاليًا",
+      "newPrice": "السعر الجديد",
+      "upcoming": "ابتداءً من {{month}}: {{price}}",
+      "invalid": "أدخل سعرًا أكبر من 0 بخانتين عشريتين كحد أقصى.",
+      "tooHigh": "الحد الأقصى {{max}}.",
+      "save": "حفظ الأسعار",
+      "reset": "تجاهل التغييرات",
+      "hint": {
+        "str": "وحدة إيجار قصير الأمد",
+        "ltr": "وحدة إيجار طويل الأمد",
+        "sync": "لكل وحدة STR متزامنة"
+      }
+    },
+    "confirm": {
+      "title": "تطبيق الأسعار الجديدة؟",
+      "body": "تُطبَّق على فترات الفوترة الجديدة فقط.",
+      "effective": "تبدأ الأسعار الجديدة مع فترة الفوترة {{month}}. تحتفظ الفواتير الصادرة بأسعارها.",
+      "confirm": "تطبيق الأسعار"
+    },
+    "saved": "حُفظت الأسعار. تُطبَّق ابتداءً من {{month}}.",
+    "history": {
+      "title": "سجل الأسعار",
+      "colDate": "تاريخ التغيير",
+      "colProduct": "المنتج",
+      "colChange": "التغيير",
+      "colEffective": "تُطبَّق من",
+      "colBy": "بواسطة",
+      "initial": "سعر الإطلاق",
+      "scheduled": "مجدول",
+      "current": "ساري"
+    },
+    "launch": {
+      "title": "عرض الإطلاق",
+      "description": "يحصل العملاء المسجَّلون قبل الموعد النهائي على عرض الإطلاق.",
+      "deadline": "الموعد النهائي للتسجيل",
+      "zone": "بتوقيت الدار البيضاء ({{offset}})",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "save": "حفظ الموعد النهائي",
+      "saved": "تم تحديث الموعد النهائي لعرض الإطلاق.",
+      "open": "مفتوح: التسجيل حتى {{date}}",
+      "closed": "مغلق منذ {{date}}",
+      "invalid": "اختر التاريخ والوقت.",
+      "rulesTitle": "قواعد العرض",
+      "colSignup": "نوع التسجيل",
+      "colFree": "الأشهر المجانية",
+      "rules": {
+        "str": "وحدات STR فقط",
+        "ltr": "وحدات LTR فقط",
+        "str_ltr": "وحدات STR وLTR",
+        "str_sync_ltr": "وحدات STR مع مزامنة القنوات ووحدات LTR",
+        "sync": "مزامنة القنوات (أول {{total}} وحدة متزامنة على المنصة)"
+      },
+      "rulesNote": "تبدأ الأشهر المجانية من يوم التسجيل. هذه القواعد ثابتة."
+    },
+    "freeSync": {
+      "title": "مزامنة القنوات المجانية",
+      "slots": "مقاعد المزامنة المجانية",
+      "used": "<figures>{{used}} / {{total}}</figures> مستخدمة",
+      "total": "إجمالي المقاعد",
+      "totalHint": "لا يمكن أن يقل عن {{used}} مقعدًا قيد الاستخدام.",
+      "save": "حفظ المقاعد",
+      "saved": "تم ضبط مقاعد المزامنة المجانية على {{total}}.",
+      "invalid": "أدخل عددًا صحيحًا لا يقل عن {{min}}.",
+      "unitsTitle": "الوحدات التي تستخدم مقعدًا مجانيًا",
+      "colUnit": "الوحدة",
+      "colProperty": "العقار",
+      "colClient": "العميل",
+      "colUntil": "مجانية حتى",
+      "statusActive": "مجانية",
+      "statusEnded": "انتهت",
+      "none": "لا توجد وحدة تستخدم مقعدًا مجانيًا بعد."
+    }
+  },
+  "settings": {
+    "eyebrow": "المنصة",
+    "title": "الإعدادات",
+    "subtitle": "البيانات القانونية للشركة وقواعد الفوترة.",
+    "banner": {
+      "proforma": "تُصدَر الفواتير كفواتير مبدئية إلى أن تُستكمل كل البيانات القانونية.",
+      "missing": "الحقول المتبقية: {{fields}}.",
+      "complete": "اكتملت كل البيانات القانونية. تُصدَر الفواتير كفواتير نهائية.",
+      "unsaved": "احفظ لتطبيق ذلك."
+    },
+    "form": {
+      "title": "البيانات القانونية للشركة",
+      "fields": {
+        "name": "اسم الشركة",
+        "address": "العنوان الاجتماعي",
+        "ice": "ICE",
+        "if": "IF",
+        "rc": "RC",
+        "patente": "الضريبة المهنية",
+        "rib": "RIB (الحساب البنكي)"
+      },
+      "hint": {
+        "ice": "15 رقمًا",
+        "rib": "24 رقمًا",
+        "code": "رقم التسجيل"
+      },
+      "invalid": {
+        "ice": "يتكون ICE من 15 رقمًا.",
+        "rib": "يتكون RIB من 24 رقمًا.",
+        "code": "استخدم الأحرف والأرقام و - / . فقط."
+      },
+      "save": "حفظ البيانات",
+      "reset": "تجاهل التغييرات",
+      "saved": "تم حفظ البيانات القانونية. تبقى الفواتير مبدئية حتى تُستكمل كل الحقول.",
+      "savedFinal": "تم حفظ البيانات القانونية. تُصدَر الفواتير من الآن كفواتير نهائية.",
+      "savedFinalReissued": "تم حفظ البيانات القانونية. أصبحت الفواتير نهائية من الآن، وأُعيد إصدار الفواتير المبدئية الصادرة سابقًا كفواتير نهائية."
+    },
+    "preview": {
+      "title": "معاينة ترويسة الفاتورة",
+      "caption": "تتحدّث أثناء الكتابة. يراها العملاء على كل فاتورة.",
+      "sampleClient": "عميل تجريبي",
+      "sampleHolder": "صاحب الحساب"
+    },
+    "rules": {
+      "title": "قواعد الفوترة",
+      "note": "للعرض فقط",
+      "due": "استحقاق الدفع",
+      "dueValue": "بعد {{days}} أيام من الإصدار",
+      "reminder": "رسالة التذكير",
+      "reminderValue": "اليوم {{day}}",
+      "readOnly": "التحويل إلى القراءة فقط",
+      "readOnlyValue": "اليوم {{day}}",
+      "hint": "اليوم 0 هو يوم إصدار الفاتورة. يعيد تسجيل الدفع الصلاحيات الكاملة."
+    }
+  },
+  "dataTable": {
+    "search": "بحث…",
+    "comfortable": "صفوف مريحة",
+    "compact": "صفوف مضغوطة",
+    "columns": "الأعمدة",
+    "export": "تصدير CSV",
+    "actions": "إجراءات الصف",
+    "open": "فتح",
+    "loadError": "تعذّر تحميل هذا الجدول.",
+    "retry": "إعادة المحاولة",
+    "empty": "لا شيء للعرض.",
+    "selectAll": "تحديد الكل في هذه الصفحة",
+    "selectRow": "تحديد الصف"
+  }
+}

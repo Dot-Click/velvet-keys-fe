@@ -1,0 +1,826 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --font-display: "Cormorant Garamond", "Cinzel", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+:root,
+.dark {
+  color-scheme: dark;
+  --radius: 12px;
+  --background: #0b0b0b;
+  --foreground: #f8f9fa;
+  --card: #141414;
+  --card-foreground: #f8f9fa;
+  --popover: #141414;
+  --popover-foreground: #f8f9fa;
+  --primary: #d4af37;
+  --primary-foreground: #0b0b0b;
+  --secondary: #181818;
+  --secondary-foreground: #f8f9fa;
+  --muted: #161616;
+  --muted-foreground: #989898;
+  --accent: #1c1a14;
+  --accent-foreground: #d4af37;
+  --destructive: #8b002b;
+  --destructive-foreground: #f8f9fa;
+  --success: #a2e8dd;
+  --success-foreground: #0b0b0b;
+  --warning: #d4af37;
+  --warning-foreground: #0b0b0b;
+  --border: rgba(212, 175, 55, 0.16);
+  --input: rgba(212, 175, 55, 0.22);
+  --ring: #d4af37;
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #f8f9fa;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0b0b0b;
+  --sidebar-accent: #181611;
+  --sidebar-accent-foreground: #d4af37;
+  --sidebar-border: rgba(212, 175, 55, 0.12);
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.72), 0 0 0 1px rgba(212, 175, 55, 0.1);
+  --shadow-glow: 0 0 32px rgba(212, 175, 55, 0.18);
+  --ease-luxury: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+@keyframes gold-skeleton-pulse {
+  0%,
+  100% {
+    background-color: rgba(20, 20, 20, 0.9);
+  }
+  50% {
+    background-color: rgba(212, 175, 55, 0.08);
+  }
+}
+
+@keyframes toast-progress-anim {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@utility btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    transform: translateX(-150%);
+    pointer-events: none;
+  }
+  &:hover::after {
+    animation: shimmer-sweep 0.75s var(--ease-luxury) forwards;
+  }
+}
+
+@utility reveal-up {
+  animation: reveal-up 0.6s var(--ease-luxury) both;
+}
+
+@utility premium-card {
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  background: #141414;
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.4s var(--ease-luxury),
+    border-color 0.4s var(--ease-luxury),
+    box-shadow 0.4s var(--ease-luxury);
+  &:hover {
+    border-color: rgba(212, 175, 55, 0.38);
+    box-shadow: var(--shadow-card), var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+}
+
+@utility luxury-canvas {
+  position: relative;
+  background-color: #0b0b0b;
+  background-image:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(212, 175, 55, 0.08), transparent 75%),
+    radial-gradient(circle 800px at 100% 90%, rgba(139, 0, 43, 0.035), transparent 70%),
+    radial-gradient(circle 600px at 0% 40%, rgba(162, 232, 221, 0.025), transparent 70%);
+}
+
+@utility texture-vein {
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 65%),
+    linear-gradient(to right, rgba(212, 175, 55, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    72px 72px,
+    72px 72px;
+}
+
+@utility gold-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.35) 30%,
+    rgba(212, 175, 55, 0.75) 50%,
+    rgba(212, 175, 55, 0.35) 70%,
+    transparent 100%
+  );
+}
+
+@utility gold-gradient-text {
+  background: linear-gradient(135deg, #fff1be 0%, #d4af37 50%, #b89225 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility gold-skeleton {
+  animation: gold-skeleton-pulse 2s infinite ease-in-out;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 8px;
+}
+
+/* Custom typography scale matching Aman / Mercury quality bar */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-display-72 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text-display-56 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-h1-40 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.text-h2-28 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.text-label-caps {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.text-body-15 {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    background: #0b0b0b;
+    color-scheme: dark;
+  }
+  body {
+    min-width: 320px;
+    background: #0b0b0b;
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    background-image: radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(212, 175, 55, 0.06),
+      transparent 70%
+    );
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.12em;
+  }
+  button,
+  a,
+  input,
+  [role="menuitem"],
+  [role="option"] {
+    transition:
+      color 0.35s var(--ease-luxury),
+      background-color 0.35s var(--ease-luxury),
+      border-color 0.35s var(--ease-luxury),
+      box-shadow 0.35s var(--ease-luxury),
+      transform 0.35s var(--ease-luxury);
+  }
+  ::selection {
+    background: var(--primary);
+    color: #0b0b0b;
+  }
+
+  /* Tabular numbers for all stat figures */
+  .tabular-figures,
+  [data-tabular] {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Lenis smooth scrolling rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Arch mask utilities */
+.arch-mask {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.arch-mask-lg {
+  border-top-left-radius: 160px;
+  border-top-right-radius: 160px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* Wordmark outlined serif text */
+.text-outline-gold {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(212, 175, 55, 0.4);
+  transition:
+    color 0.6s var(--ease-luxury),
+    -webkit-text-stroke 0.6s var(--ease-luxury),
+    text-shadow 0.6s var(--ease-luxury);
+}
+.text-outline-gold:hover {
+  color: #d4af37;
+  -webkit-text-stroke: 1.5px #d4af37;
+  text-shadow: 0 0 50px rgba(212, 175, 55, 0.4);
+}
+
+/* Nav link hover underline */
+.nav-gold-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-gold-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d4af37;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-luxury);
+}
+.nav-gold-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Infinite marquee track */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 50s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Toast with luxury gold progress line */
+[data-sonner-toast] {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+  background: #141414 !important;
+  color: #f8f9fa !important;
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.08) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+[data-sonner-toast]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #fff1be);
+  animation: toast-progress-anim 4s linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Arabic Typography overrides (Phase 2) */
+html[lang="ar"] {
+  --font-display: "Noto Naskh Arabic", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Noto Naskh Arabic", Georgia, serif;
+  --font-sans: "IBM Plex Sans Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
+html[lang="ar"] select {
+  font-family: "IBM Plex Sans Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] .font-display {
+  font-family: "Noto Naskh Arabic", serif;
+  letter-spacing: 0.02em; /* Arabic script should not have wide tracking */
+}
+
+/*
+ * Arabic letters join, so the tracked (letter-spaced) styles used for Latin labels would stretch
+ * or break them. Latin brand wordmarks keep their spacing through inline styles.
+ */
+[class*="tracking-"]:lang(ar),
+.text-label-caps:lang(ar),
+.text-display-72:lang(ar),
+.text-display-56:lang(ar),
+.text-h1-40:lang(ar),
+.text-h2-28:lang(ar) {
+  letter-spacing: normal;
+}
+
+/* RTL directional flipping for directional icons (chevrons, arrows) */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* 200ms smooth language fade transition */
+.lang-fade-transition {
+  transition: opacity 200ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.lang-fade-transition.is-switching {
+  opacity: 0.2;
+}
+
+
+/*
+ * Installed app, cold start: a script in the page head sets data-pwa-splash on <html>, and this
+ * black cover keeps the page from showing before the splash screen (z-50) mounts above it. If the
+ * splash never mounts, the cover lifts by itself after six seconds.
+ */
+html[data-pwa-splash] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  background: #0b0b0b;
+  animation: pwa-splash-cover-lift 0.01s linear 6s forwards;
+}
+
+@keyframes pwa-splash-cover-lift {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*
+ * Data tables on phones (see TableCards and useTableCardLabels): each row becomes a card of
+ * "label — value" lines. The column headers stay in the page for screen readers only.
+ */
+@media (max-width: 767px) {
+  .table-cards-frame {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  table.table-cards,
+  table.table-cards > tbody,
+  table.table-cards > tfoot,
+  table.table-cards > tbody > tr,
+  table.table-cards > tfoot > tr {
+    display: block;
+    width: 100%;
+  }
+
+  table.table-cards > thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  table.table-cards > tbody > tr,
+  table.table-cards > tfoot > tr {
+    margin-block-end: 0.75rem;
+    padding: 0.625rem 1rem;
+    border: 1px solid var(--border) !important;
+    border-radius: 0.75rem;
+    background: var(--card);
+  }
+
+  /* Label in the first column; whatever the cell holds stacks in the second */
+  table.table-cards > tbody > tr > *,
+  table.table-cards > tfoot > tr > * {
+    position: static !important;
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+    align-items: center;
+    justify-items: end;
+    column-gap: 1rem;
+    padding: 0.3rem 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    text-align: end !important;
+    white-space: normal;
+  }
+
+  table.table-cards > tbody > tr > * > *,
+  table.table-cards > tfoot > tr > * > * {
+    grid-column: 2;
+    max-width: 100%;
+  }
+
+  table.table-cards > tbody > tr > [data-label=""],
+  table.table-cards > tfoot > tr > [data-label=""] {
+    display: block;
+    text-align: start !important;
+  }
+
+  table.table-cards [data-label]:not([data-label=""])::before {
+    content: attr(data-label);
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    align-self: start;
+    justify-self: start;
+    padding-block-start: 0.2em;
+    max-width: 10rem;
+    text-align: start;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+}
+
+/*
+ * Operations panel (/conciergerie/*). The shell carries data-shell="operations".
+ * Figures read in Inter with tabular numerals wherever a screen asked for monospace; Cormorant
+ * lining numerals are kept for large figures (.figure-serif).
+ */
+[data-shell="operations"] .font-mono,
+[data-shell="operations"] kbd {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: normal;
+}
+
+.figure-serif {
+  font-family: var(--font-serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+
+/* Cards lift 2px with a gold rim light and a soft shadow */
+@utility hover-lift {
+  transition:
+    transform 0.3s var(--ease-luxury),
+    border-color 0.3s var(--ease-luxury),
+    box-shadow 0.3s var(--ease-luxury);
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.45);
+    box-shadow:
+      0 14px 36px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(212, 175, 55, 0.18),
+      0 0 0 1px rgba(212, 175, 55, 0.12);
+  }
+}
+
+/* Rows: a subtle highlight and an end chevron (.row-chevron) that slides in */
+@utility hover-row {
+  transition: background-color 0.2s var(--ease-luxury);
+  &:hover {
+    background-color: rgba(212, 175, 55, 0.045);
+  }
+  & .row-chevron {
+    opacity: 0;
+    transform: translateX(-6px);
+    transition:
+      opacity 0.2s var(--ease-luxury),
+      transform 0.25s var(--ease-luxury);
+  }
+  &:hover .row-chevron,
+  &:focus-visible .row-chevron {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[dir="rtl"] .hover-row .row-chevron {
+  transform: translateX(6px) scaleX(-1);
+}
+[dir="rtl"] .hover-row:hover .row-chevron,
+[dir="rtl"] .hover-row:focus-visible .row-chevron {
+  transform: translateX(0) scaleX(-1);
+}
+
+/* Images zoom to 1.05 inside a .group */
+@utility hover-zoom {
+  transition: transform 0.7s var(--ease-luxury);
+  :where(.group):hover & {
+    transform: scale(1.05);
+  }
+}
+
+/* Icon micro-animations, played when the enclosing .group is hovered */
+@keyframes icon-wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-12deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-6deg); }
+}
+@keyframes icon-turn {
+  0% { transform: rotate(0); }
+  60% { transform: rotate(-35deg); }
+  100% { transform: rotate(0); }
+}
+@keyframes icon-nudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+.group:hover .icon-wiggle { animation: icon-wiggle 0.55s var(--ease-luxury); transform-origin: 50% 10%; }
+.group:hover .icon-rotate { transform: rotate(-30deg); }
+.icon-rotate { transition: transform 0.35s var(--ease-luxury); }
+.group:hover .icon-turn { animation: icon-turn 0.6s var(--ease-luxury); }
+.group:hover .icon-nudge { animation: icon-nudge 0.45s var(--ease-luxury); }
+
+/* Fixed-height panels with internal scroll fade out at their top and bottom edges */
+@utility fade-edges {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 18px, #000 calc(100% - 22px), transparent 100%);
+}
+
+/* Gold shimmer sweeping across loading placeholders */
+@utility shimmer-gold {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(20, 20, 20, 0.9);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transform: translateX(-150%);
+    animation: shimmer-sweep 1.6s ease-in-out infinite;
+  }
+}
+
+/* Muted ruby hatch for maintenance blocks */
+@utility hatch-ruby {
+  background-color: rgba(139, 0, 43, 0.12);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 133, 161, 0.18) 0 2px,
+    transparent 2px 8px
+  );
+}
+
+/* Calendar day-column width, registered so zoom changes animate */
+@property --cal-col {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 88px;
+}
+
+@utility cal-grid {
+  transition: --cal-col 0.45s var(--ease-luxury);
+}
+
+@keyframes bar-in {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0 round 8px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0 round 8px);
+  }
+}
+@keyframes bar-in-rtl {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 0 100% round 8px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0 round 8px);
+  }
+}
+.cal-bar-in {
+  /* "backwards", not "both": once the delay is over the bar is its normal, visible self even if
+     the animation never gets to run (hidden tab, throttled frames), so bars can't stay hidden. */
+  animation: bar-in 0.45s var(--ease-luxury) backwards;
+}
+[dir="rtl"] .cal-bar-in {
+  animation-name: bar-in-rtl;
+}
+
+@keyframes conflict-flash {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 133, 161, 0); }
+  30% { box-shadow: 0 0 0 2px rgba(255, 133, 161, 0.9), 0 0 18px rgba(139, 0, 43, 0.7); }
+}
+.cal-conflict {
+  animation: conflict-flash 0.7s ease-out 2;
+}
+
+/* Channels hero: gold dots travelling along the sync lines, one way and back */
+@keyframes sync-travel {
+  from {
+    inset-inline-start: -4px;
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  to {
+    inset-inline-start: calc(100% - 4px);
+    opacity: 0;
+  }
+}
+.sync-dot {
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 9999px;
+  background: #d4af37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.9);
+  animation: sync-travel 2.4s linear infinite;
+}
+.sync-dot-back {
+  animation-direction: reverse;
+  background: #a2e8dd;
+  box-shadow: 0 0 8px rgba(162, 232, 221, 0.8);
+}
+
+/* Photo drop zone: a dashed gold border that marches while files are dragged over (and on hover) */
+@keyframes dash-march {
+  to {
+    background-position:
+      16px 0,
+      -16px 100%,
+      0 -16px,
+      100% 16px;
+  }
+}
+.dash-march {
+  background:
+    linear-gradient(90deg, rgba(212, 175, 55, 0.55) 50%, transparent 0) 0 0 / 16px 1px repeat-x,
+    linear-gradient(90deg, rgba(212, 175, 55, 0.55) 50%, transparent 0) 0 100% / 16px 1px repeat-x,
+    linear-gradient(0deg, rgba(212, 175, 55, 0.55) 50%, transparent 0) 0 0 / 1px 16px repeat-y,
+    linear-gradient(0deg, rgba(212, 175, 55, 0.55) 50%, transparent 0) 100% 0 / 1px 16px repeat-y;
+}
+.dash-march:hover,
+.dash-march[data-over="true"] {
+  animation: dash-march 0.9s linear infinite;
+}

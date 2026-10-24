@@ -1,0 +1,107 @@
+{
+  "home": {
+    "eyebrow": "Your home",
+    "greeting": {
+      "morning": "Good morning, {{name}}",
+      "afternoon": "Good afternoon, {{name}}",
+      "evening": "Good evening, {{name}}"
+    },
+    "subtitle": "Your home, your rent and your documents, in one quiet place.",
+    "myHome": "My home",
+    "nextRent": "Next rent",
+    "rentFor": "Rent for {{month}}",
+    "dueOn": "Due {{date}}",
+    "allPaid": "You're all paid up.",
+    "viewInvoice": "View invoice",
+    "shortcuts": "Shortcuts",
+    "shortcutLease": "My lease",
+    "shortcutLeaseBody": "Dates, rent, deposit and your contract",
+    "shortcutInvoices": "My invoices",
+    "shortcutInvoicesBody": "Every rent invoice, ready to download",
+    "unpaidCount_one": "{{count}} invoice to pay",
+    "unpaidCount_other": "{{count}} invoices to pay"
+  },
+  "noLease": {
+    "title": "No lease yet",
+    "body": "Your lease will appear here once your manager activates it."
+  },
+  "rentStatus": {
+    "paid": "Paid",
+    "unpaid": "Unpaid",
+    "late": "Late",
+    "upcoming": "Upcoming"
+  },
+  "pay": {
+    "badge": "Bank transfer",
+    "title": "How to pay",
+    "instruction": "Transfer {{amount}} to {{name}} before {{date}}.",
+    "yourManager": "your manager",
+    "rib": "RIB",
+    "copyRib": "Copy RIB",
+    "ribCopied": "RIB copied",
+    "ribMissing": "Your manager hasn't shared bank details yet. Contact them to arrange payment.",
+    "reference": "Reference to include",
+    "copyReference": "Copy invoice reference",
+    "referenceCopied": "Reference copied",
+    "referencePending": "The invoice number to quote arrives with your manager's invoice.",
+    "note": "Quote the reference so your manager can match your transfer. They mark the rent as paid once it arrives."
+  },
+  "lease": {
+    "eyebrow": "Your agreement",
+    "title": "My lease",
+    "subtitle": "The terms of your lease and who to contact.",
+    "terms": "Lease terms",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "monthlyRent": "Monthly rent",
+    "deposit": "Deposit",
+    "rentDue": "Rent due",
+    "rentDueDay": "On day {{day}} of each month",
+    "downloadContract": "Download contract",
+    "noContract": "No contract has been uploaded for this lease yet.",
+    "contractUnavailable": "The contract isn't available right now.",
+    "contractDownloadFailed": "Couldn't download the contract. Please try again.",
+    "managedBy": "Managed by"
+  },
+  "invoices": {
+    "eyebrow": "Your rent",
+    "title": "My invoices",
+    "subtitle": "Every rent invoice from your manager, newest first.",
+    "outstanding_one": "{{count}} invoice to pay · {{amount}}",
+    "outstanding_other": "{{count}} invoices to pay · {{amount}}",
+    "allPaid": "All your rent invoices are paid.",
+    "dueOn": "Due {{date}}",
+    "paidOn": "Paid on {{date}}",
+    "viewPdf": "View PDF",
+    "emptyTitle": "No invoices yet",
+    "emptyBody": "Your manager's rent invoices will appear here each month.",
+    "previewBadge": "Rent invoice",
+    "print": "Print / save PDF",
+    "printHint": "Choose “Save as PDF” as the printer to download a copy.",
+    "sort": {
+      "period": "Month",
+      "dueDate": "Due date",
+      "amount": "Amount",
+      "status": "Status"
+    }
+  },
+  "profile": {
+    "eyebrow": "Your account",
+    "title": "Profile",
+    "subtitle": "Your details, language and password.",
+    "detailsTitle": "Your details",
+    "emailHint": "To change your email address, ask your manager.",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "saved": "Profile saved",
+    "saveFailed": "Your changes couldn't be saved. Try again in a moment.",
+    "languageTitle": "Language",
+    "languageBody": "The portal and your documents appear in this language.",
+    "passwordTitle": "Change password",
+    "updatePassword": "Update password",
+    "updatingPassword": "Updating…",
+    "passwordChanged": "Password updated",
+    "passwordFailed": "Your password couldn't be changed. Check your current password and try again.",
+    "signOut": "Sign out"
+  }
+}

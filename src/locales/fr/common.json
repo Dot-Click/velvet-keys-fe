@@ -1,0 +1,269 @@
+{
+  "brand": {
+    "name": "Velvet Keys",
+    "tagline": "Contrôle Absolu",
+    "subtitle": "Gestion locative & intelligence patrimoniale au Maroc"
+  },
+  "nav": {
+    "overview": "Vue d'ensemble",
+    "financials": "Finances",
+    "demand": "Carte de demande",
+    "properties": "Propriétés",
+    "reports": "Rapports",
+    "today": "Aujourd'hui",
+    "bookings": "Réservations",
+    "calendar": "Calendrier",
+    "channels": "Canaux",
+    "leases": "Baux",
+    "rentInvoices": "Factures de loyer",
+    "maintenance": "Maintenance",
+    "expenses": "Dépenses",
+    "searchCommands": "Rechercher des commandes…",
+    "cmdK": "⌘K",
+    "accountHome": "Accueil du compte",
+    "commandPalette": "Palette de commandes",
+    "signOut": "Se déconnecter",
+    "demoSimulator": "Simulateur de démo",
+    "designSystemLab": "Laboratoire Design System",
+    "home": "Accueil",
+    "operations": "Opérations",
+    "menu": "Menu",
+    "mainNavigation": "Navigation principale",
+    "mobileNavigation": "Navigation mobile",
+    "userMenu": "Ouvrir le menu utilisateur",
+    "simulateAccount": "Se connecter en tant que (dev)",
+    "simulateStatus": "Statut du compte (dev)",
+    "owners": "Propriétaires",
+    "commission": "Commission",
+    "billing": "Facturation",
+    "propertiesUnits": "Biens et logements",
+    "myLease": "Mon bail",
+    "myInvoices": "Mes factures",
+    "profile": "Profil",
+    "clients": "Clients",
+    "invoices": "Factures",
+    "revenue": "Revenus",
+    "pricingOffers": "Tarifs & offres",
+    "settings": "Paramètres",
+    "collapseSidebar": "Réduire la barre latérale",
+    "expandSidebar": "Développer la barre latérale",
+    "more": "Plus",
+    "group": {
+      "operations": "Opérations",
+      "longTerm": "Longue durée",
+      "portfolio": "Portefeuille",
+      "finance": "Finance"
+    }
+  },
+  "roles": {
+    "owner": "Propriétaire",
+    "concierge": "Conciergerie",
+    "conciergerie": "Conciergerie",
+    "tenant": "Locataire",
+    "admin": "Administrateur",
+    "ownerPortal": "Portail Propriétaire",
+    "conciergerieOperations": "Opérations Conciergerie",
+    "ownerBadge": "Propriétaire · Exécutif",
+    "conciergerieBadge": "Conciergerie · Opérations",
+    "soloOwner": "Propriétaire autonome",
+    "adminConsole": "Console d'administration",
+    "tenantPortal": "Portail Locataire",
+    "adminBadge": "Plateforme · Admin",
+    "tenantBadge": "Locataire · Résidence",
+    "soloOwnerBadge": "Propriétaire · Autonome"
+  },
+  "portfolio": {
+    "filterLabel": "Filtre du portefeuille",
+    "allEstates": "✦ Tous les biens ({{count}})",
+    "individualResidences": "Résidences Individuelles",
+    "selectPortfolio": "Sélectionner un portefeuille"
+  },
+  "actions": {
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "export": "Exporter",
+    "exportPdf": "Exporter en PDF",
+    "download": "Télécharger",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "close": "Fermer",
+    "view": "Voir",
+    "apply": "Appliquer",
+    "refresh": "Actualiser",
+    "submit": "Soumettre",
+    "ready": "Prêt",
+    "status": "Statut",
+    "all": "Tous",
+    "back": "Retour",
+    "next": "Suivant",
+    "skip": "Passer [échap] →",
+    "top": "Haut ↑",
+    "copy": "Copier",
+    "copied": "Copié",
+    "copyFailed": "Copie impossible. Sélectionnez le texte et copiez-le manuellement.",
+    "done": "Terminé"
+  },
+  "status": {
+    "confirmed": "Confirmé",
+    "pending": "En attente",
+    "critical": "Critique",
+    "active": "Actif",
+    "vacant": "Vacant",
+    "occupied": "Occupé",
+    "inProgress": "En cours",
+    "resolved": "Résolu",
+    "readOnly": "Lecture seule",
+    "proForma": "Pro-forma",
+    "synced": "Canal Synchronisé",
+    "direct": "Séjour Direct"
+  },
+  "units": {
+    "str": "Courte durée (LCD)",
+    "ltr": "Longue durée (LLD)",
+    "unit": "Unité",
+    "units": "Unités",
+    "property": "Propriété",
+    "properties": "Propriétés"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية",
+    "select": "Langue",
+    "switcher": "Changer de langue"
+  },
+  "currency": {
+    "mad": "MAD",
+    "vat": "TVA (20%)",
+    "subtotal": "Sous-total",
+    "total": "Total",
+    "netProfit": "Bénéfice Net",
+    "grossRevenue": "Revenu Brut"
+  },
+  "floatingActions": {
+    "newBooking": "+ Nouvelle Réservation",
+    "logRepair": "+ Signaler Réparation",
+    "recordExpense": "+ Enregistrer Dépense",
+    "menuLabel": "Menu Actions Rapides"
+  },
+  "commandPalette": {
+    "searchPlaceholder": "Rechercher commandes, domaines, invités ou naviguer… (Cmd+K)",
+    "noResults": "Aucun portail ou registre correspondant trouvé.",
+    "quickActions": "Actions Opérationnelles Rapides",
+    "newBooking": "Nouvelle Réservation / Admission",
+    "logRepair": "Créer Ticket de Maintenance Domaine",
+    "recordExpense": "Enregistrer Dépense Opérationnelle",
+    "navigation": "Navigation & Portails",
+    "simulator": "Simulateur Système"
+  },
+  "drawer": {
+    "close": "Fermer",
+    "closeDrawer": "Fermer le tiroir"
+  },
+  "accountStatus": {
+    "active": "Actif",
+    "readonly": "Lecture seule",
+    "banned": "Suspendu"
+  },
+  "readOnly": {
+    "bannerTitle": "Votre compte est en lecture seule.",
+    "bannerInvoice": "La facture n°{{number}} est en retard de paiement.",
+    "bannerInvoiceUnknown": "Une facture de votre compte est en retard de paiement.",
+    "goToBilling": "Aller à la facturation",
+    "holderPays": "Le titulaire du compte peut la régler depuis Facturation.",
+    "tooltip": "Compte en lecture seule jusqu'au paiement de la facture",
+    "commandSuffix": "Lecture seule"
+  },
+  "pwa": {
+    "install": {
+      "message": "Installez Velvet Keys pour y accéder plus vite",
+      "install": "Installer",
+      "notNow": "Plus tard",
+      "gotIt": "Compris",
+      "share": "Partager",
+      "addToHome": "Sur l'écran d'accueil"
+    },
+    "offline": {
+      "banner": "Vous êtes hors ligne — affichage des dernières données enregistrées",
+      "tooltip": "Indisponible hors ligne",
+      "commandSuffix": "Hors ligne"
+    },
+    "update": {
+      "message": "Nouvelle version disponible",
+      "refresh": "Actualiser"
+    }
+  },
+  "paymentDue": {
+    "banner": "La facture n°{{number}} est à régler avant le {{date}}.",
+    "viewBilling": "Voir la facturation"
+  },
+  "states": {
+    "loading": "Chargement…",
+    "errorTitle": "Impossible de charger cette page",
+    "errorBody": "Une erreur est survenue lors du chargement de vos données. Veuillez réessayer.",
+    "retry": "Réessayer",
+    "noPropertiesTitle": "Aucun bien pour l'instant",
+    "noPropertiesBody": "Vos biens apparaîtront ici dès qu'ils seront ajoutés à votre compte.",
+    "noUnitsTitle": "Aucune unité courte durée",
+    "noUnitsBody": "Ajoutez une unité STR pour prendre des réservations et planifier les opérations."
+  },
+  "urgency": {
+    "low": "Faible",
+    "medium": "Moyenne",
+    "critical": "Critique"
+  },
+  "notFound": {
+    "eyebrow": "404 · Page introuvable",
+    "title": "Cette page n'existe pas",
+    "body": "Le lien est peut-être obsolète, ou la page a été déplacée.",
+    "cta": "Retour à l'accueil"
+  },
+  "errorPage": {
+    "title": "Cette page n'a pas pu se charger",
+    "body": "Un problème est survenu de notre côté. Réessayez, ou revenez à l'accueil.",
+    "retry": "Réessayer",
+    "home": "Accueil"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "of": "sur",
+    "perPage": "Lignes par page",
+    "first": "Première page",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "last": "Dernière page",
+    "goTo": "Aller à la page {{page}}",
+    "showing": "{{shown}} sur {{total}} affichés",
+    "loadMore_one": "Afficher {{count}} de plus",
+    "loadMore_many": "Afficher {{count}} de plus",
+    "loadMore_other": "Afficher {{count}} de plus"
+  },
+  "listControls": {
+    "clearSearch": "Effacer la recherche",
+    "sortBy": "Trier",
+    "default": "Ordre par défaut",
+    "noResults": "Aucun résultat pour votre recherche.",
+    "placeholder": {
+      "rentInvoices": "Rechercher locataire, unité ou n° de facture…",
+      "leases": "Rechercher locataire, unité ou bien…",
+      "owners": "Rechercher nom ou e-mail…",
+      "properties": "Rechercher bien, ville ou propriétaire…",
+      "channels": "Rechercher unité ou bien…",
+      "commission": "Rechercher bien ou ville…",
+      "ownerProperties": "Rechercher bien ou ville…",
+      "adminClients": "Rechercher société, contact ou e-mail…",
+      "adminProperties": "Rechercher bien ou client…",
+      "ledger": "Rechercher bénéficiaire, catégorie ou unité…",
+      "todayTasks": "Rechercher client, unité ou tâche…",
+      "todayUnits": "Rechercher unité ou client…",
+      "tickets": "Rechercher réparation, unité ou technicien…"
+    },
+    "viewLabel": "Affichage",
+    "viewTable": "Tableau",
+    "viewCards": "Cartes"
+  },
+  "breadcrumb": "Fil d’Ariane"
+}

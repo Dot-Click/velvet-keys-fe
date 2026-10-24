@@ -1,0 +1,70 @@
+{
+  "chips": {
+    "all": "All",
+    "active": "Active",
+    "readonly": "Read-only",
+    "banned": "Banned",
+    "free": "In free period",
+    "owners": "Owners",
+    "conciergeries": "Conciergeries"
+  },
+  "allOffers": "All offers",
+  "colLastPayment": "Last payment",
+  "neverPaid": "No payment yet",
+  "row": {
+    "open": "Open client",
+    "grant": "Grant free months"
+  },
+  "free": {
+    "left_one": "{{count}}d left",
+    "left_other": "{{count}}d left",
+    "ended": "ended",
+    "until": "Free until {{date}}"
+  },
+  "moreActions": "More actions",
+  "reminder": {
+    "send": "Send reminder",
+    "sent": "Reminder sent to {{client}}",
+    "disabled": "No sent or overdue invoice to remind about"
+  },
+  "kpi": {
+    "billed": "Lifetime billed",
+    "collected": "Collected",
+    "outstanding": "Outstanding",
+    "units": "Units",
+    "thisMonth": "This month (estimate)"
+  },
+  "tabs": {
+    "overview": "Overview",
+    "activity": "Activity",
+    "notes": "Notes ({{count}})"
+  },
+  "activity": {
+    "empty": "No activity yet.",
+    "signup": "Account created",
+    "payment": "Payment recorded for {{number}}",
+    "paymentRef": "Reference {{reference}}",
+    "reminder": "Payment reminder sent",
+    "manual_offer": "Free months granted: {{months}}",
+    "ban": "Account banned",
+    "unban": "Account unbanned",
+    "delist": "Property delisted",
+    "relist": "Property relisted",
+    "by": "By {{name}}"
+  },
+  "notes": {
+    "label": "Internal note",
+    "placeholder": "Context for the team: calls, promises, special arrangements…",
+    "hint": "Only Admins can see notes.",
+    "add": "Add note",
+    "added": "Note added",
+    "empty": "No notes yet.",
+    "unknownAuthor": "Admin"
+  },
+  "notFound": {
+    "crumb": "Not found",
+    "title": "Client not found",
+    "body": "This client does not exist or the link is out of date."
+  },
+  "colOverdue": "Overdue"
+}

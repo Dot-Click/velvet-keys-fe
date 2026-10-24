@@ -1,0 +1,272 @@
+{
+  "brand": {
+    "name": "Velvet Keys",
+    "tagline": "تحكم مطلق",
+    "subtitle": "إدارة الإيجارات والذكاء العقاري في المغرب"
+  },
+  "nav": {
+    "overview": "نظرة عامة",
+    "financials": "المالية",
+    "demand": "خريطة الطلب",
+    "properties": "العقارات",
+    "reports": "التقارير",
+    "today": "اليوم",
+    "bookings": "الحجوزات",
+    "calendar": "التقويم",
+    "channels": "القنوات",
+    "leases": "عقود الإيجار",
+    "rentInvoices": "فواتير الإيجار",
+    "maintenance": "الصيانة",
+    "expenses": "المصاريف",
+    "searchCommands": "البحث في الأوامر…",
+    "cmdK": "⌘K",
+    "accountHome": "الرئيسية",
+    "commandPalette": "لوحة الأوامر",
+    "signOut": "تسجيل الخروج من مساحة العمل",
+    "demoSimulator": "محاكي العرض التوضيحي",
+    "designSystemLab": "مختبر نظام التصميم",
+    "home": "الرئيسية",
+    "operations": "العمليات",
+    "menu": "القائمة",
+    "mainNavigation": "التنقل الرئيسي",
+    "mobileNavigation": "التنقل على الجوال",
+    "userMenu": "فتح قائمة المستخدم",
+    "simulateAccount": "الدخول بحساب (للتطوير فقط)",
+    "simulateStatus": "حالة الحساب (للتطوير فقط)",
+    "owners": "الملاك",
+    "commission": "العمولة",
+    "billing": "الفوترة",
+    "propertiesUnits": "العقارات والوحدات",
+    "myLease": "عقد الإيجار",
+    "myInvoices": "فواتيري",
+    "profile": "الملف الشخصي",
+    "clients": "العملاء",
+    "invoices": "الفواتير",
+    "revenue": "الإيرادات",
+    "pricingOffers": "الأسعار والعروض",
+    "settings": "الإعدادات",
+    "collapseSidebar": "طيّ الشريط الجانبي",
+    "expandSidebar": "توسيع الشريط الجانبي",
+    "more": "المزيد",
+    "group": {
+      "operations": "العمليات",
+      "longTerm": "الإيجار الطويل",
+      "portfolio": "المحفظة",
+      "finance": "المالية"
+    }
+  },
+  "roles": {
+    "owner": "المالك",
+    "concierge": "الكونسيرجيري",
+    "conciergerie": "الكونسيرجيري",
+    "tenant": "المستأجر",
+    "admin": "المدير",
+    "ownerPortal": "بوابة المالك",
+    "conciergerieOperations": "عمليات الكونسيرجيري",
+    "ownerBadge": "مالك العقار · تنفيذي",
+    "conciergerieBadge": "الكونسيرجيري · عمليات",
+    "soloOwner": "مالك مستقل",
+    "adminConsole": "لوحة الإدارة",
+    "tenantPortal": "بوابة المستأجر",
+    "adminBadge": "المنصة · الإدارة",
+    "tenantBadge": "مستأجر · سكن",
+    "soloOwnerBadge": "مالك · إدارة ذاتية"
+  },
+  "portfolio": {
+    "filterLabel": "تصفية المحفظة",
+    "allEstates": "✦ جميع العقارات ({{count}})",
+    "individualResidences": "إقامات فردية",
+    "selectPortfolio": "اختر محفظة العقارات"
+  },
+  "actions": {
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "exportPdf": "تصدير كـ PDF",
+    "download": "تحميل",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "close": "إغلاق",
+    "view": "عرض",
+    "apply": "تطبيق",
+    "refresh": "تحديث",
+    "submit": "إرسال",
+    "ready": "جاهز",
+    "status": "الحالة",
+    "all": "الكل",
+    "back": "رجوع",
+    "next": "التالي",
+    "skip": "تخطي [esc] ←",
+    "top": "أعلى ↑",
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "copyFailed": "تعذر النسخ. حدد النص وانسخه يدويًا.",
+    "done": "تم"
+  },
+  "status": {
+    "confirmed": "مؤكد",
+    "pending": "قيد الانتظار",
+    "critical": "حرج",
+    "active": "نشط",
+    "vacant": "شاغر",
+    "occupied": "مشغول",
+    "inProgress": "قيد التنفيذ",
+    "resolved": "تم الحل",
+    "readOnly": "للقراءة فقط",
+    "proForma": "أولي (Pro-forma)",
+    "synced": "متزامن مع القنوات",
+    "direct": "إقامة مباشرة"
+  },
+  "units": {
+    "str": "قصير المدى (STR)",
+    "ltr": "طويل المدى (LTR)",
+    "unit": "وحدة",
+    "units": "وحدات",
+    "property": "عقار",
+    "properties": "عقارات"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية",
+    "select": "اللغة",
+    "switcher": "تغيير اللغة"
+  },
+  "currency": {
+    "mad": "MAD",
+    "vat": "الضريبة على القيمة المضافة (20%)",
+    "subtotal": "المجموع الفرعي",
+    "total": "المجموع",
+    "netProfit": "صافي الربح",
+    "grossRevenue": "إجمالي الإيرادات"
+  },
+  "floatingActions": {
+    "newBooking": "+ حجز جديد",
+    "logRepair": "+ تسجيل صيانة",
+    "recordExpense": "+ تسجيل نفقة",
+    "menuLabel": "قائمة الإجراءات السريعة"
+  },
+  "commandPalette": {
+    "searchPlaceholder": "ابحث في الأوامر، العقارات، النزلاء، أو انتقل إلى العرض… (Cmd+K)",
+    "noResults": "لم يتم العثور على بوابات أو سجلات مطابقة.",
+    "quickActions": "إجراءات تشغيلية سريعة",
+    "newBooking": "حجز جديد / تسجيل نزيل",
+    "logRepair": "تسجيل تذكرة صيانة للعقار",
+    "recordExpense": "تسجيل نفقة تشغيلية",
+    "navigation": "التنقل والبوابات",
+    "simulator": "محاكي النظام"
+  },
+  "drawer": {
+    "close": "إغلاق",
+    "closeDrawer": "إغلاق اللوحة الجانبية"
+  },
+  "accountStatus": {
+    "active": "نشط",
+    "readonly": "للقراءة فقط",
+    "banned": "موقوف"
+  },
+  "readOnly": {
+    "bannerTitle": "حسابك في وضع القراءة فقط.",
+    "bannerInvoice": "الفاتورة رقم {{number}} متأخرة السداد.",
+    "bannerInvoiceUnknown": "توجد فاتورة متأخرة السداد في حسابك.",
+    "goToBilling": "الانتقال إلى الفوترة",
+    "holderPays": "يمكن لصاحب الحساب سدادها من صفحة الفوترة.",
+    "tooltip": "الحساب للقراءة فقط إلى حين سداد الفاتورة",
+    "commandSuffix": "للقراءة فقط"
+  },
+  "pwa": {
+    "install": {
+      "message": "ثبّت Velvet Keys للوصول السريع",
+      "install": "تثبيت",
+      "notNow": "ليس الآن",
+      "gotIt": "حسنًا",
+      "share": "مشاركة",
+      "addToHome": "إضافة إلى الشاشة الرئيسية"
+    },
+    "offline": {
+      "banner": "أنت غير متصل بالإنترنت — يتم عرض آخر البيانات المحفوظة",
+      "tooltip": "غير متاح أثناء عدم الاتصال",
+      "commandSuffix": "غير متصل"
+    },
+    "update": {
+      "message": "يتوفر إصدار جديد",
+      "refresh": "تحديث"
+    }
+  },
+  "paymentDue": {
+    "banner": "الفاتورة رقم {{number}} مستحقة في {{date}}.",
+    "viewBilling": "عرض الفوترة"
+  },
+  "states": {
+    "loading": "جارٍ التحميل…",
+    "errorTitle": "تعذّر تحميل هذه الصفحة",
+    "errorBody": "حدث خطأ أثناء جلب بياناتك. يرجى المحاولة مرة أخرى.",
+    "retry": "إعادة المحاولة",
+    "noPropertiesTitle": "لا توجد عقارات بعد",
+    "noPropertiesBody": "ستظهر العقارات هنا فور إضافتها إلى حسابك.",
+    "noUnitsTitle": "لا توجد وحدات إيجار قصير بعد",
+    "noUnitsBody": "أضف وحدة إيجار قصير لبدء استقبال الحجوزات وتخطيط العمليات."
+  },
+  "urgency": {
+    "low": "منخفضة",
+    "medium": "متوسطة",
+    "critical": "حرجة"
+  },
+  "notFound": {
+    "eyebrow": "404 · الصفحة غير موجودة",
+    "title": "هذه الصفحة غير موجودة",
+    "body": "قد يكون الرابط قديمًا، أو نُقلت الصفحة.",
+    "cta": "العودة إلى الرئيسية"
+  },
+  "errorPage": {
+    "title": "تعذر تحميل هذه الصفحة",
+    "body": "حدث خطأ من جهتنا. حاول مرة أخرى، أو عد إلى الصفحة الرئيسية.",
+    "retry": "حاول مرة أخرى",
+    "home": "الرئيسية"
+  },
+  "pagination": {
+    "label": "ترقيم الصفحات",
+    "of": "من",
+    "perPage": "الصفوف في الصفحة",
+    "first": "الصفحة الأولى",
+    "previous": "الصفحة السابقة",
+    "next": "الصفحة التالية",
+    "last": "الصفحة الأخيرة",
+    "goTo": "الانتقال إلى الصفحة {{page}}",
+    "showing": "عرض {{shown}} من {{total}}",
+    "loadMore_zero": "عرض المزيد",
+    "loadMore_one": "عرض عنصر آخر",
+    "loadMore_two": "عرض عنصرين آخرين",
+    "loadMore_few": "عرض {{count}} عناصر أخرى",
+    "loadMore_many": "عرض {{count}} عنصراً آخر",
+    "loadMore_other": "عرض {{count}} عنصر آخر"
+  },
+  "listControls": {
+    "clearSearch": "مسح البحث",
+    "sortBy": "الترتيب",
+    "default": "الترتيب الافتراضي",
+    "noResults": "لا توجد نتائج مطابقة لبحثك.",
+    "placeholder": {
+      "rentInvoices": "ابحث عن مستأجر أو وحدة أو رقم فاتورة…",
+      "leases": "ابحث عن مستأجر أو وحدة أو عقار…",
+      "owners": "ابحث بالاسم أو البريد الإلكتروني…",
+      "properties": "ابحث عن عقار أو مدينة أو مالك…",
+      "channels": "ابحث عن وحدة أو عقار…",
+      "commission": "ابحث عن عقار أو مدينة…",
+      "ownerProperties": "ابحث عن عقار أو مدينة…",
+      "adminClients": "ابحث عن شركة أو جهة اتصال أو بريد…",
+      "adminProperties": "ابحث عن عقار أو عميل…",
+      "ledger": "ابحث عن مستفيد أو فئة أو وحدة…",
+      "todayTasks": "ابحث عن ضيف أو وحدة أو مهمة…",
+      "todayUnits": "ابحث عن وحدة أو ضيف…",
+      "tickets": "ابحث عن إصلاح أو وحدة أو فني…"
+    },
+    "viewLabel": "العرض",
+    "viewTable": "جدول",
+    "viewCards": "بطاقات"
+  },
+  "breadcrumb": "مسار التنقل"
+}

@@ -1,0 +1,32 @@
+{
+  "breadcrumb": {
+    "admin": "Admin"
+  },
+  "impact": {
+    "card_one": "Affects {{count}} client",
+    "card_other": "Affects {{count}} clients",
+    "summary_one": "Affects {{count}} client · MRR changes from {{from}} to {{to}} · applies from {{date}}",
+    "summary_other": "Affects {{count}} clients · MRR changes from {{from}} to {{to}} · applies from {{date}}"
+  },
+  "launch": {
+    "daysLeft_one": "{{days}} day left",
+    "daysLeft_other": "{{days}} days left",
+    "ended": "Signups closed",
+    "colClients": "Clients on this offer"
+  },
+  "freeSync": {
+    "search": "Search units, properties, clients…"
+  },
+  "settings": {
+    "errors": {
+      "ice": "The ICE must have exactly {{total}} digits ({{entered}} entered).",
+      "rib": "The RIB must have exactly {{total}} digits ({{entered}} entered).",
+      "digits": "Digits only."
+    },
+    "unsaved": {
+      "title": "Unsaved changes",
+      "save": "Save",
+      "discard": "Discard"
+    }
+  }
+}

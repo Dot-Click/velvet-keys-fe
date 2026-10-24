@@ -1,0 +1,109 @@
+{
+  "home": {
+    "eyebrow": "Votre logement",
+    "greeting": {
+      "morning": "Bonjour, {{name}}",
+      "afternoon": "Bon après-midi, {{name}}",
+      "evening": "Bonsoir, {{name}}"
+    },
+    "subtitle": "Votre logement, votre loyer et vos documents, au même endroit, en toute sérénité.",
+    "myHome": "Mon logement",
+    "nextRent": "Prochain loyer",
+    "rentFor": "Loyer de {{month}}",
+    "dueOn": "À régler avant le {{date}}",
+    "allPaid": "Tous vos loyers sont réglés.",
+    "viewInvoice": "Voir la facture",
+    "shortcuts": "Raccourcis",
+    "shortcutLease": "Mon bail",
+    "shortcutLeaseBody": "Dates, loyer, dépôt de garantie et contrat",
+    "shortcutInvoices": "Mes factures",
+    "shortcutInvoicesBody": "Toutes vos factures de loyer, prêtes à télécharger",
+    "unpaidCount_one": "{{count}} facture à régler",
+    "unpaidCount_many": "{{count}} factures à régler",
+    "unpaidCount_other": "{{count}} factures à régler"
+  },
+  "noLease": {
+    "title": "Pas encore de bail",
+    "body": "Votre bail apparaîtra ici dès que votre gestionnaire l'aura activé."
+  },
+  "rentStatus": {
+    "paid": "Payé",
+    "unpaid": "À payer",
+    "late": "En retard",
+    "upcoming": "À venir"
+  },
+  "pay": {
+    "badge": "Virement bancaire",
+    "title": "Comment payer",
+    "instruction": "Virez {{amount}} à {{name}} avant le {{date}}.",
+    "yourManager": "votre gestionnaire",
+    "rib": "RIB",
+    "copyRib": "Copier le RIB",
+    "ribCopied": "RIB copié",
+    "ribMissing": "Votre gestionnaire n'a pas encore communiqué ses coordonnées bancaires. Contactez-le pour régler votre loyer.",
+    "reference": "Référence à indiquer",
+    "copyReference": "Copier la référence de la facture",
+    "referenceCopied": "Référence copiée",
+    "referencePending": "Le numéro de facture à indiquer arrivera avec la facture de votre gestionnaire.",
+    "note": "Indiquez la référence pour que votre gestionnaire retrouve votre virement. Il marque le loyer comme payé dès réception."
+  },
+  "lease": {
+    "eyebrow": "Votre contrat",
+    "title": "Mon bail",
+    "subtitle": "Les conditions de votre bail et la personne à contacter.",
+    "terms": "Conditions du bail",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "monthlyRent": "Loyer mensuel",
+    "deposit": "Dépôt de garantie",
+    "rentDue": "Échéance du loyer",
+    "rentDueDay": "Le {{day}} de chaque mois",
+    "downloadContract": "Télécharger le contrat",
+    "noContract": "Aucun contrat n'a encore été téléversé pour ce bail.",
+    "contractUnavailable": "Le contrat n'est pas disponible pour le moment.",
+    "contractDownloadFailed": "Impossible de télécharger le contrat. Veuillez réessayer.",
+    "managedBy": "Géré par"
+  },
+  "invoices": {
+    "eyebrow": "Votre loyer",
+    "title": "Mes factures",
+    "subtitle": "Toutes les factures de loyer de votre gestionnaire, les plus récentes d'abord.",
+    "outstanding_one": "{{count}} facture à régler · {{amount}}",
+    "outstanding_many": "{{count}} factures à régler · {{amount}}",
+    "outstanding_other": "{{count}} factures à régler · {{amount}}",
+    "allPaid": "Toutes vos factures de loyer sont réglées.",
+    "dueOn": "À régler avant le {{date}}",
+    "paidOn": "Payée le {{date}}",
+    "viewPdf": "Voir le PDF",
+    "emptyTitle": "Aucune facture pour l'instant",
+    "emptyBody": "Les factures de loyer de votre gestionnaire apparaîtront ici chaque mois.",
+    "previewBadge": "Facture de loyer",
+    "print": "Imprimer / PDF",
+    "printHint": "Choisissez « Enregistrer au format PDF » comme imprimante pour télécharger une copie.",
+    "sort": {
+      "period": "Mois",
+      "dueDate": "Échéance",
+      "amount": "Montant",
+      "status": "Statut"
+    }
+  },
+  "profile": {
+    "eyebrow": "Votre compte",
+    "title": "Profil",
+    "subtitle": "Vos coordonnées, votre langue et votre mot de passe.",
+    "detailsTitle": "Vos coordonnées",
+    "emailHint": "Pour changer d'adresse e-mail, adressez-vous à votre gestionnaire.",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "saved": "Profil enregistré",
+    "saveFailed": "Vos modifications n'ont pas pu être enregistrées. Réessayez dans un instant.",
+    "languageTitle": "Langue",
+    "languageBody": "Le portail et vos documents s'affichent dans cette langue.",
+    "passwordTitle": "Changer le mot de passe",
+    "updatePassword": "Mettre à jour",
+    "updatingPassword": "Mise à jour…",
+    "passwordChanged": "Mot de passe mis à jour",
+    "passwordFailed": "Votre mot de passe n'a pas pu être changé. Vérifiez votre mot de passe actuel et réessayez.",
+    "signOut": "Se déconnecter"
+  }
+}

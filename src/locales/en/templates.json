@@ -1,0 +1,153 @@
+{
+  "pdf": {
+    "page": "Page {{page}} of {{total}}",
+    "ownerReport": {
+      "subtitle": "Owner statement",
+      "title": "Owner financial report",
+      "titleSummary": "Owner financial report · Summary",
+      "confidential": "Confidential",
+      "reference": "Reference {{ref}}",
+      "generatedOn": "Generated {{date}}",
+      "preparedFor": "Prepared for",
+      "period": "Period",
+      "properties": "Properties",
+      "cities": "Cities",
+      "intro": "Operating performance of your portfolio for the period, in Moroccan dirham (MAD).",
+      "summaryTitle": "Summary",
+      "grossRevenue": "Gross revenue",
+      "grossRevenueNote": "STR bookings and LTR rent",
+      "commission": "Commission",
+      "commissionNote": "{{share}} of gross revenue",
+      "operatingCosts": "Operating costs",
+      "operatingCostsNote": "Payroll, utilities and repairs",
+      "netProfit": "Net profit",
+      "netProfitNote": "{{margin}} net margin",
+      "statementTitle": "Profit and loss",
+      "colLine": "Line",
+      "colAmount": "Amount",
+      "colShare": "Share of gross",
+      "lineStr": "STR booking revenue",
+      "lineLtr": "LTR rent",
+      "lineGross": "Gross revenue",
+      "lineCommission": "Conciergerie commission",
+      "linePayroll": "Payroll",
+      "lineUtilities": "Utilities",
+      "lineRepairs": "Repairs",
+      "lineNet": "Net profit",
+      "breakdownTitle": "Breakdown by property",
+      "colProperty": "Property",
+      "colStr": "STR",
+      "colLtr": "LTR",
+      "colGross": "Gross",
+      "colCommission": "Commission",
+      "colOccupancy": "STR occupancy",
+      "colNet": "Net",
+      "total": "Total",
+      "notesTitle": "Notes",
+      "noteNet": "Net profit is gross revenue (STR and LTR) minus commission, payroll, utilities and repairs.",
+      "noteSolo": "Self-managed portfolio: no conciergerie commission applies.",
+      "noteOccupancy": "STR occupancy is the share of short-term unit-nights that were booked."
+    }
+  },
+  "email": {
+    "common": {
+      "greeting": "Hello {{name}},",
+      "greetingAnonymous": "Hello,",
+      "ctaFallback": "Button not working? Copy this link into your browser:",
+      "automated": "This is an automated message from {{brand}}. Please do not reply to it.",
+      "sentVia": "Sent by {{issuer}} through {{brand}}.",
+      "invoice": "Invoice",
+      "period": "Period",
+      "amount": "Amount",
+      "amountInclVat": "Amount incl. VAT",
+      "dueDate": "Due date",
+      "paidOn": "Payment date",
+      "bankTitle": "Bank transfer details",
+      "beneficiary": "Beneficiary",
+      "rib": "RIB",
+      "reference": "Transfer reference"
+    },
+    "invitation": {
+      "subject": "{{inviter}} invited you to {{brand}}",
+      "preview": "Your private invitation to {{brand}}",
+      "title": "You're invited",
+      "intro": {
+        "owner": "{{inviter}} has invited you to follow your properties on {{brand}}: revenue, occupancy and net profit in one place.",
+        "conciergerie": "{{inviter}} has invited your conciergerie to manage their property on {{brand}}.",
+        "tenant": "{{inviter}} has invited you to {{brand}}, where you can see your lease and your rent invoices."
+      },
+      "role": "Your role",
+      "property": "Property",
+      "expires": "This invitation is valid until {{date}}.",
+      "cta": "Accept invitation",
+      "ignore": "If you weren't expecting this invitation, you can ignore this email."
+    },
+    "passwordReset": {
+      "subject": "Reset your {{brand}} password",
+      "preview": "Choose a new password for your account",
+      "title": "Reset your password",
+      "intro": "We received a request to reset the password of your {{brand}} account. Choose a new one with the button below.",
+      "expires": "This link is valid for {{duration}}.",
+      "cta": "Choose a new password",
+      "ignore": "If you didn't ask for this, you can ignore this email. Your password won't change."
+    },
+    "invoiceIssued": {
+      "subject": "Invoice {{number}} from {{brand}}",
+      "subjectProForma": "Pro-forma invoice {{number}} from {{brand}}",
+      "preview": "{{amount}} to pay by {{date}}",
+      "title": "Your {{month}} invoice",
+      "intro": "Your {{brand}} subscription invoice for {{month}} is ready. Please pay it by bank transfer before {{date}}.",
+      "proForma": "This is a pro-forma invoice until our company registration details are on file.",
+      "terms": "If we haven't received the payment 8 days after the invoice was issued, your account becomes read-only.",
+      "cta": "View invoice"
+    },
+    "paymentReminder": {
+      "subject": "Reminder: invoice {{number}} is due on {{date}}",
+      "preview": "Invoice {{number}} is still unpaid",
+      "title": "Payment reminder",
+      "intro": "Invoice {{number}} for {{month}} ({{amount}}) is still unpaid. It is due on {{date}}.",
+      "warning": "If we haven't received your transfer by {{date}}, your account becomes read-only: you can still sign in and view everything, but you can't add or edit anything.",
+      "alreadyPaid": "Already paid? Thank you. A transfer can take a day or two to arrive, so there is nothing more to do.",
+      "cta": "View invoice"
+    },
+    "accountReadOnly": {
+      "subject": "Your {{brand}} account is now read-only",
+      "preview": "Invoice {{number}} is overdue",
+      "title": "Your account is read-only",
+      "intro": "Invoice {{number}} ({{amount}}) was due on {{date}} and we haven't received the payment yet.",
+      "effect": "You and your team can still sign in and view everything, but you can't add or edit anything until the invoice is paid. The owners and tenants linked to your account keep their access.",
+      "how": "Pay by bank transfer with the details on the invoice. We restore full access as soon as the payment is registered.",
+      "cta": "View invoice"
+    },
+    "paymentConfirmed": {
+      "subject": "Payment received for invoice {{number}}",
+      "subjectRestored": "Payment received: your {{brand}} access is restored",
+      "preview": "Thank you, {{amount}} received",
+      "title": "Payment received",
+      "titleRestored": "Your access is restored",
+      "intro": "Thank you. We registered your payment of {{amount}} for invoice {{number}}.",
+      "restored": "Your account is active again: you and your team can add and edit as usual.",
+      "cta": "Open {{brand}}"
+    },
+    "leaseRenewal": {
+      "subject": "Lease ending soon: {{tenant}} · {{unit}}",
+      "preview": "{{tenant}}'s lease ends on {{date}}",
+      "title": "A lease is ending soon",
+      "intro": "The lease of {{tenant}} for {{unit}} at {{property}} ends on {{date}}, {{relative}}.",
+      "tenant": "Tenant",
+      "unit": "Unit",
+      "endDate": "Lease ends",
+      "rent": "Monthly rent",
+      "hint": "Renew it with a new end date and rent, or let it end.",
+      "cta": "Review lease"
+    },
+    "rentInvoice": {
+      "subject": "Rent invoice {{number}} · {{month}}",
+      "preview": "{{amount}} to pay by {{date}}",
+      "title": "Your rent for {{month}}",
+      "intro": "{{issuer}} has issued your rent invoice for {{unit}}. Please pay it by bank transfer before {{date}}.",
+      "property": "Property",
+      "cta": "View invoice"
+    }
+  }
+}

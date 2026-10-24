@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "outstanding": "المستحق",
+    "outstandingHint": "{{count}} بانتظار التحصيل",
+    "overdue": "متأخرة",
+    "overdueHint": "{{count}} متأخرة",
+    "dueWeek": "مستحقة هذا الأسبوع",
+    "dueWeekHint": "{{count}} حتى {{date}}",
+    "collected": "المحصّل هذا الشهر",
+    "collectedHint": "{{count}} مدفوعة في {{month}}"
+  },
+  "chip": {
+    "free": "مجانية"
+  },
+  "period": {
+    "chip": "صادرة في {{month}}",
+    "dismiss": "إزالة تصفية الفترة"
+  },
+  "col": {
+    "issued": "الإصدار",
+    "paid": "الدفع",
+    "days": "{{count}} ي"
+  },
+  "actions": {
+    "markPaid": "تحديد كمدفوعة",
+    "sendReminder": "إرسال تذكير",
+    "downloadPdf": "تنزيل PDF",
+    "copyReference": "نسخ مرجع التحويل",
+    "copied": "تم نسخ المرجع {{reference}}",
+    "copyFailed": "تعذّر نسخ المرجع.",
+    "reminderSent": "تم إرسال تذكير إلى {{client}} بخصوص {{number}}.",
+    "reminderNothing": "التذكير متاح للفواتير المرسلة أو المتأخرة فقط.",
+    "void": "إلغاء"
+  },
+  "generate": {
+    "action": "إنشاء",
+    "result": "تم إنشاء الفواتير: {{created}} جديدة، {{skipped}} تم تخطيها",
+    "failed": "تعذّر إنشاء الفواتير",
+    "badPeriod": "أدخل الفترة بصيغة YYYY-MM (مثال 2026-10)."
+  },
+  "bulk": {
+    "selected": "المحدد: {{count}}",
+    "markSelected": "تحديد المحدد كمدفوع",
+    "sendReminders": "إرسال التذكيرات",
+    "clear": "إلغاء التحديد",
+    "remindersSent": "تم إرسال التذكيرات لـ {{count}} فاتورة.",
+    "title": "تحديد الفواتير المختارة كمدفوعة",
+    "description": "أدخل تاريخ الدفع والمرجع البنكي لكل تحويل.",
+    "invoice": "الفاتورة",
+    "client": "العميل",
+    "amount": "المبلغ",
+    "paidOn": "تاريخ الدفع",
+    "reference": "المرجع البنكي",
+    "referencePlaceholder": "مرجع كشف الحساب البنكي",
+    "referenceError": "{{count}} أحرف على الأقل.",
+    "dateError": "تاريخ غير صالح.",
+    "total": "الإجمالي",
+    "confirm": "تحديد {{count}} كمدفوعة",
+    "saving": "جارٍ الحفظ...",
+    "done": "تم تحديد {{count}} فاتورة كمدفوعة.",
+    "partial": "تم تحديد {{done}} كمدفوعة وفشل {{failed}}. أعد المحاولة للباقي.",
+    "failed": "تعذّر حفظ المدفوعات."
+  },
+  "detail": {
+    "breadcrumb": "الفواتير",
+    "sendReminder": "إرسال تذكير",
+    "copyReference": "نسخ المرجع",
+    "downloadPdf": "تنزيل PDF",
+    "freeNote": "مجانية · عرض الإطلاق: لا شيء للتحصيل",
+    "paymentTitle": "الدفع",
+    "markedBy": "سجّلها",
+    "markedOn": "سُجّل في {{date}}",
+    "notPaid": "لم يُسجَّل أي دفع بعد.",
+    "notRequired": "لا دفع مطلوب: هذه الفاتورة مجانية.",
+    "remindersTitle": "سجل التذكيرات",
+    "reminderDelivered": "تم الإرسال"
+  },
+  "void": {
+    "action": "إلغاء",
+    "title": "إلغاء الفاتورة",
+    "description": "لن يعود بالإمكان دفع هذه الفاتورة.",
+    "confirm": "إلغاء",
+    "done": "تم إلغاء الفاتورة."
+  }
+}

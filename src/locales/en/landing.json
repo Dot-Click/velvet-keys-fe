@@ -1,0 +1,433 @@
+{
+  "pageTitle": "Velvet Keys — Absolute Control",
+  "metaDescription": "Velvet Keys — Absolute Control. Rental-management and estate stewardship SaaS for Morocco covering short-term and long-term rentals.",
+  "nav": {
+    "product": "Product",
+    "horizons": "Horizons",
+    "channels": "Channels",
+    "methodology": "Method",
+    "capabilities": "Capabilities",
+    "manifesto": "Manifesto",
+    "signIn": "Sign in",
+    "getStarted": "Get started"
+  },
+  "hero": {
+    "tag": "Rental management for Morocco",
+    "line1": "Absolute",
+    "line2": "Control",
+    "line3": "Every stay. Every lease. One ledger.",
+    "subcopy": "One platform for owners and conciergeries across Morocco: Airbnb and Booking.com bookings, leases and rent, and every figure in dirhams with the commission on its own line.",
+    "getStarted": "Get started",
+    "manageProperties": "I manage properties",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "scrollExplore": "Scroll to explore"
+  },
+  "mock": {
+    "str": "STR",
+    "ltr": "LTR",
+    "splitLabel": "Short-term {{str}}, long-term {{ltr}}",
+    "gross": "Gross revenue",
+    "commission": "Commission {{pct}}%",
+    "costs": "Operating costs",
+    "net": "Net profit"
+  },
+  "reveal": {
+    "live": "Live",
+    "chapterOf": "Chapter {{current}} of {{total}}",
+    "callout": {
+      "c1": "{{margin}} net margin after commission",
+      "c2": "{{count}} confirmed bookings this month",
+      "c3": "{{count}} properties on one ledger"
+    },
+    "c1": {
+      "kicker": "Net profit",
+      "headline": "See what you truly earn",
+      "body": "Gross revenue from short-term and long-term rentals, the manager's commission and the operating costs, all in dirhams. Net profit is the line at the bottom, never a guess.",
+      "statGross": "{{amount}} gross revenue",
+      "statMargin": "{{margin}} net margin"
+    },
+    "c2": {
+      "kicker": "Short-term rentals",
+      "headline": "Every night, priced and counted",
+      "body": "Airbnb and Booking.com reservations land on one calendar. Peak nights stand out, and each stay shows what it earns after commission.",
+      "statOccupancy": "{{value}} occupancy",
+      "statRate": "{{amount}} average nightly rate"
+    },
+    "c3": {
+      "kicker": "The whole portfolio",
+      "headline": "Each property, short and long term",
+      "body": "Apartments let by the night, by the year, or both. Every property shows its split between short-term and long-term revenue, and the commission it generated.",
+      "statProperties": "{{count}} properties",
+      "statCommission": "{{amount}} commission this month"
+    },
+    "m1": {
+      "title": "Owner overview",
+      "netProfit": "Net profit, year to date",
+      "margin": "Net margin",
+      "vsPrior": "{{delta}} vs last year",
+      "trajectory": "Gross revenue, 12 months",
+      "peak": "Best month {{amount}}"
+    },
+    "m2": {
+      "title": "Booking calendar",
+      "heading": "Short-term rentals",
+      "sub": "Occupancy and nightly rates",
+      "bookings": "{{count}} confirmed",
+      "legendStandard": "Standard",
+      "legendHigh": "High demand",
+      "legendPeak": "Peak rate {{amount}} / night",
+      "strGross": "STR revenue this month",
+      "ownerShare": "Owner's share"
+    },
+    "m3": {
+      "title": "Properties",
+      "heading": "Revenue by property",
+      "total": "{{amount}} this month",
+      "perMonth": "{{amount}} / month",
+      "commission": "Commission {{amount}}"
+    }
+  },
+  "marquee": {
+    "kicker": "Curated architectural ledger",
+    "title": "Signature residences",
+    "subtitle": "Six residences on one ledger: short stays, long leases, and every dirham of commission accounted for.",
+    "cta": "Start your portfolio",
+    "occupancy": "{{value}} occupancy",
+    "perMonth": "{{amount}} / month",
+    "previous": "Previous residence",
+    "next": "Next residence",
+    "items": {
+      "harbour": {
+        "unit": "Penthouse 14",
+        "location": "Tangier Bay Waterfront",
+        "bedrooms": "4 master suites"
+      },
+      "aurora": {
+        "unit": "Penthouse 4A",
+        "location": "Marrakesh Palmeraie",
+        "bedrooms": "5 private suites"
+      },
+      "palm": {
+        "unit": "Villa Oasis",
+        "location": "Palmeraie Enclave",
+        "bedrooms": "6 garden suites"
+      },
+      "marina": {
+        "unit": "Residence 12",
+        "location": "Casablanca Marina",
+        "bedrooms": "3 ocean suites"
+      },
+      "skyline": {
+        "unit": "Penthouse 21",
+        "location": "Rabat High-Altitude",
+        "bedrooms": "4 panorama suites"
+      },
+      "garden": {
+        "unit": "Suite 8",
+        "location": "Fes Medina Sanctuary",
+        "bedrooms": "4 courtyard suites"
+      }
+    }
+  },
+  "twoHorizons": {
+    "label": "Three ways to use Velvet Keys",
+    "tabs": {
+      "owner": "Owner",
+      "conciergerie": "Conciergerie",
+      "ltr": "Long-term rentals"
+    },
+    "owner": {
+      "badge": "For owners",
+      "headline": "See what you truly earn",
+      "body": "Your short-term and long-term revenue side by side, in dirhams, property by property. The commission is its own line, so net profit is never a guess.",
+      "features": [
+        {
+          "title": "One view of the whole portfolio",
+          "desc": "Short-term and long-term revenue together, with the split for each property."
+        },
+        {
+          "title": "Commission shown, not buried",
+          "desc": "Gross revenue, commission and costs add up to your net profit, line by line."
+        },
+        {
+          "title": "Statements for you and your accountant",
+          "desc": "Monthly owner statements as PDF, ready to share."
+        }
+      ],
+      "cta": "Start as an owner",
+      "imageAlt": "Executive residence study",
+      "imageLabel": "The Aurora · Marrakesh",
+      "mockTitle": "Owner overview",
+      "netProfit": "Net profit, this month",
+      "vsPrior": "{{delta}} vs last year",
+      "netMargin": "Net margin",
+      "afterCommission": "After commission"
+    },
+    "conciergerie": {
+      "badge": "For conciergeries",
+      "headline": "Run every owner from one desk",
+      "body": "Bookings from every channel, repairs with proof, and the commission you earn on short stays and long leases, calculated for you.",
+      "features": [
+        {
+          "title": "One calendar for every stay",
+          "desc": "Airbnb, Booking.com and owner blocks in one place, with no double bookings."
+        },
+        {
+          "title": "Repairs and expenses with proof",
+          "desc": "Each cost is logged with a photo before it reaches an owner's statement."
+        },
+        {
+          "title": "Commission calculated for you",
+          "desc": "Set a percentage per owner and per property; short-term and long-term are totalled separately."
+        }
+      ],
+      "cta": "Start as a conciergerie",
+      "imageAlt": "Conciergerie master suite",
+      "imageLabel": "Palm Residences · Palmeraie",
+      "mockTitle": "Dispatch and commission",
+      "mockPill": "Live sync",
+      "events": [
+        {
+          "title": "VIP arrival",
+          "sub": "Lady Genevieve Vance · Penthouse 4A",
+          "tag": "Ready 15:00"
+        },
+        {
+          "title": "Turnover inspection",
+          "sub": "Master suite 12 · Inventory checked",
+          "tag": "Dispatched"
+        }
+      ],
+      "repair": "Chilled water loop calibration",
+      "earnedHeading": "Commission earned this month",
+      "strCommission": "STR commission ({{pct}}%)",
+      "ltrCommission": "LTR commission ({{pct}}%)",
+      "earned": "Commission earned"
+    },
+    "ltr": {
+      "badge": "Long-term rentals",
+      "headline": "Leases and rent, under control",
+      "body": "Every lease, every rent due date and every payment in one place, next to your short-term bookings and in the same dirhams.",
+      "features": [
+        {
+          "title": "Leases and renewals",
+          "desc": "Contracts, rent amounts, deposits and end dates, with a reminder before a lease runs out."
+        },
+        {
+          "title": "Rent tracking",
+          "desc": "See who has paid, who is due and who is late, month after month."
+        },
+        {
+          "title": "Receipts and owner statements",
+          "desc": "Receipts for tenants and a monthly statement for owners, with your commission worked out."
+        }
+      ],
+      "cta": "Start with long-term rentals",
+      "imageAlt": "Skyline Tower apartment",
+      "imageLabel": "Skyline Tower · Rabat",
+      "mockTitle": "Leases and rent",
+      "collected": "Rent collected",
+      "ofExpected": "of {{amount}} expected",
+      "progressLabel": "{{value}} of this month's rent collected",
+      "leases": {
+        "youssef": {
+          "tenant": "Youssef A.",
+          "unit": "Marina House · Apt 4B"
+        },
+        "salma": {
+          "tenant": "Salma R.",
+          "unit": "The Aurora · Apt 2"
+        },
+        "imane": {
+          "tenant": "Imane K.",
+          "unit": "Skyline Tower · Apt 12"
+        },
+        "mehdi": {
+          "tenant": "Mehdi T.",
+          "unit": "Skyline Tower · Apt 7"
+        }
+      },
+      "paid": "Paid",
+      "dueOn": "Due {{date}}",
+      "late": "Late",
+      "endingAlert": "A lease ends in {{days}} days · renewal reminder set",
+      "commission": "Commission {{pct}}% on rent collected"
+    }
+  },
+  "channels": {
+    "kicker": "Channel sync",
+    "title": "Connected to Airbnb & Booking.com",
+    "subtitle": "Reservations, availability and rates move both ways, so your calendar is always the same everywhere and every booking arrives with its commission worked out.",
+    "brand": "Velvet Keys",
+    "status": "Synced with both channels",
+    "inbound": "In",
+    "outbound": "Out",
+    "events": {
+      "booking": "New booking · {{platform}}",
+      "stay": "{{property}} · {{nights}} nights",
+      "commission": "Commission {{pct}}% · {{amount}}",
+      "availability": "Availability updated on both channels",
+      "blocked": "{{property}} · {{from}} to {{to}} blocked",
+      "rate": "Nightly rate updated on both channels",
+      "rateDetail": "{{property}} · {{amount}} / night"
+    },
+    "points": {
+      "twoWay": {
+        "title": "Two-way sync",
+        "desc": "Bookings come in and availability and rates go out, without anyone retyping a thing."
+      },
+      "noDoubleBookings": {
+        "title": "No double bookings",
+        "desc": "A night booked on one platform closes on the other within moments."
+      },
+      "commission": {
+        "title": "Commission included",
+        "desc": "Each booking arrives with its gross amount and the commission it earns."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "How it works",
+    "title": "Three steps to a clear ledger",
+    "subtitle": "From the first property to the monthly statement, in a few minutes of setup and no spreadsheets.",
+    "step1": {
+      "phase": "Step 01",
+      "tag": "Setup",
+      "title": "Add your properties",
+      "body": "Add each property as short-term, long-term or both, with its owner, its target revenue and the commission you take.",
+      "cardTitle": "New property",
+      "property": "The Aurora Penthouse",
+      "propertyMeta": "4 suites · Marrakesh",
+      "target": "Monthly revenue target",
+      "perMonth": "{{amount}} / month",
+      "set": "Set"
+    },
+    "step2": {
+      "phase": "Step 02",
+      "tag": "Operations",
+      "title": "Bookings and rent flow in",
+      "body": "Airbnb and Booking.com reservations sync into one calendar, rent is tracked lease by lease, and every expense is logged with a photo.",
+      "cardTitle": "Today",
+      "active": "Active",
+      "booking": "Booking synced · Airbnb",
+      "rent": "Rent received · Youssef A.",
+      "expense": "Repair logged with photo"
+    },
+    "step3": {
+      "phase": "Step 03",
+      "tag": "Clarity",
+      "title": "Everyone sees the numbers",
+      "body": "Owners see gross revenue, commission and net profit in dirhams, and can download a PDF statement for their accountant at any time.",
+      "cardTitle": "Monthly statement",
+      "pdf": "PDF ready"
+    }
+  },
+  "numbers": {
+    "stat1Label": "Managed estate assets",
+    "stat1Value": "148M MAD",
+    "stat1Sub": "Short-term and long-term rentals across Morocco",
+    "stat2Label": "Average peak yield",
+    "stat2Value": "22.4%",
+    "stat2Sub": "Audited yields across high season and direct stays",
+    "stat3Label": "Channel sync latency",
+    "stat3Value": "< 800 ms",
+    "stat3Sub": "From an Airbnb or Booking.com change to your calendar",
+    "stat4Label": "Statement reliability",
+    "stat4Value": "99.98%",
+    "stat4Sub": "Every figure reconciles, from gross revenue to net profit"
+  },
+  "manifesto": {
+    "title": "The Velvet Keys Manifesto",
+    "quote": "“True luxury in asset stewardship is not excess—it is absolute control, quiet discretion, and immutable arithmetic.”",
+    "pillar1": "Discretion",
+    "pillar2": "Architectural Craft",
+    "pillar3": "Uncompromised Precision"
+  },
+  "bento": {
+    "badge": "Capabilities",
+    "title": "Engineered without compromise",
+    "subtitle": "Six foundations that keep operations calm and every figure verified.",
+    "heatmap": {
+      "tag": "Telemetry core",
+      "pill": "Live rates",
+      "title": "Occupancy and demand heatmap",
+      "body": "A multi-month calendar that shows high-season pressure, event peaks and nightly rates across your properties.",
+      "matrix": "Peak season heatmap",
+      "peak": "Peak rate {{amount}} / night",
+      "baseline": "Baseline {{value}}",
+      "optimal": "Optimal rate reached",
+      "visibility": "Portfolio visibility",
+      "live": "Live feed"
+    },
+    "pdf": {
+      "tag": "Accountant-grade",
+      "title": "One-click PDF statements",
+      "body": "Print-ready owner statements in Moroccan dirhams, with the short-term and long-term split and the commission line, for owners and their accountants.",
+      "meta": "Net profit {{amount}} · Commission included",
+      "export": "Export",
+      "footer": "No manual spreadsheets"
+    },
+    "calendar": {
+      "tag": "Synchronization",
+      "title": "Unified calendar",
+      "airbnb": "Airbnb · 5 nights",
+      "booking": "Booking.com · 3 nights",
+      "body": "Bookings from every channel on one calendar, without collisions."
+    },
+    "repairs": {
+      "tag": "Ground integrity",
+      "title": "Photo-logged repairs",
+      "job": "Marble polishing",
+      "verified": "Verified",
+      "disbursed": "Disbursed:",
+      "body": "Every contractor payment is tied to photographic proof before it is approved."
+    },
+    "switcher": {
+      "tag": "Portfolios",
+      "title": "Property switcher",
+      "active": "Active",
+      "body": "Move between city apartments, coastal villas and riads in one click."
+    },
+    "commission": {
+      "tag": "Transparent earnings",
+      "title": "Commission and net profit",
+      "body": "Set a commission per owner. Every statement shows gross revenue, the short-term and long-term split, the commission, the costs and the net profit, in dirhams.",
+      "footer": "STR and LTR on one statement"
+    }
+  },
+  "getStarted": {
+    "badge": "Get started",
+    "title": "Start with Velvet Keys",
+    "sub": "Create your account and choose how you will use it. You can set up your first property in a few minutes.",
+    "chooseLabel": "I am…",
+    "owner": {
+      "title": "I own properties",
+      "desc": "See what you earn across short-term and long-term rentals, with the commission shown.",
+      "cta": "Sign up as an owner"
+    },
+    "conciergerie": {
+      "title": "I manage properties",
+      "desc": "Run owners, bookings, leases and your commission from one desk.",
+      "cta": "Sign up as a conciergerie"
+    },
+    "cta": "Get started",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "note": "Available in English, French and Arabic.",
+    "imageAlt": "Private luxury residence interior",
+    "panelTag": "Velvet Keys",
+    "panelTitle": "Absolute Control",
+    "panelSub": "Short-term and long-term rentals on one ledger, in dirhams."
+  },
+  "footer": {
+    "wordmark": "VELVET KEYS",
+    "tagline": "Absolute Control",
+    "editorial": "Velvet Keys · Absolute Control. Quiet luxury rental-management and estate stewardship for Morocco.",
+    "copyright": "© 2026 Velvet Keys. All rights reserved.",
+    "locations": "Morocco · Casablanca · Marrakech · Tangier",
+    "signUp": "Sign up",
+    "signIn": "Sign in",
+    "linksLabel": "Account"
+  }
+}

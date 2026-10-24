@@ -1,0 +1,153 @@
+{
+  "pdf": {
+    "page": "Page {{page}} sur {{total}}",
+    "ownerReport": {
+      "subtitle": "Relevé propriétaire",
+      "title": "Rapport financier propriétaire",
+      "titleSummary": "Rapport financier propriétaire · Synthèse",
+      "confidential": "Confidentiel",
+      "reference": "Référence {{ref}}",
+      "generatedOn": "Généré le {{date}}",
+      "preparedFor": "Établi pour",
+      "period": "Période",
+      "properties": "Biens",
+      "cities": "Villes",
+      "intro": "Performance d'exploitation de votre portefeuille sur la période, en dirhams marocains (MAD).",
+      "summaryTitle": "Synthèse",
+      "grossRevenue": "Revenu brut",
+      "grossRevenueNote": "Réservations STR et loyers LTR",
+      "commission": "Commission",
+      "commissionNote": "{{share}} du revenu brut",
+      "operatingCosts": "Charges d'exploitation",
+      "operatingCostsNote": "Salaires, charges et réparations",
+      "netProfit": "Bénéfice net",
+      "netProfitNote": "{{margin}} de marge nette",
+      "statementTitle": "Compte de résultat",
+      "colLine": "Ligne",
+      "colAmount": "Montant",
+      "colShare": "Part du brut",
+      "lineStr": "Revenus des réservations STR",
+      "lineLtr": "Loyers LTR",
+      "lineGross": "Revenu brut",
+      "lineCommission": "Commission de la conciergerie",
+      "linePayroll": "Salaires",
+      "lineUtilities": "Charges (eau, électricité…)",
+      "lineRepairs": "Réparations",
+      "lineNet": "Bénéfice net",
+      "breakdownTitle": "Détail par bien",
+      "colProperty": "Bien",
+      "colStr": "STR",
+      "colLtr": "LTR",
+      "colGross": "Brut",
+      "colCommission": "Commission",
+      "colOccupancy": "Occupation STR",
+      "colNet": "Net",
+      "total": "Total",
+      "notesTitle": "Notes",
+      "noteNet": "Le bénéfice net est le revenu brut (STR et LTR) moins la commission, les salaires, les charges et les réparations.",
+      "noteSolo": "Portefeuille en gestion directe : aucune commission de conciergerie ne s'applique.",
+      "noteOccupancy": "L'occupation STR est la part des nuitées de courte durée qui ont été réservées."
+    }
+  },
+  "email": {
+    "common": {
+      "greeting": "Bonjour {{name}},",
+      "greetingAnonymous": "Bonjour,",
+      "ctaFallback": "Le bouton ne fonctionne pas ? Copiez ce lien dans votre navigateur :",
+      "automated": "Ceci est un message automatique de {{brand}}. Merci de ne pas y répondre.",
+      "sentVia": "Envoyé par {{issuer}} via {{brand}}.",
+      "invoice": "Facture",
+      "period": "Période",
+      "amount": "Montant",
+      "amountInclVat": "Montant TTC",
+      "dueDate": "Échéance",
+      "paidOn": "Date du paiement",
+      "bankTitle": "Coordonnées bancaires du virement",
+      "beneficiary": "Bénéficiaire",
+      "rib": "RIB",
+      "reference": "Référence du virement"
+    },
+    "invitation": {
+      "subject": "{{inviter}} vous invite sur {{brand}}",
+      "preview": "Votre invitation privée à {{brand}}",
+      "title": "Vous êtes invité",
+      "intro": {
+        "owner": "{{inviter}} vous invite à suivre vos biens sur {{brand}} : revenus, occupation et bénéfice net au même endroit.",
+        "conciergerie": "{{inviter}} invite votre conciergerie à gérer son bien sur {{brand}}.",
+        "tenant": "{{inviter}} vous invite sur {{brand}}, où vous retrouverez votre bail et vos factures de loyer."
+      },
+      "role": "Votre rôle",
+      "property": "Bien",
+      "expires": "Cette invitation est valable jusqu'au {{date}}.",
+      "cta": "Accepter l'invitation",
+      "ignore": "Si vous n'attendiez pas cette invitation, vous pouvez ignorer cet e-mail."
+    },
+    "passwordReset": {
+      "subject": "Réinitialisez votre mot de passe {{brand}}",
+      "preview": "Choisissez un nouveau mot de passe pour votre compte",
+      "title": "Réinitialisez votre mot de passe",
+      "intro": "Nous avons reçu une demande de réinitialisation du mot de passe de votre compte {{brand}}. Choisissez-en un nouveau avec le bouton ci-dessous.",
+      "expires": "Ce lien est valable {{duration}}.",
+      "cta": "Choisir un nouveau mot de passe",
+      "ignore": "Si vous n'êtes pas à l'origine de cette demande, ignorez cet e-mail. Votre mot de passe ne changera pas."
+    },
+    "invoiceIssued": {
+      "subject": "Facture {{number}} de {{brand}}",
+      "subjectProForma": "Facture pro forma {{number}} de {{brand}}",
+      "preview": "{{amount}} à régler avant le {{date}}",
+      "title": "Votre facture de {{month}}",
+      "intro": "Votre facture d'abonnement {{brand}} pour {{month}} est disponible. Merci de la régler par virement bancaire avant le {{date}}.",
+      "proForma": "Il s'agit d'une facture pro forma tant que nos informations légales ne sont pas enregistrées.",
+      "terms": "Si nous n'avons pas reçu le paiement 8 jours après l'émission de la facture, votre compte passe en lecture seule.",
+      "cta": "Voir la facture"
+    },
+    "paymentReminder": {
+      "subject": "Rappel : la facture {{number}} est due le {{date}}",
+      "preview": "La facture {{number}} n'est pas encore payée",
+      "title": "Rappel de paiement",
+      "intro": "La facture {{number}} de {{month}} ({{amount}}) n'est pas encore payée. Elle est due le {{date}}.",
+      "warning": "Si nous n'avons pas reçu votre virement avant le {{date}}, votre compte passe en lecture seule : vous pourrez toujours vous connecter et tout consulter, mais plus rien ajouter ni modifier.",
+      "alreadyPaid": "Déjà payée ? Merci. Un virement peut prendre un ou deux jours, vous n'avez rien d'autre à faire.",
+      "cta": "Voir la facture"
+    },
+    "accountReadOnly": {
+      "subject": "Votre compte {{brand}} est en lecture seule",
+      "preview": "La facture {{number}} est en retard",
+      "title": "Votre compte est en lecture seule",
+      "intro": "La facture {{number}} ({{amount}}) était due le {{date}} et nous n'avons pas encore reçu le paiement.",
+      "effect": "Vous et votre équipe pouvez toujours vous connecter et tout consulter, mais vous ne pouvez plus rien ajouter ni modifier tant que la facture n'est pas payée. Les propriétaires et locataires rattachés à votre compte conservent leur accès.",
+      "how": "Payez par virement bancaire avec les coordonnées de la facture. Nous rétablissons l'accès complet dès que le paiement est enregistré.",
+      "cta": "Voir la facture"
+    },
+    "paymentConfirmed": {
+      "subject": "Paiement reçu pour la facture {{number}}",
+      "subjectRestored": "Paiement reçu : votre accès {{brand}} est rétabli",
+      "preview": "Merci, {{amount}} reçus",
+      "title": "Paiement reçu",
+      "titleRestored": "Votre accès est rétabli",
+      "intro": "Merci. Nous avons enregistré votre paiement de {{amount}} pour la facture {{number}}.",
+      "restored": "Votre compte est de nouveau actif : vous et votre équipe pouvez ajouter et modifier comme d'habitude.",
+      "cta": "Ouvrir {{brand}}"
+    },
+    "leaseRenewal": {
+      "subject": "Bail bientôt terminé : {{tenant}} · {{unit}}",
+      "preview": "Le bail de {{tenant}} se termine le {{date}}",
+      "title": "Un bail arrive à échéance",
+      "intro": "Le bail de {{tenant}} pour {{unit}} ({{property}}) se termine le {{date}}, {{relative}}.",
+      "tenant": "Locataire",
+      "unit": "Logement",
+      "endDate": "Fin du bail",
+      "rent": "Loyer mensuel",
+      "hint": "Renouvelez-le avec une nouvelle date de fin et un nouveau loyer, ou laissez-le se terminer.",
+      "cta": "Examiner le bail"
+    },
+    "rentInvoice": {
+      "subject": "Facture de loyer {{number}} · {{month}}",
+      "preview": "{{amount}} à régler avant le {{date}}",
+      "title": "Votre loyer de {{month}}",
+      "intro": "{{issuer}} a émis votre facture de loyer pour {{unit}}. Merci de la régler par virement bancaire avant le {{date}}.",
+      "property": "Bien",
+      "cta": "Voir la facture"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Roadmap
+
+- [x] Add a reusable month/week master calendar with local operational events.
+- [x] Add multi-unit filtering, calendar navigation, and all four event markers.
+- [x] Add an accessible day-detail side panel and clean empty states.
+- [x] Add a Concierge-only calendar route and navigation entry.
+- [x] Verify build health and desktop/mobile interactions.
+- [x] Add maintenance log with photo thumbnails, status changer, and assigned workers.
+- [x] Implement jade/gold/ruby urgency pills and prominent ruby alerts for critical repairs.
+- [x] Build "Log new repair" modal with multi-image drag-and-drop and thumbnail preview grid.
+- [x] Add expense tracking section with worker pay and utility bill line-item tables and entry dialogs.
+- [x] Implement clean empty states for repairs, worker disbursements, and utility bills.
+- [x] Add concierge-only maintenance route (/maintenance) and navigation entry.
+- [x] Build Executive Financial KPI overview screen with portfolio and period selectors.
+- [x] Implement four KPI cards (Gross Revenue, Net Profit with interactive formula breakdown, Staff Payroll, Occupancy Rate with Jade Mint accent).
+- [x] Add trend indicators (arrow + percentage vs previous period) and gold numerals.
+- [x] Build sortable portfolio breakdown table with column sort, unit search, and margin badges.
+- [x] Apply restrained quiet-luxury animations and gold glow hover states.
+- [x] Build Occupancy & Demand Heatmap with month, quarter, and year zoom views.
+- [x] Implement on-brand warm gold intensity scale (Level 0 charcoal to Level 4 luminescent gold).
+- [x] Add subtle weekend surge dots and luxury event markers.
+- [x] Implement interactive hover/tap tooltips with date, occupancy %, ADR, and properties booked count.
+- [x] Add portfolio/property filter and gold scale legend.
+- [x] Add dynamic-pricing opportunity purpose callout in the Executive Dashboard.
+- [x] Add "Generate Report" primary gold button to Executive KPI dashboard and header.
+- [x] Build report configuration modal (date range picker, property multi-select, summary/detailed toggle).
+- [x] Build branded, print-elegant report preview screen (Ebon Black background, Diamond White text, Cinzel serif typography, gold rule lines, and "H" monogram).
+- [x] Implement cover block, print-friendly KPI summary, property revenue breakdown table, and one-line net profit statement.
+- [x] Add "Export as PDF" (print-ready) and "Email report" dispatch modal.
+- [x] Build Public Landing Page (Module 0) with quiet luxury editorial tone, Hero, Two-Role Explainer with mockup frames, Manifesto block, soft closing CTA, and minimal footer.
+- [x] Implement Global Design System & Tokens (Module 1 revised): Ebon Black #0B0B0B, Deep Charcoal #141414, Chiseled Gold #D4AF37, Imperial Ruby #8B002B, Jade Mint #A2E8DD, Diamond White #F8F9FA, and Cinzel/Cormorant typography.
+- [x] Add textural layers to canvas (fine noise grain overlay, architectural hairline gold motif, and subtle marble veining).
+- [x] Create bespoke luxury BrandMark component with engraved monogram and metallic gold bevels.
+- [x] Redesign navigation shell (AppShell) with property/unit switcher and user avatar ONLY in top bar; tuck demo simulator in collapsed footer popover.
+- [x] Build base component library: buttons (primary gold, ghost, ruby), custom-styled inputs, custom single & range date pickers (zero OS chrome), dropdowns, dialogs, status pills, empty states, and shimmer skeletons.
+- [x] Redesign Sign-in screen with asymmetric brand craft, discretion manifesto, and quiet luxury storytelling.
+- [x] Upgrade Booking Intake form with custom date picker and quiet luxury card surface.
+- [x] Add Design System proof screen (/design-system) demonstrating all base components and tokens.
+- [x] Implement Global Motion System (Module 1B): Framer Motion cubic-bezier(0.25, 1, 0.5, 1) global easing, page transitions with upward rise & staggered children, single-play scroll reveals, KPI count-ups, sequential heatmap reveals (20ms stagger), 3D card tilt (max 4deg) with gold glow, button shimmer sweeps, sliding active sidebar indicator, and 24s ambient gold drift.
+- [x] Build Fine Gold Architectural Line-Art Illustration System: 1–1.5px Chiseled Gold (#D4AF37) strokes with SVG draw-in animation for bookings doorway, repairs toolkit, expense column ledger, dispatches folded sheet, building facade on login screen, architectural section dividers, and 404 perspective archway.
+- [x] Integrate Chiaroscuro Luxury Imagery Layer: Studio-lit dark luxury interiors (penthouse at dusk, Nero Marquina marble bath, graphite master suite) with Ken Burns zoom (1.0 -> 1.05), dark gradient overlays (40-80%), blur-to-sharp lazy loading, and swappable centralized config.
+- [x] Implement prefers-reduced-motion support across all motion primitives, disabling tilt, shimmer, parallax, and count-ups while retaining subtle fades.
+- [x] Complete Senior Redesign: Separate isolated route trees (/owner/* vs /concierge/*) with strict role guards and dedicated home redirects.
+- [x] Account-derived mock authentication (owner@velvetkeys.demo -> /owner/overview, concierge@velvetkeys.demo -> /concierge/today) with independent sidebar navigations.
+- [x] Moroccan Dirham (MAD) scale across all mock data, P&Ls, ledger tables, inputs ("MAD" suffix), and formatMAD() utilities (zero decimals on dashboards, two on forms/invoices).
+- [x] Owner Portal: Asymmetric Net Profit Bento Hero, 5-bucket Demand Heatmap, Financials dual-line & cost donut breakdown, deep Property detail suites, and live branded Reports preview.
+- [x] Concierge Portal: 07:00-23:00 Today operational timeline with live jade now-indicator and single-click actions, 3-step inline Booking stepper with conflict detection, Hotel PMS reservation tape chart calendar, 4-stage Maintenance Kanban board with pulsing urgency pills, and weekly utility/worker Expense management.
+- [x] Global 480px slide-over detail drawer, Cmd/Ctrl+K command palette, and floating concierge quick-action menu.

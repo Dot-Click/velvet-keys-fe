@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#161412"/>
+      <stop offset="100%" stop-color="#0B0B0B"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="20" y1="10" x2="108" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF2B2"/>
+      <stop offset="22%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#9E781D"/>
+      <stop offset="100%" stop-color="#6C4E08"/>
+    </linearGradient>
+    <radialGradient id="diamondGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FFF6CC"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </radialGradient>
+  </defs>
+  <!-- Background rounded rect -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect width="128" height="128" rx="28" fill="none" stroke="url(#gold)" stroke-width="1.5" stroke-opacity="0.35"/>
+  
+  <!-- Centered Key Mark scaled into 128x128 with 50% clear space padding -->
+  <g transform="translate(36, 14) scale(0.70)">
+    <!-- Outer Ring -->
+    <circle cx="40" cy="28" r="22" stroke="url(#gold)" stroke-width="2.4" fill="none"/>
+    <circle cx="40" cy="28" r="18" stroke="url(#gold)" stroke-width="1.2" stroke-opacity="0.85" fill="none"/>
+    
+    <!-- VK Monogram -->
+    <path d="M 29 20 L 37 36 L 44 28" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 44 20 V 36" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <path d="M 44 28 L 52 20" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <path d="M 44 28 L 52 36" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    
+    <!-- Diamond Highlight -->
+    <polygon points="44,25 47,28 44,31 41,28" fill="url(#diamondGlow)"/>
+    <circle cx="44" cy="28" r="0.8" fill="#FFFFFF"/>
+    
+    <!-- Key Collar -->
+    <path d="M 35 52 H 45" stroke="url(#gold)" stroke-width="2.4" stroke-linecap="round"/>
+    
+    <!-- Key Shaft -->
+    <line x1="40" y1="52" x2="40" y2="116" stroke="url(#gold)" stroke-width="3.0" stroke-linecap="round"/>
+    
+    <!-- Key Teeth -->
+    <path d="M 40 100 H 50" stroke="url(#gold)" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M 40 108 H 52" stroke="url(#gold)" stroke-width="2.8" stroke-linecap="round"/>
+    
+    <!-- Shaft Tip -->
+    <circle cx="40" cy="117" r="1.6" fill="url(#gold)"/>
+  </g>
+</svg>

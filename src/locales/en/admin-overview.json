@@ -1,0 +1,145 @@
+{
+  "eyebrow": "Platform",
+  "title": "Overview",
+  "asOf": "As of {{date}}",
+  "kpis": "Key figures",
+  "kpi": {
+    "mrr": "MRR excl. VAT",
+    "mrrDetail": "Free months deducted",
+    "clients": "Active clients",
+    "newThisMonth_one": "+{{count}} new this month",
+    "newThisMonth_other": "+{{count}} new this month",
+    "units": "Units",
+    "str": "STR",
+    "ltr": "LTR",
+    "synced": "Synced",
+    "unitsLabel": "{{str}} STR, {{ltr}} LTR, {{synced}} synced units",
+    "outstanding": "Outstanding",
+    "overdueCount_one": "{{count}} overdue (all-time) · {{amount}}",
+    "overdueCount_other": "{{count}} overdue (all-time) · {{amount}}",
+    "noOverdue": "Nothing overdue",
+    "freeSync": "Free sync slots",
+    "slotsLeft_one": "{{count}} slot left",
+    "slotsLeft_other": "{{count}} slots left",
+    "vsLastMonth": "vs last month",
+    "vsPrevious": "vs previous period",
+    "points": "{{value}} pts"
+  },
+  "mrrChart": {
+    "title": "MRR, last 12 months",
+    "label": "Monthly recurring revenue excl. VAT for the last 12 months, in MAD",
+    "sync": "Sync"
+  },
+  "cycle": {
+    "title": "This billing cycle",
+    "empty": "No invoice has been issued yet.",
+    "caption": "{{period}} period · issued {{date}}",
+    "issued": "Issued",
+    "paid": "Paid",
+    "dueThisWeek": "Due this week",
+    "overdue": "Overdue (this cycle)"
+  },
+  "upcoming": {
+    "title": "Upcoming in the next 30 days",
+    "today": "Today",
+    "more_one": "+{{count}} more on this day",
+    "more_other": "+{{count}} more on this day",
+    "empty": "Nothing scheduled in the next 30 days.",
+    "legend": {
+      "free_end": "Free period ends",
+      "invoice_due": "Invoice due",
+      "read_only": "Read-only trigger"
+    },
+    "kind": {
+      "free_end": "{{product}} free period ends",
+      "invoice_due": "Invoice due",
+      "read_only": "Account turns read-only if unpaid"
+    },
+    "product": {
+      "str": "STR",
+      "ltr": "LTR",
+      "sync": "Sync"
+    }
+  },
+  "alerts": {
+    "title": "Needs attention",
+    "overdue": "Overdue invoices",
+    "read_only": "Read-only accounts",
+    "ending": "Free periods ending within 7 days",
+    "none": "Nothing to flag.",
+    "sendReminder": "Send reminder",
+    "reminded": "Reminder sent",
+    "markPaid": "Mark paid",
+    "openClient": "Open client",
+    "reminderSent": "Reminder sent to {{client}}.",
+    "reminderFailed": "The reminder could not be sent.",
+    "daysOverdue_one": "{{count}} day overdue",
+    "daysOverdue_other": "{{count}} days overdue",
+    "readOnlySince": "Read-only until {{amount}} is paid",
+    "readOnlyNoInvoice": "Read-only · no unpaid invoice on file",
+    "freeEnds": "{{product}} free until {{date}} ·",
+    "daysLeft_one": "{{count}} day left",
+    "daysLeft_other": "{{count}} days left",
+    "lastDayToday": "last free day today"
+  },
+  "activity": {
+    "title": "Recent activity",
+    "empty": "No activity yet.",
+    "signup": "joined Velvet Keys:",
+    "payment": "marked paid",
+    "offer": "granted a free offer to",
+    "ban": "banned",
+    "unban": "unbanned",
+    "delist": "delisted a property of",
+    "relist": "relisted a property of",
+    "price": "changed the price of",
+    "reminder": "sent a payment reminder for",
+    "priceTarget": "{{product}} units",
+    "someone": "An admin",
+    "loadingMore": "Loading moderation and payment events…"
+  },
+  "revenue": {
+    "eyebrow": "Billing",
+    "title": "Revenue",
+    "subtitle": "Subscription invoices by the month they were issued.",
+    "kpiBilled": "Billed",
+    "kpiBilledDetail": "Incl. VAT",
+    "kpiCollected": "Collected",
+    "kpiOutstanding": "Not yet collected",
+    "kpiRate": "Collection rate",
+    "emptyTitle": "No invoices yet",
+    "emptyBody": "Revenue appears here as soon as the first invoice is issued."
+  },
+  "range": {
+    "label": "Period",
+    "3": "3M",
+    "6": "6M",
+    "12": "12M",
+    "ytd": "YTD",
+    "custom": "Custom",
+    "from": "From",
+    "to": "To",
+    "summary": "{{from}} – {{to}}"
+  },
+  "revenueChart": {
+    "title": "Revenue by product, excl. VAT",
+    "label": "Subscription revenue by product excl. VAT, with the amount collected, each month in MAD",
+    "sync": "Sync",
+    "collected": "Collected (incl. VAT)",
+    "noInvoices": "No invoices issued",
+    "rate": "{{rate}} collected"
+  },
+  "table": {
+    "title": "Breakdown by month",
+    "note": "STR, LTR and sync are excl. VAT; billed and collected include VAT. Click a month to see its invoices.",
+    "month": "Month",
+    "str": "STR",
+    "ltr": "LTR",
+    "sync": "Sync",
+    "vat": "VAT",
+    "billed": "Billed",
+    "collected": "Collected",
+    "rate": "Rate",
+    "total": "Total"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "outstanding": "Outstanding",
+    "outstandingHint": "{{count}} to collect",
+    "overdue": "Overdue",
+    "overdueHint": "{{count}} overdue",
+    "dueWeek": "Due this week",
+    "dueWeekHint": "{{count}} due by {{date}}",
+    "collected": "Collected this month",
+    "collectedHint": "{{count}} paid in {{month}}"
+  },
+  "chip": {
+    "free": "Free"
+  },
+  "period": {
+    "chip": "Issued {{month}}",
+    "dismiss": "Remove the period filter"
+  },
+  "col": {
+    "issued": "Issued",
+    "paid": "Paid",
+    "days": "{{count}} d"
+  },
+  "actions": {
+    "markPaid": "Mark paid",
+    "sendReminder": "Send reminder",
+    "downloadPdf": "Download PDF",
+    "copyReference": "Copy transfer reference",
+    "copied": "Reference {{reference}} copied",
+    "copyFailed": "Could not copy the reference.",
+    "reminderSent": "Reminder sent to {{client}} for {{number}}.",
+    "reminderNothing": "Only sent and overdue invoices get a reminder.",
+    "void": "Void"
+  },
+  "generate": {
+    "action": "Generate",
+    "result": "Invoices generated: {{created}} created, {{skipped}} skipped",
+    "failed": "Couldn't generate invoices",
+    "badPeriod": "Enter the period as YYYY-MM (for example 2026-10)."
+  },
+  "bulk": {
+    "selected": "{{count}} selected",
+    "markSelected": "Mark selected as paid",
+    "sendReminders": "Send reminders",
+    "clear": "Clear selection",
+    "remindersSent": "Reminders sent for {{count}} invoices.",
+    "title": "Mark selected invoices as paid",
+    "description": "Give each transfer its payment date and bank reference.",
+    "invoice": "Invoice",
+    "client": "Client",
+    "amount": "Amount",
+    "paidOn": "Payment date",
+    "reference": "Bank reference",
+    "referencePlaceholder": "Bank statement reference",
+    "referenceError": "At least {{count}} characters.",
+    "dateError": "Invalid date.",
+    "total": "Total",
+    "confirm": "Mark {{count}} as paid",
+    "saving": "Saving...",
+    "done": "{{count}} invoices marked as paid.",
+    "partial": "{{done}} marked as paid, {{failed}} failed. Try the rest again.",
+    "failed": "Could not save the payments."
+  },
+  "detail": {
+    "breadcrumb": "Invoices",
+    "sendReminder": "Send reminder",
+    "copyReference": "Copy reference",
+    "downloadPdf": "Download PDF",
+    "freeNote": "Free · launch offer: nothing to collect",
+    "paymentTitle": "Payment",
+    "markedBy": "Marked by",
+    "markedOn": "Marked on {{date}}",
+    "notPaid": "No payment recorded yet.",
+    "notRequired": "No payment needed: this invoice is free.",
+    "remindersTitle": "Reminders history",
+    "reminderDelivered": "Sent"
+  },
+  "void": {
+    "action": "Void",
+    "title": "Void invoice",
+    "description": "This invoice will no longer be payable.",
+    "confirm": "Void",
+    "done": "Invoice voided."
+  }
+}

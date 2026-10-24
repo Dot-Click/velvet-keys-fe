@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "outstanding": "Encours",
+    "outstandingHint": "{{count}} à encaisser",
+    "overdue": "En retard",
+    "overdueHint": "{{count}} en retard",
+    "dueWeek": "Échéance cette semaine",
+    "dueWeekHint": "{{count}} d'ici le {{date}}",
+    "collected": "Encaissé ce mois-ci",
+    "collectedHint": "{{count}} payées en {{month}}"
+  },
+  "chip": {
+    "free": "Gratuites"
+  },
+  "period": {
+    "chip": "Émises en {{month}}",
+    "dismiss": "Retirer le filtre de période"
+  },
+  "col": {
+    "issued": "Émise",
+    "paid": "Payée",
+    "days": "{{count}} j"
+  },
+  "actions": {
+    "markPaid": "Marquer payée",
+    "sendReminder": "Envoyer un rappel",
+    "downloadPdf": "Télécharger le PDF",
+    "copyReference": "Copier la référence de virement",
+    "copied": "Référence {{reference}} copiée",
+    "copyFailed": "Impossible de copier la référence.",
+    "reminderSent": "Rappel envoyé à {{client}} pour {{number}}.",
+    "reminderNothing": "Seules les factures envoyées ou en retard reçoivent un rappel.",
+    "void": "Annuler"
+  },
+  "generate": {
+    "action": "Générer",
+    "result": "Factures générées : {{created}} créées, {{skipped}} ignorées",
+    "failed": "Impossible de générer les factures",
+    "badPeriod": "Saisissez la période au format AAAA-MM (par exemple 2026-10)."
+  },
+  "bulk": {
+    "selected": "{{count}} sélectionnée(s)",
+    "markSelected": "Marquer la sélection comme payée",
+    "sendReminders": "Envoyer des rappels",
+    "clear": "Effacer la sélection",
+    "remindersSent": "Rappels envoyés pour {{count}} factures.",
+    "title": "Marquer les factures sélectionnées comme payées",
+    "description": "Indiquez la date de paiement et la référence bancaire de chaque virement.",
+    "invoice": "Facture",
+    "client": "Client",
+    "amount": "Montant",
+    "paidOn": "Date de paiement",
+    "reference": "Référence bancaire",
+    "referencePlaceholder": "Référence du relevé bancaire",
+    "referenceError": "{{count}} caractères minimum.",
+    "dateError": "Date invalide.",
+    "total": "Total",
+    "confirm": "Marquer {{count}} comme payée(s)",
+    "saving": "Enregistrement...",
+    "done": "{{count}} factures marquées comme payées.",
+    "partial": "{{done}} marquée(s) payée(s), {{failed}} en échec. Réessayez pour le reste.",
+    "failed": "Impossible d'enregistrer les paiements."
+  },
+  "detail": {
+    "breadcrumb": "Factures",
+    "sendReminder": "Envoyer un rappel",
+    "copyReference": "Copier la référence",
+    "downloadPdf": "Télécharger le PDF",
+    "freeNote": "Gratuite · offre de lancement : rien à encaisser",
+    "paymentTitle": "Paiement",
+    "markedBy": "Enregistré par",
+    "markedOn": "Enregistré le {{date}}",
+    "notPaid": "Aucun paiement enregistré pour le moment.",
+    "notRequired": "Aucun paiement requis : cette facture est gratuite.",
+    "remindersTitle": "Historique des rappels",
+    "reminderDelivered": "Envoyé"
+  },
+  "void": {
+    "action": "Annuler",
+    "title": "Annuler la facture",
+    "description": "Cette facture ne pourra plus être payée.",
+    "confirm": "Annuler",
+    "done": "Facture annulée."
+  }
+}

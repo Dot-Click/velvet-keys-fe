@@ -1,0 +1,445 @@
+{
+  "accountStatus": {
+    "active": "Actif",
+    "readonly": "Lecture seule",
+    "banned": "Banni"
+  },
+  "accountType": {
+    "owner": "Propriétaire",
+    "conciergerie": "Conciergerie"
+  },
+  "offers": {
+    "none": "Aucune offre",
+    "str": "STR",
+    "ltr": "LTR",
+    "str_ltr": "STR + LTR",
+    "str_sync_ltr": "Pack complet"
+  },
+  "products": {
+    "str": "STR",
+    "ltr": "LTR",
+    "sync": "Synchro"
+  },
+  "actions": {
+    "cancel": "Annuler",
+    "saving": "Enregistrement…"
+  },
+  "errors": {
+    "saveFailed": "Cette modification n'a pas pu être enregistrée. Réessayez."
+  },
+  "filters": {
+    "all": "Tous",
+    "clear": "Effacer les filtres"
+  },
+  "reason": {
+    "label": "Motif (obligatoire)",
+    "placeholder": "Pourquoi cette décision ? Elle reste dans le dossier du client.",
+    "hint": "Conservé dans l'historique. Au moins {{count}} caractères.",
+    "tooShort": "Écrivez au moins {{count}} caractères."
+  },
+  "clients": {
+    "eyebrow": "Comptes",
+    "title": "Clients",
+    "count_one": "{{shown}} client sur {{count}}",
+    "count_many": "{{shown}} clients sur {{count}}",
+    "count_other": "{{shown}} clients sur {{count}}",
+    "search": "Rechercher un client",
+    "searchPlaceholder": "Nom ou e-mail",
+    "filterType": "Type",
+    "filterStatus": "Statut",
+    "filterOffer": "Offre",
+    "noMatchTitle": "Aucun client ne correspond",
+    "noMatchBody": "Essayez une autre recherche ou effacez les filtres.",
+    "colClient": "Client",
+    "colType": "Type",
+    "colSignup": "Inscription",
+    "colUnits": "Logements",
+    "unitsBreakdown": "STR / LTR / Synchro",
+    "unitsLabel": "{{str}} STR, {{ltr}} LTR, {{synced}} synchronisés",
+    "colSynced": "Synchro",
+    "colOffer": "Offre",
+    "colFreeUntil": "Offert jusqu'au",
+    "colStatus": "Statut",
+    "colLanguage": "Langue",
+    "freeRunning": "Période offerte en cours",
+    "freeEnded": "Période offerte terminée"
+  },
+  "client": {
+    "back": "Tous les clients",
+    "signedUp": "Inscrit le {{date}}",
+    "grantOffer": "Offrir des mois",
+    "ban": "Bannir",
+    "unban": "Réactiver",
+    "profile": "Profil",
+    "units": "Logements",
+    "holder": "Titulaire du compte",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "issuer": "Facture les locataires au nom de",
+    "accountId": "ID du compte",
+    "properties": "Biens listés",
+    "thisMonth": "Estimation {{month}}",
+    "exclVat": "HT",
+    "overdue": "Factures en retard",
+    "tabInvoices": "Factures ({{count}})",
+    "tabProperties": "Biens ({{count}})",
+    "tabUsers": "Utilisateurs ({{count}})",
+    "noInvoices": "Aucune facture pour l'instant.",
+    "noProperties": "Aucun bien pour l'instant.",
+    "noUsers": "Aucun utilisateur pour l'instant."
+  },
+  "timeline": {
+    "title": "Historique de l'offre",
+    "today": "Aujourd'hui",
+    "signup": "Inscription · {{offer}}",
+    "freeEnds": "Fin des mois offerts {{product}}",
+    "freeEnded": "Mois offerts {{product}} terminés",
+    "monthsOf_one": "+{{count}} mois {{product}}",
+    "monthsOf_many": "+{{count}} mois {{product}}",
+    "monthsOf_other": "+{{count}} mois {{product}}",
+    "action": {
+      "manual_offer": "Mois offerts accordés : {{months}}",
+      "ban": "Compte banni",
+      "unban": "Compte réactivé",
+      "delist": "Bien retiré",
+      "relist": "Bien remis en ligne"
+    },
+    "kind": {
+      "signup": "Compte créé"
+    }
+  },
+  "grant": {
+    "title": "Offrir des mois",
+    "description": "Mois offerts supplémentaires pour {{client}}. Pour chaque produit, ils commencent aujourd'hui, ou à la fin de la période offerte en cours.",
+    "months": "Mois offerts par produit",
+    "freeUntil": "Offert jusqu'au {{date}}",
+    "currentlyUntil": "Actuellement offert jusqu'au {{date}}",
+    "notFree": "Facturé au tarif normal",
+    "pickMonths": "Ajoutez au moins un mois.",
+    "monthCount_one": "{{count}} mois",
+    "monthCount_many": "{{count}} mois",
+    "monthCount_other": "{{count}} mois",
+    "fewer": "Un mois de {{product}} en moins",
+    "more": "Un mois de {{product}} en plus",
+    "confirm_one": "Offrir {{count}} mois",
+    "confirm_many": "Offrir {{count}} mois",
+    "confirm_other": "Offrir {{count}} mois",
+    "granted": "Mois offerts à {{client}}"
+  },
+  "ban": {
+    "banTitle": "Bannir {{client}} ?",
+    "banBody": "Toutes les personnes de ce compte sont bloquées à la connexion jusqu'à sa réactivation. Leurs données sont conservées.",
+    "unbanTitle": "Réactiver {{client}} ?",
+    "unbanBody": "Le compte peut de nouveau se connecter. Si une facture est encore en retard, il reste en lecture seule jusqu'au paiement.",
+    "banned": "{{client}} est banni",
+    "unbanned": "{{client}} peut de nouveau se connecter"
+  },
+  "invoices": {
+    "colPeriod": "Période",
+    "colNumber": "Facture",
+    "colTotal": "Total TTC",
+    "colStatus": "Statut",
+    "colIssued": "Émise",
+    "colDue": "Échéance",
+    "colPaid": "Payée",
+    "eyebrow": "Facturation",
+    "title": "Factures",
+    "count": "{{shown}} sur {{count}} factures · {{amount}} en attente",
+    "search": "Rechercher des factures",
+    "searchPlaceholder": "N° de facture ou client",
+    "filterLabel": "Filtrer par statut",
+    "chip": {
+      "all": "Toutes",
+      "sent": "Envoyées",
+      "overdue": "En retard",
+      "paid": "Payées",
+      "proforma": "Pro forma"
+    },
+    "colClient": "Client",
+    "colDaysOverdue": "Jours de retard",
+    "colActions": "Actions",
+    "proForma": "Pro forma",
+    "markPaid": "Marquer payée",
+    "noMatchTitle": "Aucune facture ne correspond",
+    "noMatchBody": "Essayez une autre recherche ou retirez le filtre."
+  },
+  "users": {
+    "colName": "Nom",
+    "colRole": "Rôle",
+    "colEmail": "E-mail",
+    "colPhone": "Téléphone",
+    "colLanguage": "Langue",
+    "colAccess": "Accès",
+    "role": {
+      "holder": "Titulaire",
+      "team": "Équipe",
+      "owner": "Propriétaire",
+      "tenant": "Locataire"
+    },
+    "access": {
+      "active": "Peut se connecter",
+      "invited": "Invité",
+      "not_invited": "Non invité"
+    }
+  },
+  "properties": {
+    "eyebrow": "Plateforme",
+    "title": "Biens",
+    "count_one": "{{shown}} bien sur {{count}} · {{delisted}} retiré(s)",
+    "count_many": "{{shown}} biens sur {{count}} · {{delisted}} retiré(s)",
+    "count_other": "{{shown}} biens sur {{count}} · {{delisted}} retiré(s)",
+    "search": "Rechercher un bien",
+    "searchPlaceholder": "Bien, client, propriétaire ou ville",
+    "filterStatus": "Statut",
+    "filterClient": "Client",
+    "listed": "En ligne",
+    "delisted": "Retiré",
+    "noMatchTitle": "Aucun bien ne correspond",
+    "noMatchBody": "Essayez une autre recherche ou effacez les filtres.",
+    "colProperty": "Bien",
+    "colClient": "Client",
+    "colOwner": "Propriétaire",
+    "colCity": "Ville",
+    "colUnits": "Logements",
+    "colStatus": "Statut",
+    "colModeration": "Dernière modération",
+    "colActions": "Actions",
+    "unitsMix": "{{total}} · {{str}} STR / {{ltr}} LTR",
+    "moderationNote": "{{action}} le {{date}} :",
+    "delist": "Retirer",
+    "relist": "Remettre en ligne",
+    "delistTitle": "Retirer {{property}} ?",
+    "delistBody": "Le bien n'apparaît plus dans les espaces de {{client}}. Ses réservations, baux et factures sont conservés.",
+    "relistTitle": "Remettre {{property}} en ligne ?",
+    "relistBody": "Le bien réapparaît dans les espaces de {{client}}.",
+    "delistedToast": "{{property}} retiré",
+    "relisted": "{{property}} remis en ligne"
+  },
+  "invoice": {
+    "eyebrow": "Facture",
+    "back": "Toutes les factures",
+    "print": "Imprimer / PDF",
+    "markPaid": "Marquer comme payée",
+    "previewTitle": "Aperçu de la facture",
+    "summaryTitle": "Résumé",
+    "client": "Client",
+    "openClient": "Ouvrir le client",
+    "accountStatus": "Compte",
+    "period": "Période de facturation",
+    "total": "Total TTC",
+    "due": "Échéance",
+    "daysOverdue": "Jours de retard",
+    "kind": "Type",
+    "kindProForma": "Pro forma",
+    "kindFinal": "Facture définitive",
+    "timelineTitle": "Historique du statut",
+    "paymentTitle": "Paiement reçu",
+    "paidOn": "Date du paiement",
+    "reference": "Référence bancaire",
+    "note": "Note",
+    "recordedBy": "Enregistré par {{name}} le {{date}}",
+    "notFoundTitle": "Facture introuvable",
+    "state": {
+      "done": "Fait",
+      "pending": "À venir",
+      "skipped": "Ignoré"
+    },
+    "steps": {
+      "issued": {
+        "title": "Facture émise",
+        "detail": "Paiement dû le {{date}}"
+      },
+      "reminder": {
+        "title": "E-mail de rappel · jour {{day}}",
+        "done": "Envoyé au titulaire du compte",
+        "pending": "Envoyé seulement si toujours impayée",
+        "skipped": "Inutile : payée avant le rappel"
+      },
+      "readonly": {
+        "title": "Lecture seule · jour {{day}}",
+        "done": "L'équipe du client peut consulter mais pas modifier",
+        "doneRestored": "L'équipe du client est restée en lecture seule jusqu'au paiement",
+        "pending": "Commence si toujours impayée",
+        "skipped": "Non atteint : payée à temps"
+      },
+      "paid": {
+        "title": "Payée",
+        "done": "Référence bancaire {{reference}}",
+        "doneNoReference": "Paiement reçu",
+        "pending": "En attente du virement"
+      }
+    },
+    "scheduled": "Prévu · {{date}}",
+    "notPaidYet": "Pas encore payée"
+  },
+  "markPaid": {
+    "title": "Marquer la facture comme payée",
+    "description": "Enregistrez le virement reçu pour {{number}}.",
+    "invoice": "Facture",
+    "client": "Client",
+    "amount": "Montant dû",
+    "paidOn": "Date du paiement",
+    "paidOnError": "Choisissez une date entre le {{from}} et aujourd'hui.",
+    "reference": "Référence bancaire",
+    "referencePlaceholder": "Telle qu'elle apparaît sur le relevé bancaire",
+    "referenceError": "Saisissez la référence bancaire (au moins {{count}} caractères).",
+    "note": "Note (facultatif)",
+    "notePlaceholder": "Tout ce que le prochain Admin doit savoir",
+    "restores": "{{client}} repasse de la lecture seule à actif.",
+    "stillReadOnly": "{{client}} reste en lecture seule tant que d'autres factures sont en retard.",
+    "confirm": "Marquer comme payée",
+    "done": "{{number}} marquée comme payée.",
+    "doneRestored": "{{number}} marquée comme payée. {{client}} est de nouveau actif.",
+    "doneStillReadOnly": "{{number}} marquée comme payée. {{client}} reste en lecture seule : d'autres factures sont encore en retard."
+  },
+  "pricing": {
+    "eyebrow": "Facturation",
+    "title": "Tarifs & offres",
+    "subtitle": "Prix par logement, offre de lancement et synchro de canaux offerte.",
+    "prices": {
+      "title": "Prix par logement",
+      "perUnit": "MAD par logement / mois, hors TVA",
+      "inForce": "En vigueur",
+      "newPrice": "Nouveau prix",
+      "upcoming": "À partir de {{month}} : {{price}}",
+      "invalid": "Saisissez un prix supérieur à 0, avec 2 décimales au maximum.",
+      "tooHigh": "Le maximum est {{max}}.",
+      "save": "Enregistrer les prix",
+      "reset": "Annuler les modifications",
+      "hint": {
+        "str": "Logement en location courte durée",
+        "ltr": "Logement en location longue durée",
+        "sync": "Par logement STR synchronisé"
+      }
+    },
+    "confirm": {
+      "title": "Appliquer les nouveaux prix ?",
+      "body": "S'applique aux nouvelles périodes de facturation uniquement.",
+      "effective": "Les nouveaux prix commencent avec la période de facturation de {{month}}. Les factures déjà émises gardent leurs prix.",
+      "confirm": "Appliquer les prix"
+    },
+    "saved": "Prix enregistrés. Ils s'appliquent à partir de {{month}}.",
+    "history": {
+      "title": "Historique des prix",
+      "colDate": "Modifié",
+      "colProduct": "Produit",
+      "colChange": "Changement",
+      "colEffective": "S'applique dès",
+      "colBy": "Par",
+      "initial": "Prix de lancement",
+      "scheduled": "Programmé",
+      "current": "En vigueur"
+    },
+    "launch": {
+      "title": "Offre de lancement",
+      "description": "Les clients qui s'inscrivent avant la date limite bénéficient de l'offre de lancement.",
+      "deadline": "Date limite d'inscription",
+      "zone": "Heure de Casablanca ({{offset}})",
+      "date": "Date",
+      "time": "Heure",
+      "save": "Enregistrer la date limite",
+      "saved": "Date limite de l'offre de lancement mise à jour.",
+      "open": "Ouverte : inscriptions jusqu'au {{date}}",
+      "closed": "Fermée depuis le {{date}}",
+      "invalid": "Choisissez une date et une heure.",
+      "rulesTitle": "Règles de l'offre",
+      "colSignup": "S'inscrit avec",
+      "colFree": "Mois offerts",
+      "rules": {
+        "str": "Logements STR uniquement",
+        "ltr": "Logements LTR uniquement",
+        "str_ltr": "Logements STR et LTR",
+        "str_sync_ltr": "Logements STR avec synchro de canaux, et logements LTR",
+        "sync": "Synchro de canaux (les {{total}} premiers logements synchronisés de la plateforme)"
+      },
+      "rulesNote": "Les mois offerts commencent le jour de l'inscription. Ces règles sont fixes."
+    },
+    "freeSync": {
+      "title": "Synchro de canaux offerte",
+      "slots": "Places de synchro offerte",
+      "used": "<figures>{{used}} / {{total}}</figures> utilisées",
+      "total": "Nombre total de places",
+      "totalHint": "Il ne peut pas descendre sous les {{used}} places utilisées.",
+      "save": "Enregistrer les places",
+      "saved": "Places de synchro offerte fixées à {{total}}.",
+      "invalid": "Saisissez un nombre entier d'au moins {{min}}.",
+      "unitsTitle": "Logements utilisant une place offerte",
+      "colUnit": "Logement",
+      "colProperty": "Bien",
+      "colClient": "Client",
+      "colUntil": "Synchro offerte jusqu'au",
+      "statusActive": "Offerte",
+      "statusEnded": "Terminée",
+      "none": "Aucun logement n'utilise encore de place offerte."
+    }
+  },
+  "settings": {
+    "eyebrow": "Plateforme",
+    "title": "Paramètres",
+    "subtitle": "Informations légales de l'entreprise et règles de facturation.",
+    "banner": {
+      "proforma": "Les factures sont émises en PRO FORMA tant que toutes les informations légales ne sont pas renseignées.",
+      "missing": "Reste à renseigner : {{fields}}.",
+      "complete": "Toutes les informations légales sont renseignées. Les factures sont émises en version définitive.",
+      "unsaved": "Enregistrez pour l'appliquer."
+    },
+    "form": {
+      "title": "Informations légales de l'entreprise",
+      "fields": {
+        "name": "Raison sociale",
+        "address": "Adresse du siège",
+        "ice": "ICE",
+        "if": "IF",
+        "rc": "RC",
+        "patente": "Patente",
+        "rib": "RIB (compte bancaire)"
+      },
+      "hint": {
+        "ice": "15 chiffres",
+        "rib": "24 chiffres",
+        "code": "Numéro d'immatriculation"
+      },
+      "invalid": {
+        "ice": "L'ICE comporte 15 chiffres.",
+        "rib": "Un RIB comporte 24 chiffres.",
+        "code": "Utilisez uniquement lettres, chiffres et - / ."
+      },
+      "save": "Enregistrer",
+      "reset": "Annuler les modifications",
+      "saved": "Informations légales enregistrées. Les factures restent pro forma tant que tous les champs ne sont pas remplis.",
+      "savedFinal": "Informations légales enregistrées. Les factures sont désormais émises en version définitive.",
+      "savedFinalReissued": "Informations légales enregistrées. Les factures sont désormais définitives, et les factures pro forma déjà émises ont été ré-émises en version définitive."
+    },
+    "preview": {
+      "title": "Aperçu de l'en-tête de facture",
+      "caption": "Se met à jour pendant la saisie. Les clients le voient sur chaque facture.",
+      "sampleClient": "Client exemple",
+      "sampleHolder": "Titulaire du compte"
+    },
+    "rules": {
+      "title": "Règles de facturation",
+      "note": "Lecture seule",
+      "due": "Paiement dû",
+      "dueValue": "{{days}} jours après l'émission",
+      "reminder": "E-mail de rappel",
+      "reminderValue": "Jour {{day}}",
+      "readOnly": "Le compte passe en lecture seule",
+      "readOnlyValue": "Jour {{day}}",
+      "hint": "Le jour 0 est celui de l'émission de la facture. Marquer une facture payée rétablit l'accès complet."
+    }
+  },
+  "dataTable": {
+    "search": "Rechercher…",
+    "comfortable": "Lignes aérées",
+    "compact": "Lignes compactes",
+    "columns": "Colonnes",
+    "export": "Exporter en CSV",
+    "actions": "Actions de la ligne",
+    "open": "Ouvrir",
+    "loadError": "Impossible de charger ce tableau.",
+    "retry": "Réessayer",
+    "empty": "Rien à afficher.",
+    "selectAll": "Tout sélectionner sur cette page",
+    "selectRow": "Sélectionner la ligne"
+  }
+}

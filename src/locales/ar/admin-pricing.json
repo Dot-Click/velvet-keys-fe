@@ -1,0 +1,44 @@
+{
+  "breadcrumb": {
+    "admin": "الإدارة"
+  },
+  "impact": {
+    "card_zero": "لا يخص أي عميل",
+    "summary_zero": "لا يخص أي عميل · يتغير MRR من {{from}} إلى {{to}} · يسري ابتداءً من {{date}}",
+    "card_one": "يخص عميل واحد",
+    "summary_one": "يخص عميل واحد · يتغير MRR من {{from}} إلى {{to}} · يسري ابتداءً من {{date}}",
+    "card_two": "يخص عميلان",
+    "summary_two": "يخص عميلان · يتغير MRR من {{from}} إلى {{to}} · يسري ابتداءً من {{date}}",
+    "card_few": "يخص {{count}} عملاء",
+    "summary_few": "يخص {{count}} عملاء · يتغير MRR من {{from}} إلى {{to}} · يسري ابتداءً من {{date}}",
+    "card_many": "يخص {{count}} عميلًا",
+    "summary_many": "يخص {{count}} عميلًا · يتغير MRR من {{from}} إلى {{to}} · يسري ابتداءً من {{date}}",
+    "card_other": "يخص {{count}} عميل",
+    "summary_other": "يخص {{count}} عميل · يتغير MRR من {{from}} إلى {{to}} · يسري ابتداءً من {{date}}"
+  },
+  "launch": {
+    "ended": "انتهى التسجيل",
+    "colClients": "العملاء على هذا العرض",
+    "daysLeft_zero": "لم يتبق أي يوم",
+    "daysLeft_one": "تبقى يوم واحد",
+    "daysLeft_two": "يومان متبقيان",
+    "daysLeft_few": "{{days}} أيام متبقية",
+    "daysLeft_many": "{{days}} يومًا متبقيًا",
+    "daysLeft_other": "{{days}} يوم متبقٍ"
+  },
+  "freeSync": {
+    "search": "ابحث عن وحدات أو عقارات أو عملاء…"
+  },
+  "settings": {
+    "errors": {
+      "ice": "يجب أن يتكون ICE من {{total}} رقمًا بالضبط (تم إدخال {{entered}}).",
+      "rib": "يجب أن يتكون RIB من {{total}} رقمًا بالضبط (تم إدخال {{entered}}).",
+      "digits": "أرقام فقط."
+    },
+    "unsaved": {
+      "title": "تغييرات غير محفوظة",
+      "save": "حفظ",
+      "discard": "تجاهل"
+    }
+  }
+}

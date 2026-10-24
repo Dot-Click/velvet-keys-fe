@@ -1,0 +1,35 @@
+{
+  "breadcrumb": {
+    "admin": "Admin"
+  },
+  "impact": {
+    "card_one": "Concerne {{count}} client",
+    "card_many": "Concerne {{count}} clients",
+    "card_other": "Concerne {{count}} clients",
+    "summary_one": "Concerne {{count}} client · le MRR passe de {{from}} à {{to}} · applicable dès le {{date}}",
+    "summary_many": "Concerne {{count}} clients · le MRR passe de {{from}} à {{to}} · applicable dès le {{date}}",
+    "summary_other": "Concerne {{count}} clients · le MRR passe de {{from}} à {{to}} · applicable dès le {{date}}"
+  },
+  "launch": {
+    "daysLeft_one": "{{days}} jour restant",
+    "daysLeft_many": "{{days}} jours restants",
+    "daysLeft_other": "{{days}} jours restants",
+    "ended": "Inscriptions closes",
+    "colClients": "Clients sur cette offre"
+  },
+  "freeSync": {
+    "search": "Rechercher unités, propriétés, clients…"
+  },
+  "settings": {
+    "errors": {
+      "ice": "L'ICE doit comporter exactement {{total}} chiffres ({{entered}} saisis).",
+      "rib": "Le RIB doit comporter exactement {{total}} chiffres ({{entered}} saisis).",
+      "digits": "Chiffres uniquement."
+    },
+    "unsaved": {
+      "title": "Modifications non enregistrées",
+      "save": "Enregistrer",
+      "discard": "Annuler"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "chips": {
+    "all": "Tous",
+    "active": "Actifs",
+    "readonly": "Lecture seule",
+    "banned": "Bannis",
+    "free": "En période gratuite",
+    "owners": "Propriétaires",
+    "conciergeries": "Conciergeries"
+  },
+  "allOffers": "Toutes les offres",
+  "colLastPayment": "Dernier paiement",
+  "neverPaid": "Aucun paiement",
+  "row": {
+    "open": "Ouvrir le client",
+    "grant": "Offrir des mois gratuits"
+  },
+  "free": {
+    "left_one": "{{count}} j restant",
+    "left_other": "{{count}} j restants",
+    "ended": "terminé",
+    "until": "Gratuit jusqu'au {{date}}"
+  },
+  "moreActions": "Plus d'actions",
+  "reminder": {
+    "send": "Envoyer un rappel",
+    "sent": "Rappel envoyé à {{client}}",
+    "disabled": "Aucune facture envoyée ou en retard à relancer"
+  },
+  "kpi": {
+    "billed": "Total facturé",
+    "collected": "Encaissé",
+    "outstanding": "En attente",
+    "units": "Unités",
+    "thisMonth": "Ce mois-ci (estimation)"
+  },
+  "tabs": {
+    "overview": "Aperçu",
+    "activity": "Activité",
+    "notes": "Notes ({{count}})"
+  },
+  "activity": {
+    "empty": "Aucune activité pour le moment.",
+    "signup": "Compte créé",
+    "payment": "Paiement enregistré pour {{number}}",
+    "paymentRef": "Référence {{reference}}",
+    "reminder": "Rappel de paiement envoyé",
+    "manual_offer": "Mois gratuits accordés : {{months}}",
+    "ban": "Compte banni",
+    "unban": "Compte rétabli",
+    "delist": "Bien retiré de la liste",
+    "relist": "Bien remis en liste",
+    "by": "Par {{name}}"
+  },
+  "notes": {
+    "label": "Note interne",
+    "placeholder": "Contexte pour l'équipe : appels, promesses, arrangements particuliers…",
+    "hint": "Seuls les administrateurs voient les notes.",
+    "add": "Ajouter la note",
+    "added": "Note ajoutée",
+    "empty": "Aucune note pour le moment.",
+    "unknownAuthor": "Admin"
+  },
+  "notFound": {
+    "crumb": "Introuvable",
+    "title": "Client introuvable",
+    "body": "Ce client n'existe pas ou le lien n'est plus à jour."
+  },
+  "colOverdue": "En retard"
+}

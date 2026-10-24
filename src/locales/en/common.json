@@ -1,0 +1,268 @@
+{
+  "brand": {
+    "name": "Velvet Keys",
+    "tagline": "Absolute Control",
+    "subtitle": "Morocco Rental Management & Estate Intelligence"
+  },
+  "nav": {
+    "overview": "Overview",
+    "financials": "Financials",
+    "demand": "Demand Heatmap",
+    "properties": "Properties",
+    "reports": "Reports",
+    "today": "Today",
+    "bookings": "Bookings",
+    "calendar": "Calendar",
+    "channels": "Channels",
+    "leases": "Leases",
+    "rentInvoices": "Rent invoices",
+    "maintenance": "Maintenance",
+    "expenses": "Expenses",
+    "searchCommands": "Search commands…",
+    "cmdK": "⌘K",
+    "accountHome": "Account Home",
+    "commandPalette": "Command Palette",
+    "signOut": "Sign out of workspace",
+    "demoSimulator": "Demo Simulator",
+    "designSystemLab": "Design System Lab",
+    "home": "Home",
+    "operations": "Operations",
+    "menu": "Menu",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "userMenu": "Open user menu",
+    "simulateAccount": "Sign in as (dev only)",
+    "simulateStatus": "Account status (dev only)",
+    "owners": "Owners",
+    "commission": "Commission",
+    "billing": "Billing",
+    "propertiesUnits": "Properties & units",
+    "myLease": "My lease",
+    "myInvoices": "My invoices",
+    "profile": "Profile",
+    "clients": "Clients",
+    "invoices": "Invoices",
+    "revenue": "Revenue",
+    "pricingOffers": "Pricing & offers",
+    "settings": "Settings",
+    "collapseSidebar": "Collapse sidebar",
+    "expandSidebar": "Expand sidebar",
+    "more": "More",
+    "group": {
+      "operations": "Operations",
+      "longTerm": "Long-term",
+      "portfolio": "Portfolio",
+      "finance": "Finance"
+    }
+  },
+  "roles": {
+    "owner": "Owner",
+    "concierge": "Conciergerie",
+    "conciergerie": "Conciergerie",
+    "tenant": "Tenant",
+    "admin": "Admin",
+    "ownerPortal": "Owner Portal",
+    "conciergerieOperations": "Conciergerie Operations",
+    "ownerBadge": "Property Owner · Executive",
+    "conciergerieBadge": "Conciergerie · Operations",
+    "soloOwner": "Self-managed owner",
+    "adminConsole": "Admin Console",
+    "tenantPortal": "Tenant Portal",
+    "adminBadge": "Platform · Admin",
+    "tenantBadge": "Tenant · Residence",
+    "soloOwnerBadge": "Owner · Self-managed"
+  },
+  "portfolio": {
+    "filterLabel": "Portfolio Filter",
+    "allEstates": "✦ All properties ({{count}})",
+    "individualResidences": "Individual Residences",
+    "selectPortfolio": "Select property portfolio"
+  },
+  "actions": {
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "exportPdf": "Export as PDF",
+    "download": "Download",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "view": "View",
+    "apply": "Apply",
+    "refresh": "Refresh",
+    "submit": "Submit",
+    "ready": "Ready",
+    "status": "Status",
+    "all": "All",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip [esc] →",
+    "top": "Top ↑",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Couldn't copy. Select the text and copy it manually.",
+    "done": "Done"
+  },
+  "status": {
+    "confirmed": "Confirmed",
+    "pending": "Pending",
+    "critical": "Critical",
+    "active": "Active",
+    "vacant": "Vacant",
+    "occupied": "Occupied",
+    "inProgress": "In Progress",
+    "resolved": "Resolved",
+    "readOnly": "Read Only",
+    "proForma": "Pro-forma",
+    "synced": "Channel Synced",
+    "direct": "Direct Stay"
+  },
+  "units": {
+    "str": "Short-Term (STR)",
+    "ltr": "Long-Term (LTR)",
+    "unit": "Unit",
+    "units": "Units",
+    "property": "Property",
+    "properties": "Properties"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية",
+    "select": "Language",
+    "switcher": "Switch Language"
+  },
+  "currency": {
+    "mad": "MAD",
+    "vat": "VAT (20%)",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "netProfit": "Net Profit",
+    "grossRevenue": "Gross Revenue"
+  },
+  "floatingActions": {
+    "newBooking": "+ New Booking",
+    "logRepair": "+ Log Repair",
+    "recordExpense": "+ Record Expense",
+    "menuLabel": "Quick Actions Menu"
+  },
+  "commandPalette": {
+    "searchPlaceholder": "Search commands, properties, guests, or jump to view… (Cmd+K)",
+    "noResults": "No matching portals or ledger records found.",
+    "quickActions": "Quick Operational Actions",
+    "newBooking": "New Reservation / Intake Booking",
+    "logRepair": "Log Estate Maintenance Ticket",
+    "recordExpense": "Record Operational Expense",
+    "navigation": "Navigation & Portals",
+    "simulator": "System Simulator"
+  },
+  "drawer": {
+    "close": "Close",
+    "closeDrawer": "Close drawer"
+  },
+  "accountStatus": {
+    "active": "Active",
+    "readonly": "Read-only",
+    "banned": "Banned"
+  },
+  "readOnly": {
+    "bannerTitle": "Your account is read-only.",
+    "bannerInvoice": "Invoice #{{number}} is overdue.",
+    "bannerInvoiceUnknown": "An invoice on your account is overdue.",
+    "goToBilling": "Go to billing",
+    "holderPays": "The account holder can settle it from Billing.",
+    "tooltip": "Account is read-only until the invoice is paid",
+    "commandSuffix": "Read-only"
+  },
+  "pwa": {
+    "install": {
+      "message": "Install Velvet Keys for quick access",
+      "install": "Install",
+      "notNow": "Not now",
+      "gotIt": "Got it",
+      "share": "Share",
+      "addToHome": "Add to Home Screen"
+    },
+    "offline": {
+      "banner": "You're offline — showing last saved data",
+      "tooltip": "Unavailable while you're offline",
+      "commandSuffix": "Offline"
+    },
+    "update": {
+      "message": "New version available",
+      "refresh": "Refresh"
+    }
+  },
+  "paymentDue": {
+    "banner": "Invoice #{{number}} is due on {{date}}.",
+    "viewBilling": "View billing"
+  },
+  "states": {
+    "loading": "Loading…",
+    "errorTitle": "This page couldn't load",
+    "errorBody": "Something went wrong while fetching your data. Please try again.",
+    "retry": "Try again",
+    "noPropertiesTitle": "No properties yet",
+    "noPropertiesBody": "Properties will appear here as soon as they're added to your account.",
+    "noUnitsTitle": "No short-term units yet",
+    "noUnitsBody": "Add an STR unit to start taking bookings and planning operations."
+  },
+  "urgency": {
+    "low": "Low",
+    "medium": "Medium",
+    "critical": "Critical"
+  },
+  "notFound": {
+    "eyebrow": "404 · Page not found",
+    "title": "This page doesn't exist",
+    "body": "The link may be out of date, or the page has moved.",
+    "cta": "Back to home"
+  },
+  "errorPage": {
+    "title": "This page didn't load",
+    "body": "Something went wrong on our end. Try again, or go back to the home page.",
+    "retry": "Try again",
+    "home": "Go home"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "of": "of",
+    "perPage": "Rows per page",
+    "first": "First page",
+    "previous": "Previous page",
+    "next": "Next page",
+    "last": "Last page",
+    "goTo": "Go to page {{page}}",
+    "showing": "Showing {{shown}} of {{total}}",
+    "loadMore_one": "Load {{count}} more",
+    "loadMore_other": "Load {{count}} more"
+  },
+  "listControls": {
+    "clearSearch": "Clear search",
+    "sortBy": "Sort",
+    "default": "Default order",
+    "noResults": "Nothing matches your search.",
+    "placeholder": {
+      "rentInvoices": "Search tenant, unit or invoice number…",
+      "leases": "Search tenant, unit or property…",
+      "owners": "Search name or email…",
+      "properties": "Search property, city or owner…",
+      "channels": "Search unit or property…",
+      "commission": "Search property or city…",
+      "ownerProperties": "Search property or city…",
+      "adminClients": "Search company, contact or email…",
+      "adminProperties": "Search property or client…",
+      "ledger": "Search recipient, category or unit…",
+      "todayTasks": "Search guest, unit or task…",
+      "todayUnits": "Search unit or guest…",
+      "tickets": "Search repair, unit or technician…"
+    },
+    "viewLabel": "View",
+    "viewTable": "Table",
+    "viewCards": "Cards"
+  },
+  "breadcrumb": "Breadcrumb"
+}
