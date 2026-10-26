@@ -115,7 +115,13 @@ export function DayTimeline({
         <div
           role="radiogroup"
           aria-label={t("today.day.filterLabel")}
-          className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-0.5"
+          // me-20 on mobile shrinks this scroll container's own box so it clips (and scrolls)
+          // before reaching the floating quick-actions button's zone (fixed bottom-end, ~76px
+          // wide incl. its own margin), instead of rendering the last chip underneath it --
+          // confirmed overlapping on a 375px-wide viewport before this margin was added. Trailing
+          // padding alone doesn't help here: it only adds space after the scrolled-to-end content,
+          // it doesn't affect what's visible at the initial, unscrolled position.
+          className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-0.5 me-20 md:me-0"
         >
           {(["all", ...TASK_KINDS] as TaskFilter[]).map((kind) => (
             <button

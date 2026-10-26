@@ -16,6 +16,7 @@ import { ArrowDownRight, ArrowUpRight, ChevronRight, Download } from "lucide-rea
 import { addMonths, endOfMonth, startOfMonth } from "date-fns";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { RevenueSplitBar } from "@/components/owner/portfolio-figures";
 import { QueryView } from "@/components/panel-states";
 import {
   useOwnerKpis,
@@ -231,6 +232,10 @@ function OwnerFinancialsContent({
           <p className="font-serif text-3xl sm:text-4xl text-foreground font-light font-tabular">
             {money(kpis.grossRevenueMinor)}
           </p>
+          <RevenueSplitBar
+            strRevenueMinor={kpis.strRevenueMinor}
+            ltrRevenueMinor={kpis.ltrRevenueMinor}
+          />
           <p
             className={`text-xs font-mono flex items-center gap-1 ${
               (grossDelta ?? 0) < 0 ? "text-destructive-foreground" : "text-[#A2E8DD]"
