@@ -49,7 +49,6 @@ import {
 } from "@/services/str-service";
 import { useDataScope } from "@/hooks/use-data-scope";
 import { assertOnline } from "@/lib/pwa";
-import { rentInvoicesService as mockRentInvoicesService } from "@/services/leases-service";
 import {
   commissionService,
   ownersService,
@@ -502,14 +501,56 @@ export const useReportStatus = (reportId: string | null) => {
   });
 };
 
+export interface RentDueRow {
+  invoiceId: string;
+  leaseId: string;
+  period: string;
+  amountMinor: number;
+  currency: string;
+  dueDate: string;
+  state: "late" | "due_today" | "upcoming";
+  tenantName: string;
+  unitName: string;
+  propertyName: string;
+}
+
 /**
- * KNOWN GAP: the backend has no cross-lease "rent due soon" aggregate endpoint (only a
- * per-lease schedule and a paged invoice list), so this widget still reads the old mock store.
- * It is used by the Today screen / operations nav (outside this stage's file list) and is
- * documented as not wired in the Stage 5 report.
+ * Late rent, plus rent invoiced but not yet due, across every lease in scope: the Today screen's
+ * "Rent due" widget and the sidebar's rent-due badge both read this. The backend has no single
+ * cross-lease "rent due soon" aggregate endpoint, only a paged, status-filterable invoice list,
+ * so this combines two real /rent-invoices queries instead of a projected schedule; a lease
+ * whose rent for an upcoming period hasn't been invoiced yet (via "Generate invoices") won't
+ * show up here until it has, same as the Rent Invoices page itself.
  */
 export const useRentDue = () =>
-  useScopedQuery(["rent-due"], (scope) => mockRentInvoicesService.listDue(scope));
+  useScopedQuery(["rent-due"], async (): Promise<RentDueRow[]> => {
+    const day = toISODate(today());
+    const [late, dueSoon] = await Promise.all([
+      loadAllPages((page) => realRentInvoicesService.list({ status: "late", page })),
+      loadAllPages((page) => realRentInvoicesService.list({ status: "unpaid", page })),
+    ]);
+    const rows = [...late, ...dueSoon].map(
+      (invoice): RentDueRow => ({
+        invoiceId: invoice.id,
+        leaseId: invoice.leaseId,
+        period: invoice.period,
+        amountMinor: invoice.amountMinor,
+        currency: invoice.currency,
+        dueDate: invoice.dueDate,
+        state: invoice.dueDate < day ? "late" : invoice.dueDate === day ? "due_today" : "upcoming",
+        tenantName: invoice.tenantName,
+        unitName: invoice.unitName,
+        propertyName: invoice.propertyName,
+      }),
+    );
+    const rank = { late: 0, due_today: 1, upcoming: 2 } as const;
+    return rows.sort(
+      (a, b) =>
+        rank[a.state] - rank[b.state] ||
+        a.dueDate.localeCompare(b.dueDate) ||
+        a.propertyName.localeCompare(b.propertyName),
+    );
+  });
 
 export const useCommission = (page = 1, pageSize: 10 | 25 | 50 = 25) =>
   useScopedQuery(["commission", page, pageSize], () => commissionService.list(page, pageSize), true);
