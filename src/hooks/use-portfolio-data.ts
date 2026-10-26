@@ -245,6 +245,7 @@ export const useSubscriptionInvoice = (invoiceId: string | null) => {
  */
 export const useUnitConnections = (unitId: string | null) => {
   const scope = useDataScope();
+  const queryClient = useQueryClient();
   return useQuery({
     queryKey: key(scope, "unit-connections", unitId),
     queryFn: async () => {
@@ -258,6 +259,13 @@ export const useUnitConnections = (unitId: string | null) => {
       const refreshed = await Promise.all(
         pending.map((connection) => channexService.syncStatus(connection.id)),
       );
+      // This can flip a connection to "connected" or "error" behind the account-status and
+      // today-board aggregates' backs -- unlike every other write here, it isn't routed
+      // through usePanelMutation, so nothing else tells the header/sidebar counts to catch up.
+      if (refreshed.some((connection) => connection.status !== "pending")) {
+        void queryClient.invalidateQueries({ queryKey: key(scope, "channex-account-status") });
+        void queryClient.invalidateQueries({ queryKey: key(scope, "today") });
+      }
       const byId = new Map(refreshed.map((connection) => [connection.id, connection]));
       return connections.map((connection) => byId.get(connection.id) ?? connection);
     },
