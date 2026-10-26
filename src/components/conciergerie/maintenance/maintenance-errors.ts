@@ -13,6 +13,7 @@ const EXPLAINED_CODES = [
   "FILE_TYPE_NOT_ALLOWED",
   "UPLOAD_NOT_FOUND",
   "R2_NOT_CONFIGURED",
+  "UPLOAD_FAILED",
 ] as const;
 
 /** Locale key (conciergerie namespace) explaining a failed maintenance or worker request. */

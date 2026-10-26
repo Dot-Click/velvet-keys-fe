@@ -551,7 +551,8 @@
       "FILE_TOO_LARGE": "A photo is too large. Choose a smaller one.",
       "FILE_TYPE_NOT_ALLOWED": "This file type is not allowed. Use a JPG, PNG or WebP image.",
       "UPLOAD_NOT_FOUND": "The photo upload did not finish. Try again.",
-      "R2_NOT_CONFIGURED": "File storage is not set up yet, so photos cannot be uploaded."
+      "R2_NOT_CONFIGURED": "File storage is not set up yet, so photos cannot be uploaded.",
+      "UPLOAD_FAILED": "Couldn't upload the photo. Check your connection and try again."
     },
     "fieldPropertyOnly": "Property",
     "fieldUnit": "Unit",

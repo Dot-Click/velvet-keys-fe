@@ -1,4 +1,4 @@
-import { api, uploadToStorage, type Page } from "@/lib/apiClient";
+import { api, ApiError, uploadToStorage, type Page } from "@/lib/apiClient";
 import type {
   CreateExpenseInput,
   CreateTicketInput,
@@ -118,7 +118,19 @@ export const filesService = {
       mime: file.type,
       sizeBytes: file.size,
     });
-    await uploadToStorage(uploadUrl, file, file.type);
+    try {
+      await uploadToStorage(uploadUrl, file, file.type);
+    } catch {
+      // This PUT goes straight to object storage, not through `api`/`apiClient`, so its
+      // failures never pass through the response interceptor that turns a backend error into
+      // an `ApiError` -- they were bubbling up as bare AxiosErrors and getting mistaken for a
+      // generic "fetching your data" failure everywhere a caller checked `isApiError`/`code`
+      // (e.g. maintenanceErrorKey), hiding that a photo upload is what actually failed.
+      throw new ApiError(0, {
+        code: "UPLOAD_FAILED",
+        message: "Could not upload the file to storage.",
+      });
+    }
     await api.post(`/files/${fileId}/complete`);
     return fileId;
   },
