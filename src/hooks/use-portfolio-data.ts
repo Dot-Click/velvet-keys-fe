@@ -247,7 +247,20 @@ export const useUnitConnections = (unitId: string | null) => {
   const scope = useDataScope();
   return useQuery({
     queryKey: key(scope, "unit-connections", unitId),
-    queryFn: () => channexService.listConnections(unitId ?? ""),
+    queryFn: async () => {
+      const connections = await channexService.listConnections(unitId ?? "");
+      const pending = connections.filter((connection) => connection.status === "pending");
+      if (pending.length === 0) return connections;
+      // Listing connections only reads what we already have in our own DB -- nothing else
+      // polls Channex to find out a Pending connection actually went live, so without this a
+      // row would sit on "Pending" forever even after the manager finished authorizing on
+      // Channex's side. sync-status is what actually asks Channex and updates our record.
+      const refreshed = await Promise.all(
+        pending.map((connection) => channexService.syncStatus(connection.id)),
+      );
+      const byId = new Map(refreshed.map((connection) => [connection.id, connection]));
+      return connections.map((connection) => byId.get(connection.id) ?? connection);
+    },
     enabled: Boolean(scope.accountId && unitId),
     refetchInterval: (query) =>
       query.state.data?.some((connection) => connection.status === "pending") ? 5000 : false,
