@@ -106,14 +106,11 @@ function ConnectFlow({
         setAuthUrl(result.channexAuthUrl);
         setStep("redirected");
         // External redirect by design: Channex's hosted page is where the manager actually signs
-        // in to Airbnb/Booking.com and picks the listing; we never see those credentials.
+        // in to Airbnb/Booking.com and picks the listing; we never see those credentials. No
+        // success toast here -- nothing has been authorized yet. The "redirected" step below
+        // states that plainly, and ChannelUnitCard's useUnitConnections poll is what flips the
+        // row to "Connected" once Channex confirms the real status.
         window.open(result.channexAuthUrl, "_blank", "noopener,noreferrer");
-        toast.success(
-          t(
-            mode === "reconnect" ? "channels.dialog.reconnectedToast" : "channels.dialog.connectedToast",
-            { unit: unitLabel, platform: platformName },
-          ),
-        );
       },
       onError: (error) => toast.error(t(channexErrorKey(error))),
     });
