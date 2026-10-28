@@ -1123,6 +1123,9 @@
     "disconnectBody": "تتوقف مزامنة الحجوزات والإتاحة فوراً. يمكنك إعادة الربط في أي وقت.",
     "disconnectedToast": "تم فصل {{unit}} عن {{platform}}",
     "disconnectFailed": "تعذّر فصل الربط. حاول مرة أخرى.",
+    "pendingTimeout": "يستغرق وقتًا أطول من المتوقع؟",
+    "cancelPending": "إلغاء",
+    "pendingCancelledToast": "تم إلغاء ربط {{unit}} بـ {{platform}}. جاهز للمحاولة مجددًا.",
     "emptyTitle": "لا توجد وحدات للإيجار القصير",
     "emptyBody": "المزامنة مخصصة لوحدات الإيجار القصير (STR). أضف وحدة أو حوّل وحدة إلى STR لربطها بـ Airbnb أو Booking.com.",
     "platform": {

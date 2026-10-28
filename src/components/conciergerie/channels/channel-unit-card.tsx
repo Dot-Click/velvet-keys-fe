@@ -40,6 +40,36 @@ function displayPlatform(channel: Channel): ChannelPlatform {
   return channel === "booking" ? "bookingCom" : "airbnb";
 }
 
+/** How long a connection can sit in "Pending" before we offer to cancel it (see
+ * velvet-keys-be/app/services/channex.py `pending_since`). Abandoned Channex/Airbnb
+ * authorization flows otherwise leave the unit stuck with no way to retry. */
+const PENDING_TIMEOUT_MS = 2 * 60 * 1000;
+
+/** True once `pendingSince` is more than PENDING_TIMEOUT_MS in the past. Re-evaluates itself with
+ * a single timer scheduled for the exact moment the threshold is crossed, so the "Cancel" option
+ * appears live without polling or a page reload. */
+function usePendingTimedOut(pendingSince: string | null | undefined): boolean {
+  const elapsedAtMount = pendingSince ? Date.now() - new Date(pendingSince).getTime() : 0;
+  const [timedOut, setTimedOut] = React.useState(() => elapsedAtMount >= PENDING_TIMEOUT_MS);
+
+  React.useEffect(() => {
+    if (!pendingSince) {
+      setTimedOut(false);
+      return;
+    }
+    const elapsed = Date.now() - new Date(pendingSince).getTime();
+    if (elapsed >= PENDING_TIMEOUT_MS) {
+      setTimedOut(true);
+      return;
+    }
+    setTimedOut(false);
+    const timer = window.setTimeout(() => setTimedOut(true), PENDING_TIMEOUT_MS - elapsed);
+    return () => window.clearTimeout(timer);
+  }, [pendingSince]);
+
+  return timedOut;
+}
+
 /** The connection that represents the unit's current link on a channel: the latest one that isn't disconnected. */
 export function currentConnection(
   connections: ChannelConnection[] | undefined,
@@ -150,6 +180,9 @@ function ConnectionRow({
   const platform = displayPlatform(channel);
   const platformName = t(`channels.platform.${platform}`);
   const status = connection?.status ?? "disconnected";
+  const pendingTimedOut = usePendingTimedOut(
+    status === "pending" ? connection?.pendingSince : null,
+  );
 
   const disconnect = usePanelMutation((connectionId: string) =>
     channexService.disconnect(connectionId),
@@ -166,6 +199,20 @@ function ConnectionRow({
       },
       onError: (error) => {
         setConfirmDisconnect(false);
+        toast.error(t(channexErrorKey(error)));
+      },
+    });
+  }
+
+  function cancelPending() {
+    if (!connection) return;
+    disconnect.mutate(connection.id, {
+      onSuccess: () => {
+        toast.success(
+          t("channels.pendingCancelledToast", { unit: unit.unitName, platform: platformName }),
+        );
+      },
+      onError: (error) => {
         toast.error(t(channexErrorKey(error)));
       },
     });
@@ -212,6 +259,21 @@ function ConnectionRow({
         {status === "error" && (
           <p className="truncate text-[0.68rem] text-[#FF85A1]">
             {connection?.errorMessage ?? t("channels.errorRow", { platform: platformName })}
+          </p>
+        )}
+        {status === "pending" && pendingTimedOut && connection && (
+          <p className="flex items-center gap-1.5 truncate text-[0.68rem] text-muted-foreground">
+            {t("channels.pendingTimeout")}
+            <ReadOnlyGuard>
+              <button
+                type="button"
+                onClick={cancelPending}
+                disabled={disconnect.isPending}
+                className="font-medium text-primary underline-offset-2 hover:underline disabled:opacity-50"
+              >
+                {t("channels.cancelPending")}
+              </button>
+            </ReadOnlyGuard>
           </p>
         )}
       </div>

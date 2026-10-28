@@ -1051,6 +1051,9 @@
     "disconnectBody": "Bookings and availability stop syncing immediately. You can reconnect anytime.",
     "disconnectedToast": "{{unit}} disconnected from {{platform}}",
     "disconnectFailed": "Couldn't disconnect. Try again.",
+    "pendingTimeout": "Taking longer than expected?",
+    "cancelPending": "Cancel",
+    "pendingCancelledToast": "{{unit}} connection to {{platform}} cancelled. Ready to try again.",
     "emptyTitle": "No short-term units",
     "emptyBody": "Channel sync is for STR units. Add one, or switch a unit to STR, to connect it to Airbnb or Booking.com.",
     "platform": {

@@ -18,6 +18,7 @@ export interface ChannelConnection {
   errorMessage: string | null;
   connectedAt: string | null;
   disconnectedAt: string | null;
+  pendingSince: string | null;
 }
 
 export interface SyncStatus extends ChannelConnection {
