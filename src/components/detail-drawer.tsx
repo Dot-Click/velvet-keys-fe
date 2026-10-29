@@ -2,6 +2,7 @@ import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { createPortal } from "react-dom";
 import { LUXURY_EASE } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 
@@ -81,7 +82,12 @@ export function DetailDrawer({
     };
   }, [open]);
 
-  return (
+  // Rendered at document.body via a portal (like the Sheet/Dialog primitives), not inline in the
+  // page tree: AppShell's fixed mobile bottom nav bar shares this z-index and sits after the page
+  // content in the DOM, so an inline-rendered drawer (equal z-index, earlier in the DOM) lost the
+  // stacking order and had its bottom -- including the submit button -- painted over by the nav bar.
+  if (typeof document === "undefined") return null;
+  return createPortal(
     <AnimatePresence>
       {open && (
         <div
@@ -141,17 +147,30 @@ export function DetailDrawer({
                 </Button>
               </div>
 
-              {/* Body */}
-              <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6">{children}</div>
+              {/* Body: extra bottom padding clears the iOS home indicator / Android gesture bar
+                  when a form puts its own submit button at the end of this scrollable area
+                  instead of the fixed footer below. */}
+              <div
+                className="flex-1 overflow-y-auto px-6 pt-6 space-y-6"
+                style={{ paddingBottom: "calc(1.5rem + env(safe-area-inset-bottom))" }}
+              >
+                {children}
+              </div>
 
               {/* Footer */}
               {footer && (
-                <div className="border-t border-border/80 px-6 py-4 bg-[#111111]/95">{footer}</div>
+                <div
+                  className="border-t border-border/80 px-6 pt-4 bg-[#111111]/95"
+                  style={{ paddingBottom: "calc(1rem + env(safe-area-inset-bottom))" }}
+                >
+                  {footer}
+                </div>
               )}
             </motion.div>
           </div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
