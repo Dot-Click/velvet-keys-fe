@@ -7,7 +7,7 @@ import axios, { AxiosError, type AxiosInstance, type InternalAxiosRequestConfig 
 // line. To switch back to local development, reverse it.
 // =====================================================================================
 // const API_URL = "http://localhost:8000/api/v1"; // LOCAL — active for development
-const API_URL = "https://web-production-56ed4.up.railway.app/api/v1"; // RAILWAY — uncomment for production, comment out the line above
+const API_URL = "https://web-production-368d93.up.railway.app/api/v1"; // RAILWAY — uncomment for production, comment out the line above
 
 /** The backend's standard error body: { error: { code, message, details } }. */
 export interface ApiErrorBody {
