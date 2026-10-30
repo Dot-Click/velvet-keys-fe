@@ -935,6 +935,14 @@
     "errors": {
       "readOnly": "Votre compte est en lecture seule : les invitations ne peuvent pas être envoyées pour le moment.",
       "propertyUnavailable": "Un des biens sélectionnés n’est plus disponible. Actualisez et réessayez."
+    },
+    "reports": {
+      "badge": "Relevés",
+      "title": "Rapports",
+      "empty": "Ce propriétaire n’a encore généré aucun rapport.",
+      "sendToOwner": "Envoyer au propriétaire",
+      "sentToast": "Rapport envoyé",
+      "sentDesc": "Un e-mail contenant le rapport a été envoyé à {{email}}."
     }
   },
   "commission": {

@@ -100,3 +100,8 @@ export interface ReportStatusDetail {
   downloadUrl: string | null;
   errorMessage: string | null;
 }
+
+export interface SendReportToOwnerResult {
+  sent: boolean;
+  ownerEmail: string;
+}

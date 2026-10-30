@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { OwnerAvatar } from "@/components/conciergerie/owner-avatar";
 import { OwnerStatusBadge } from "@/components/conciergerie/owner-status-badge";
 import { OwnerPropertyCard } from "@/components/conciergerie/owners/owner-cards";
+import { OwnerReportsPanel } from "@/components/conciergerie/owners/owner-reports-panel";
 import { EmptyState } from "@/components/empty-state";
 import { QueryView } from "@/components/panel-states";
 import { Button } from "@/components/ui/button";
@@ -85,6 +86,18 @@ function OwnerProfile({ owner }: { owner: OwnerDetail }) {
             ))}
           </div>
         )}
+      </section>
+
+      <section className="space-y-5">
+        <div>
+          <p className="text-label-caps text-primary">{t("owners.reports.badge")}</p>
+          <h2 className="font-display text-2xl uppercase tracking-[0.1em] text-[#F8F9FA]">
+            {t("owners.reports.title")}
+          </h2>
+        </div>
+        <div className="rounded-xl border border-primary/20 bg-[#141414] p-6 shadow-xl">
+          <OwnerReportsPanel propertyIds={owner.properties.map((property) => property.id)} />
+        </div>
       </section>
     </div>
   );

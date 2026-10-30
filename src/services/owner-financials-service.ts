@@ -10,6 +10,7 @@ import type {
   PropertyFinancialDetail,
   ReportListItem,
   ReportStatusDetail,
+  SendReportToOwnerResult,
 } from "@/types/owner-financials";
 
 function query(filter: object) {
@@ -54,5 +55,10 @@ export const ownerFinancialsService = {
 
   reportStatus(reportId: string): Promise<ReportStatusDetail> {
     return api.get<ReportStatusDetail>(`/owner/reports/${reportId}`);
+  },
+
+  /** Conciergerie-only: emails the ready report's PDF link to its owner. */
+  sendToOwner(reportId: string): Promise<SendReportToOwnerResult> {
+    return api.post<SendReportToOwnerResult>(`/owner/reports/${reportId}/send-to-owner`);
   },
 };

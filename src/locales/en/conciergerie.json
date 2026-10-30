@@ -918,6 +918,14 @@
     "errors": {
       "readOnly": "Your account is read-only, so invitations cannot be sent right now.",
       "propertyUnavailable": "One of the selected properties is no longer available. Refresh and try again."
+    },
+    "reports": {
+      "badge": "Statements",
+      "title": "Reports",
+      "empty": "This owner hasn't generated any property reports yet.",
+      "sendToOwner": "Send to owner",
+      "sentToast": "Report sent",
+      "sentDesc": "An email with the report was sent to {{email}}."
     }
   },
   "commission": {
