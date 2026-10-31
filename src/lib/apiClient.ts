@@ -3,12 +3,17 @@ import axios, { AxiosError, type AxiosInstance, type InternalAxiosRequestConfig 
 // =====================================================================================
 // API BASE URL — the ONE place in the codebase that knows where the backend lives.
 //
-// To deploy to production, comment out the localhost line below and uncomment the Railway
-// line. To switch back to local development, reverse it.
+// In production this is a RELATIVE path. The frontend (Vercel) and backend (Railway) are on
+// different registrable domains, so a direct cross-site call made the refresh-token cookie a
+// third-party cookie -- blocked outright by Safari, and increasingly by Chrome, regardless of
+// SameSite=None. Calling our own origin and letting vercel.json rewrite /api/* to Railway
+// server-side makes every request same-origin, so the cookie is first-party and always sent.
+//
+// To deploy to production, comment out the localhost line below and uncomment the relative
+// path. To switch back to local development, reverse it (there is no Vercel rewrite locally).
 // =====================================================================================
 // const API_URL = "http://localhost:8000/api/v1"; // LOCAL — active for development
-// const API_URL = "https://web-production-368d93.up.railway.app/api/v1"; // RAILWAY — uncomment for production, comment out the line above
-const API_URL = "https://web-production-56ed4.up.railway.app/api/v1"; // RAILWAY — uncomment for production, comment out the line above
+const API_URL = "/api/v1"; // PRODUCTION — relative, proxied to Railway by vercel.json
 
 /** The backend's standard error body: { error: { code, message, details } }. */
 export interface ApiErrorBody {
