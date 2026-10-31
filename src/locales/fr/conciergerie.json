@@ -1154,7 +1154,42 @@
     "cancelBody": "Le séjour de {{guest}} sera annulé et ses dates libérées. Cette action est irréversible.",
     "keepBooking": "Conserver",
     "cancelConfirm": "Annuler la réservation",
-    "cancelledDone": "Réservation annulée"
+    "cancelledDone": "Réservation annulée",
+    "policeDeclaration": {
+      "title": "Déclaration de police",
+      "hint": "Champs de la fiche de police (formulaire d'enregistrement hôtelier). Renseignez ce dont vous disposez ; générez le formulaire à tout moment, les champs manquants seront signalés.",
+      "nationality": "Nationalité",
+      "countryOfResidence": "Pays de résidence",
+      "idType": "Type de document",
+      "idTypeName": {
+        "passport": "Passeport",
+        "cin": "Carte d'identité nationale"
+      },
+      "idNumber": "Numéro de document",
+      "documentPlaceOfIssue": "Lieu de délivrance",
+      "documentDateOfIssue": "Date de délivrance",
+      "dateOfBirth": "Date de naissance",
+      "placeOfBirth": "Lieu de naissance",
+      "maidenName": "Nom de jeune fille (le cas échéant)",
+      "occupation": "Profession",
+      "arrivingFrom": "En provenance de (ville/pays)",
+      "nextDestination": "Prochaine destination (ville/pays)",
+      "purposeOfVisit": "Motif du séjour",
+      "purposeName": {
+        "tourism": "Tourisme",
+        "business": "Affaires",
+        "family": "Famille",
+        "official_mission": "Mission officielle",
+        "other": "Autre"
+      },
+      "residenceAddress": "Adresse du domicile",
+      "accompanyingMinors": "Enfants mineurs accompagnants (noms et âges)",
+      "accompanyingMinorsHint": "Laisser vide si aucun.",
+      "selectPlaceholder": "Sélectionner…",
+      "saveDetails": "Enregistrer les informations",
+      "saved": "Informations du voyageur enregistrées",
+      "generate": "Générer la déclaration de police"
+    }
   },
   "leaseDrawer": {
     "title": "Bail",

@@ -1218,7 +1218,42 @@
     "cancelBody": "سيتم إلغاء إقامة {{guest}} وتحرير تواريخها. لا يمكن التراجع عن ذلك.",
     "keepBooking": "الإبقاء على الحجز",
     "cancelConfirm": "إلغاء الحجز",
-    "cancelledDone": "تم إلغاء الحجز"
+    "cancelledDone": "تم إلغاء الحجز",
+    "policeDeclaration": {
+      "title": "بيان الشرطة",
+      "hint": "حقول استمارة تسجيل النزلاء (بيان الشرطة). أدخل ما هو متوفر الآن؛ يمكنك إنشاء الاستمارة في أي وقت وستظهر الحقول الناقصة.",
+      "nationality": "الجنسية",
+      "countryOfResidence": "بلد الإقامة",
+      "idType": "نوع الوثيقة",
+      "idTypeName": {
+        "passport": "جواز السفر",
+        "cin": "البطاقة الوطنية"
+      },
+      "idNumber": "رقم الوثيقة",
+      "documentPlaceOfIssue": "مكان الإصدار",
+      "documentDateOfIssue": "تاريخ الإصدار",
+      "dateOfBirth": "تاريخ الميلاد",
+      "placeOfBirth": "مكان الميلاد",
+      "maidenName": "اسم العائلة قبل الزواج (إن وجد)",
+      "occupation": "المهنة",
+      "arrivingFrom": "القادم من (مدينة/بلد)",
+      "nextDestination": "الوجهة التالية (مدينة/بلد)",
+      "purposeOfVisit": "الغرض من الزيارة",
+      "purposeName": {
+        "tourism": "سياحة",
+        "business": "أعمال",
+        "family": "عائلي",
+        "official_mission": "مهمة رسمية",
+        "other": "أخرى"
+      },
+      "residenceAddress": "عنوان السكن",
+      "accompanyingMinors": "الأطفال القاصرون المرافقون (الأسماء والأعمار)",
+      "accompanyingMinorsHint": "اتركه فارغاً إذا لم يوجد.",
+      "selectPlaceholder": "اختر…",
+      "saveDetails": "حفظ البيانات",
+      "saved": "تم حفظ بيانات النزيل",
+      "generate": "إنشاء بيان الشرطة"
+    }
   },
   "leaseDrawer": {
     "title": "عقد الإيجار",

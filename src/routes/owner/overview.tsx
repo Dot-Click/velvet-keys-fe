@@ -22,6 +22,7 @@ import {
   UnitMixChips,
 } from "@/components/owner/portfolio-figures";
 import { useIsSoloOwner } from "@/hooks/use-is-solo-owner";
+import { useHorizontalScroll } from "@/hooks/use-horizontal-scroll";
 import {
   useOwnerAttention,
   useOwnerKpis,
@@ -126,6 +127,7 @@ function OwnerOverviewContent({
   );
   const [sortKey, setSortKey] = React.useState<SortKey>("grossRevenue");
   const [sortAsc, setSortAsc] = React.useState(false);
+  const showcaseScrollRef = useHorizontalScroll<HTMLDivElement>();
   const [dismissed, setDismissed] = React.useState<Set<string>>(() => new Set());
 
   const window = monthWindow();
@@ -691,7 +693,10 @@ function OwnerOverviewContent({
               </span>
             </div>
 
-            <div className="relative flex gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory">
+            <div
+              ref={showcaseScrollRef}
+              className="relative flex gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory cursor-grab active:cursor-grabbing"
+            >
               {rows.map((row) => (
                 <div
                   key={row.property.id}

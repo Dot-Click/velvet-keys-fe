@@ -1134,7 +1134,42 @@
     "cancelBody": "{{guest}}'s stay will be cancelled and its dates freed up. This can't be undone.",
     "keepBooking": "Keep booking",
     "cancelConfirm": "Cancel booking",
-    "cancelledDone": "Booking cancelled"
+    "cancelledDone": "Booking cancelled",
+    "policeDeclaration": {
+      "title": "Police Declaration",
+      "hint": "Fields for the Hotel / Accommodation Registration Form (fiche de police). Fill in what's on hand now; generate the form any time, and it flags what's still missing.",
+      "nationality": "Nationality",
+      "countryOfResidence": "Country of Residence",
+      "idType": "Document Type",
+      "idTypeName": {
+        "passport": "Passport",
+        "cin": "National ID Card"
+      },
+      "idNumber": "Document Number",
+      "documentPlaceOfIssue": "Place of Issue",
+      "documentDateOfIssue": "Date of Issue",
+      "dateOfBirth": "Date of Birth",
+      "placeOfBirth": "Place of Birth",
+      "maidenName": "Maiden Name (if applicable)",
+      "occupation": "Occupation / Profession",
+      "arrivingFrom": "Arriving From (City/Country)",
+      "nextDestination": "Next Destination (City/Country)",
+      "purposeOfVisit": "Purpose of Visit",
+      "purposeName": {
+        "tourism": "Tourism",
+        "business": "Business",
+        "family": "Family",
+        "official_mission": "Official Mission",
+        "other": "Other"
+      },
+      "residenceAddress": "Home Address",
+      "accompanyingMinors": "Accompanying Minor Children (Names & Ages)",
+      "accompanyingMinorsHint": "Leave blank if none.",
+      "selectPlaceholder": "Select…",
+      "saveDetails": "Save details",
+      "saved": "Guest details saved",
+      "generate": "Generate Police Declaration"
+    }
   },
   "leaseDrawer": {
     "title": "Lease",

@@ -9,6 +9,7 @@ import type {
   CreateBlockInput,
   CreateBookingInput,
   Guest,
+  GuestIdDetailsInput,
   HousekeepingFilter,
   HousekeepingStatus,
   HousekeepingTask,
@@ -45,12 +46,23 @@ export const bookingsService = {
     return api.post<Booking>(`/bookings/${id}/cancel`);
   },
 
-  checkIn(id: string): Promise<Booking> {
-    return api.post<Booking>(`/bookings/${id}/check-in`);
+  checkIn(id: string, guest?: GuestIdDetailsInput): Promise<Booking> {
+    return api.post<Booking>(`/bookings/${id}/check-in`, guest ? { guest } : undefined);
   },
 
   checkOut(id: string): Promise<Booking> {
     return api.post<Booking>(`/bookings/${id}/check-out`);
+  },
+
+  /** Fills in police-declaration details outside of check-in -- works whether or not the
+   * booking has been checked in yet. */
+  updateGuestDetails(id: string, guest: GuestIdDetailsInput): Promise<Booking> {
+    return api.patch<Booking>(`/bookings/${id}/guest-details`, { guest });
+  },
+
+  /** The Police Declaration Form PDF, matching the client's exact fiche de police template. */
+  policeDeclarationPdf(id: string): Promise<Blob> {
+    return api.getBlob(`/bookings/${id}/police-declaration`);
   },
 
   /** Guest search by name, email or phone (at least 2 characters). */

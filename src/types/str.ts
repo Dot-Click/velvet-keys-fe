@@ -12,6 +12,8 @@ export type DepositStatus = "pending" | "received" | "returned";
 export type PaymentStatus = "unpaid" | "partial" | "paid";
 export type HousekeepingStatus = "scheduled" | "done";
 export type CalendarBlockReason = "maintenance" | "owner" | "other";
+export type GuestIdType = "cin" | "passport";
+export type PurposeOfVisit = "tourism" | "business" | "family" | "official_mission" | "other";
 
 /** Server-side bookings tabs. */
 export type BookingStatusFilter = "upcoming" | "inhouse" | "past" | "unpaid";
@@ -21,12 +23,48 @@ export interface Guest {
   name: string;
   email: string | null;
   phone: string | null;
+  // Police declaration (fiche de police) fields -- all optional, captured at
+  // check-in or filled in later. See GuestIdDetailsInput.
+  nationality: string | null;
+  idType: GuestIdType | null;
+  idNumber: string | null;
+  dateOfBirth: string | null;
+  placeOfBirth: string | null;
+  residenceAddress: string | null;
+  maidenName: string | null;
+  countryOfResidence: string | null;
+  occupation: string | null;
+  documentPlaceOfIssue: string | null;
+  documentDateOfIssue: string | null;
+  arrivingFrom: string | null;
+  nextDestination: string | null;
+  purposeOfVisit: PurposeOfVisit | null;
+  accompanyingMinors: string | null;
 }
 
 export interface GuestInput {
   name: string;
   email?: string;
   phone?: string;
+}
+
+/** Every field optional: a manager may not have them on hand yet. */
+export interface GuestIdDetailsInput {
+  nationality?: string;
+  idType?: GuestIdType;
+  idNumber?: string;
+  dateOfBirth?: string;
+  placeOfBirth?: string;
+  residenceAddress?: string;
+  maidenName?: string;
+  countryOfResidence?: string;
+  occupation?: string;
+  documentPlaceOfIssue?: string;
+  documentDateOfIssue?: string;
+  arrivingFrom?: string;
+  nextDestination?: string;
+  purposeOfVisit?: PurposeOfVisit;
+  accompanyingMinors?: string;
 }
 
 export interface Booking {

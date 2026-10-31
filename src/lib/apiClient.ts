@@ -265,6 +265,11 @@ export const api = {
   put: <T>(url: string, body?: unknown) => apiClient.put<T>(url, body).then((r) => r.data),
   patch: <T>(url: string, body?: unknown) => apiClient.patch<T>(url, body).then((r) => r.data),
   delete: <T = void>(url: string) => apiClient.delete<T>(url).then((r) => r.data),
+  /** Fetches a binary file (e.g. a server-rendered PDF) with the same auth as every other
+   * request -- unlike a presigned storage URL, these endpoints require the Authorization
+   * header, so a plain `<a href>` or `window.open` can't reach them directly. */
+  getBlob: (url: string) =>
+    apiClient.get<Blob>(url, { responseType: "blob" }).then((r) => r.data),
 };
 
 /**

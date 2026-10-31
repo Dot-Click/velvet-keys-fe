@@ -9,6 +9,7 @@ import {
   minorToInput,
   StayStatePill,
 } from "@/components/conciergerie/bookings/booking-parts";
+import { GuestPoliceDetailsSection } from "@/components/conciergerie/bookings/guest-police-details";
 import { ChannelMark, SyncedBadge } from "@/components/conciergerie/channel-badges";
 import { DetailDrawer } from "@/components/detail-drawer";
 import { InitialsAvatar } from "@/components/initials-avatar";
@@ -227,6 +228,16 @@ function BookingBody({ initial, onClose }: { initial: Booking; onClose: () => vo
           </div>
         </div>
       </section>
+
+      {/* Police declaration (fiche de police) -- fields and generate/send action */}
+      {!cancelled && (
+        <GuestPoliceDetailsSection
+          key={booking.guest.id}
+          bookingId={booking.id}
+          guest={booking.guest}
+          canWrite={canWrite}
+        />
+      )}
 
       {/* Stay */}
       <section
