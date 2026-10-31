@@ -191,11 +191,16 @@ function refreshOnce<T extends { accessToken: string }>(): Promise<T> {
  * cannot be reached at all it throws instead, so an offline user is not signed out.
  */
 export async function restoreSession<T extends { accessToken: string }>(): Promise<T | null> {
+  // This call is sent on app load, before any cookie may exist yet. If someone signs in by
+  // hand while it is still in flight, a fresh token lands in `accessToken` before this one's
+  // (now-stale) 401 comes back; that stale failure must not wipe the token a newer, real
+  // sign-in just set.
+  const tokenAtCallTime = accessToken;
   try {
     return await refreshOnce<T>();
   } catch (error) {
     if (axios.isAxiosError(error) && !error.response) throw normalizeError(error);
-    setAccessToken(null);
+    if (accessToken === tokenAtCallTime) setAccessToken(null);
     return null;
   }
 }

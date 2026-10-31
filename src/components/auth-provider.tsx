@@ -105,6 +105,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isReady, setIsReady] = useState(false);
   // The identity (user, account, role) the in-memory query cache belongs to.
   const identityRef = useRef<AuthProfile | undefined>(undefined);
+  // Bumped every time a session is established (sign in, sign up, MFA, invitation accept).
+  // The mount-time restore-from-cookie call is slow on a bad connection; if the person signs
+  // in by hand before it resolves, its late "no session" answer must not clobber the session
+  // they just established.
+  const sessionGenerationRef = useRef(0);
   // A language picked on a signed-out screen (login page): the person's latest explicit choice.
   const signedOutChoiceRef = useRef<AppLanguage | null>(null);
 
@@ -115,6 +120,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [queryClient]);
 
   const clearSession = useCallback(() => {
+    sessionGenerationRef.current += 1;
     saveSession(null);
     setSession(null);
     identityRef.current = undefined;
@@ -156,11 +162,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       identityRef.current = cached.profile;
       setSession(cached);
     }
+    const startGeneration = sessionGenerationRef.current;
 
     authService
       .restore()
       .then((profile) => {
         if (cancelled) return;
+        // A sign-in (or sign-up/MFA/invitation) completed while this restore was still in
+        // flight: it is the newer, authoritative session, so this late answer is stale and
+        // must not overwrite or clear it.
+        if (sessionGenerationRef.current !== startGeneration) return;
         if (profile) {
           const resolved = resolveLanguage(profile, false);
           // The restored account is not the one the cache was filled for (e.g. a cached profile of
@@ -198,6 +209,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const establish = useCallback(
     (profile: AuthProfile) => {
+      sessionGenerationRef.current += 1;
       // Signing in as another person (or role/account) must not reuse what the last one loaded.
       if (!sameIdentity(identityRef.current, profile)) resetQueryCache();
       const resolved = resolveLanguage(profile, true);

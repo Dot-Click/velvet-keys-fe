@@ -289,6 +289,10 @@ export const authService = {
   async restoreOnce(): Promise<AuthProfile | null> {
     const payload = await restoreSession<LoginResponse>();
     if (!payload) {
+      // This call is sent on app load before any cookie may exist. If a real sign-in completed
+      // while it was in flight, there is now a live access token; this stale "no session" answer
+      // must not erase the session that sign-in just established.
+      if (getAccessToken() !== null) return null;
       this.writeSession(null);
       setActiveAccountId(null);
       return null;
