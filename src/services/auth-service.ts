@@ -258,6 +258,18 @@ async function refreshProfile(): Promise<AuthProfile> {
 
 let restoring: Promise<AuthProfile | null> | null = null;
 
+/**
+ * Bumped by every explicit, user-initiated sign-in (login, signup, MFA, invitation accept).
+ * The mount-time cookie restore (`restoreOnce`) is slow on a bad connection; if one of these
+ * completes while it is still in flight, that is the authoritative session, and the restore's
+ * (now-stale) payload must not overwrite it when it finally resolves.
+ */
+let authoritativeGeneration = 0;
+
+function bumpAuthoritativeGeneration() {
+  authoritativeGeneration += 1;
+}
+
 export const authService = {
   /** Synchronous read of the cached profile, for route guards. */
   readSession(): AuthSession | null {
@@ -287,7 +299,11 @@ export const authService = {
   },
 
   async restoreOnce(): Promise<AuthProfile | null> {
+    const generationAtStart = authoritativeGeneration;
     const payload = await restoreSession<LoginResponse>();
+    // A real sign-in started (or finished) while this cookie-restore was in flight: that sign-in
+    // is authoritative, so this restore must not touch anything, win or lose.
+    if (authoritativeGeneration !== generationAtStart) return null;
     if (!payload) {
       // This call is sent on app load before any cookie may exist. If a real sign-in completed
       // while it was in flight, there is now a live access token; this stale "no session" answer
@@ -308,6 +324,7 @@ export const authService = {
   },
 
   async signIn({ email, password }: SignInInput): Promise<SignInResult> {
+    bumpAuthoritativeGeneration();
     try {
       const result = await api.post<LoginResponse | MfaChallengeResponse>("/auth/login", {
         email: email.trim(),
@@ -321,6 +338,7 @@ export const authService = {
   },
 
   async verifyMfa({ mfaToken, code }: MfaVerifyInput): Promise<AuthProfile> {
+    bumpAuthoritativeGeneration();
     try {
       const result = await api.post<LoginResponse>("/auth/mfa/verify", { mfaToken, code });
       return await establishFrom(result);
@@ -330,6 +348,7 @@ export const authService = {
   },
 
   async signUp(input: SignUpInput): Promise<AuthProfile> {
+    bumpAuthoritativeGeneration();
     try {
       const result = await api.post<LoginResponse>("/auth/signup", {
         accountType: input.role,
@@ -410,6 +429,7 @@ export const authService = {
     password,
     language,
   }: AcceptInvitationInput): Promise<AuthProfile> {
+    bumpAuthoritativeGeneration();
     try {
       const result = await api.post<LoginResponse>(`/invites/${token}/accept`, {
         name: name.trim(),
