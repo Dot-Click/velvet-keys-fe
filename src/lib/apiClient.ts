@@ -157,9 +157,16 @@ export const apiClient: AxiosInstance = axios.create({
 });
 
 apiClient.interceptors.request.use(async (config) => {
-  // Token about to expire (or timer was throttled): every request waits on the same single
-  // in-flight refresh and then goes out with the new token, so none of them 401s.
-  if (accessToken && !isNoRefreshPath(config.url ?? "") && tokenNeedsRefresh()) {
+  // An app-load/reload restore (or a proactive refresh) is already in flight: every request
+  // waits on that SAME single refresh and goes out with its token, instead of firing with no
+  // token at all, 401ing, and racing that in-flight refresh's own token rotation.
+  if (refreshing && !isNoRefreshPath(config.url ?? "")) {
+    try {
+      await refreshing;
+    } catch {
+      // No session to restore, or the restore failed: send as-is; a real 401 is handled below.
+    }
+  } else if (accessToken && !isNoRefreshPath(config.url ?? "") && tokenNeedsRefresh()) {
     try {
       await refreshOnce();
     } catch {
