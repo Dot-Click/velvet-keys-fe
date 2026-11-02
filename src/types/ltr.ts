@@ -10,18 +10,23 @@ export type ComputedLeaseStatus = "active" | "ending_soon" | "ended";
 export type LeaseStatusFilter = "active" | "ending" | "ended";
 export type RentInvoiceStatus = "unpaid" | "paid" | "late";
 export type RentScheduleStatus = "unpaid" | "paid" | "late" | "not_yet_generated";
+/** "Mode de règlement" on the Quittance de Loyer (Article 10 de la Loi n° 67-12). */
+export type PaymentMethod = "virement" | "cheque" | "especes";
 
 export interface Tenant {
   id: string;
   name: string;
   email: string;
   phone: string | null;
+  /** "CIN / N° Séjour" on the Quittance de Loyer. */
+  nationalId: string | null;
 }
 
 export interface TenantInput {
   name: string;
   email: string;
   phone?: string | null;
+  nationalId?: string | null;
 }
 
 export interface Lease {
@@ -106,6 +111,9 @@ export interface RentInvoice {
   status: RentInvoiceStatus;
   paidAt: string | null;
   number: string;
+  /** The Quittance de Loyer receipt number ("Q-2026-0001"), set once the
+   * invoice is marked received; null until then. */
+  receiptNumber: string | null;
 }
 
 export interface RentInvoiceListFilter {
@@ -130,6 +138,9 @@ export interface GenerateRentInvoicesResult {
 export interface MarkReceivedInput {
   paidAt?: string;
   note?: string;
+  paymentMethod?: PaymentMethod;
+  /** The cheque number, when paymentMethod is "cheque"; ignored otherwise. */
+  paymentReference?: string;
 }
 
 export interface IssuerProfile {

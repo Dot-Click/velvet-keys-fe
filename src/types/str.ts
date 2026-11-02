@@ -40,6 +40,8 @@ export interface Guest {
   nextDestination: string | null;
   purposeOfVisit: PurposeOfVisit | null;
   accompanyingMinors: string | null;
+  /** "Heure" on the v3 (DGSN) police declaration -- "HH:MM:SS". */
+  arrivalTime: string | null;
 }
 
 export interface GuestInput {
@@ -65,6 +67,7 @@ export interface GuestIdDetailsInput {
   nextDestination?: string;
   purposeOfVisit?: PurposeOfVisit;
   accompanyingMinors?: string;
+  arrivalTime?: string;
 }
 
 export interface Booking {
