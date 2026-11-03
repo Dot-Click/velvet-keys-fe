@@ -61,7 +61,7 @@ const money = (minor: number | null | undefined, hideDecimals = false) =>
     ? "—"
     : formatMoney(minor, ACCOUNT_CURRENCY, { hideDecimals });
 
-function OwnerOverviewPage() {
+export function OwnerOverviewPage() {
   const performance = useOwnerPropertyPerformance();
   const kpisQuery = useOwnerKpis({ period: "month" });
 

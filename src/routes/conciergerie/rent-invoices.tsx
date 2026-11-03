@@ -1,12 +1,22 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { differenceInCalendarDays } from "date-fns";
-import { AlertTriangle, Check, Download, Landmark, MoreHorizontal, Sparkles } from "lucide-react";
+import {
+  AlertTriangle,
+  Check,
+  Download,
+  Landmark,
+  Mail,
+  MessageCircle,
+  MoreHorizontal,
+  Sparkles,
+} from "lucide-react";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { ReadOnlyGuard } from "@/components/account/read-only-guard";
 import { RentStatusPill } from "@/components/conciergerie/lease-badges";
 import { RentInvoicePreviewDialog } from "@/components/conciergerie/rent-invoice-preview-dialog";
+import { RentInvoiceShareEmailDialog } from "@/components/conciergerie/rent-invoice-share-email-dialog";
 import { DataTable, type DataTableColumn } from "@/components/data-table";
 import { EmptyState } from "@/components/empty-state";
 import { FilterChips } from "@/components/filter-chips";
@@ -51,6 +61,7 @@ function RentInvoicesPage() {
   const [filter, setFilter] = useUrlState<StatusFilter>("status", "all", parseOneOf(FILTERS));
   const [search, setSearch] = React.useState("");
   const [previewInvoice, setPreviewInvoice] = React.useState<RentInvoice | null>(null);
+  const [shareEmailInvoice, setShareEmailInvoice] = React.useState<RentInvoice | null>(null);
   const [generating, setGenerating] = React.useState(false);
   const controls = useServerPageControls();
   const issuer = useIssuerProfile();
@@ -87,6 +98,27 @@ function RentInvoicesPage() {
 
   const daysLate = (row: RentInvoice) =>
     differenceInCalendarDays(today(), parseDay(row.dueDate));
+
+  /** WhatsApp click-to-chat (https://wa.me/<phone>?text=<message>) -- no Business API needed. */
+  const shareWhatsapp = (row: RentInvoice) => {
+    if (!row.tenantPhone) {
+      toast.error(t("rentInvoices.shareWhatsappNoPhone"));
+      return;
+    }
+    const digits = row.tenantPhone.replace(/[^0-9]/g, "");
+    const link = `${window.location.origin}/tenant/invoices`;
+    const message = t("rentInvoices.whatsappMessage", {
+      tenant: row.tenantName,
+      number: row.number,
+      property: row.propertyName,
+      unit: row.unitName,
+      period: formatMonth(row.period, { style: "long", withYear: true }),
+      amount: formatMoney(row.amountMinor, row.currency),
+      dueDate: formatDate(parseDay(row.dueDate)),
+      link,
+    });
+    window.open(`https://wa.me/${digits}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+  };
 
   const columns: DataTableColumn<RentInvoice>[] = [
     {
@@ -182,13 +214,27 @@ function RentInvoicesPage() {
                 <MoreHorizontal className="size-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-44 border-border bg-[#141414]">
+            <DropdownMenuContent align="end" className="w-48 border-border bg-[#141414]">
               <DropdownMenuItem
                 className="cursor-pointer gap-2 text-xs"
                 onSelect={() => setPreviewInvoice(row)}
               >
                 <Download className="size-3.5" aria-hidden="true" />
                 {t("rentInvoices.downloadPdf")}
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="cursor-pointer gap-2 text-xs"
+                onSelect={() => setShareEmailInvoice(row)}
+              >
+                <Mail className="size-3.5" aria-hidden="true" />
+                {t("rentInvoices.shareEmail")}
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                className="cursor-pointer gap-2 text-xs"
+                onSelect={() => shareWhatsapp(row)}
+              >
+                <MessageCircle className="size-3.5" aria-hidden="true" />
+                {t("rentInvoices.shareWhatsapp")}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -319,6 +365,10 @@ function RentInvoicesPage() {
         />
       )}
       <RentInvoicePreviewDialog invoice={previewInvoice} onClose={() => setPreviewInvoice(null)} />
+      <RentInvoiceShareEmailDialog
+        invoice={shareEmailInvoice}
+        onClose={() => setShareEmailInvoice(null)}
+      />
     </div>
   );
 }

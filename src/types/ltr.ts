@@ -101,6 +101,8 @@ export interface RentInvoice {
   id: string;
   leaseId: string;
   tenantName: string;
+  tenantEmail: string;
+  tenantPhone: string | null;
   unitName: string;
   propertyName: string;
   /** "YYYY-MM" */
@@ -114,6 +116,12 @@ export interface RentInvoice {
   /** The Quittance de Loyer receipt number ("Q-2026-0001"), set once the
    * invoice is marked received; null until then. */
   receiptNumber: string | null;
+}
+
+export interface ShareRentInvoiceEmailResult {
+  sent: boolean;
+  to: string;
+  attachedPdf: boolean;
 }
 
 export interface RentInvoiceListFilter {

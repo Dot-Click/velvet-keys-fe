@@ -11,6 +11,7 @@ import type {
   RenewLeaseInput,
   RentInvoice,
   RentInvoiceListFilter,
+  ShareRentInvoiceEmailResult,
   TenantContract,
   TenantHome,
   TenantLease,
@@ -67,6 +68,10 @@ export const rentInvoicesService = {
 
   markReceived(id: string, input: MarkReceivedInput = {}): Promise<RentInvoice> {
     return api.post<RentInvoice>(`/rent-invoices/${id}/mark-received`, input);
+  },
+
+  shareEmail(id: string, email: string): Promise<ShareRentInvoiceEmailResult> {
+    return api.post<ShareRentInvoiceEmailResult>(`/rent-invoices/${id}/share-email`, { email });
   },
 };
 

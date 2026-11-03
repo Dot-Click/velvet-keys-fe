@@ -109,6 +109,14 @@ const OPS_ITEM = {
     to: "/conciergerie/commission",
     icon: Percent,
   },
+  overview: {
+    id: "overview",
+    labelKey: "nav.overview",
+    to: "/conciergerie/overview",
+    icon: LayoutGrid,
+  },
+  demand: { id: "demand", labelKey: "nav.demand", to: "/conciergerie/demand", icon: Sparkles },
+  reports: { id: "reports", labelKey: "nav.reports", to: "/conciergerie/reports", icon: FileText },
 } satisfies Record<string, NavItem>;
 
 const OPERATIONS_ITEMS: NavItem[] = [
@@ -125,6 +133,11 @@ const OPERATIONS_ITEMS: NavItem[] = [
 /** The Conciergerie panel, grouped as the operations sidebar shows it. */
 function conciergerieSections(billing: NavItem | null): NavSection[] {
   return [
+    {
+      id: "insights",
+      titleKey: "nav.group.insights",
+      items: [OPS_ITEM.overview, OPS_ITEM.demand, OPS_ITEM.reports],
+    },
     {
       id: "operations",
       titleKey: "nav.group.operations",

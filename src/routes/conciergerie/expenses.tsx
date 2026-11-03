@@ -12,6 +12,7 @@ import {
   UtilityCard,
 } from "@/components/conciergerie/expenses/expense-cards";
 import { ExpenseDialog, expenseErrorKey } from "@/components/conciergerie/expenses/expense-dialog";
+import { EarningsTrendStrip } from "@/components/conciergerie/expenses/earnings-trend-strip";
 import { ReceiptThumb } from "@/components/conciergerie/expenses/receipt-thumb";
 import { TrendStrip } from "@/components/conciergerie/expenses/trend-strip";
 import { DataTable, type DataTableColumn } from "@/components/data-table";
@@ -41,6 +42,7 @@ import {
   useExpensesPage,
   useExpenseSummary,
   useOwnerExpenseKpis,
+  useOwnerMonthlyTrend,
   usePanelMutation,
   useProperties,
   useUtilities,
@@ -107,6 +109,8 @@ function ExpensesPage() {
   });
   const summary = useExpenseSummary();
   const kpis = useOwnerExpenseKpis(propertyFilter ? { propertyId: propertyFilter } : {});
+  const isConciergerie = session ? hasCapability(session.profile, "commission") : false;
+  const earningsTrend = useOwnerMonthlyTrend(6);
   const utilities = useUtilities();
   const properties = useProperties();
 
@@ -259,13 +263,24 @@ function ExpensesPage() {
         }
       />
 
-      {summary.isError ? (
-        <InlineError onRetry={() => void summary.refetch()} />
-      ) : summary.data ? (
-        <TrendStrip summary={summary.data} label={t("expenses.thisMonth")} />
-      ) : (
-        <Skeleton className="h-44 w-full rounded-2xl" />
-      )}
+      <div className={cn("grid grid-cols-1 gap-4", isConciergerie && "lg:grid-cols-2")}>
+        {isConciergerie &&
+          (earningsTrend.isError ? (
+            <InlineError onRetry={() => void earningsTrend.refetch()} />
+          ) : earningsTrend.data ? (
+            <EarningsTrendStrip months={earningsTrend.data} label={t("expenses.yourCommission")} />
+          ) : (
+            <Skeleton className="h-44 w-full rounded-2xl" />
+          ))}
+
+        {summary.isError ? (
+          <InlineError onRetry={() => void summary.refetch()} />
+        ) : summary.data ? (
+          <TrendStrip summary={summary.data} label={t("expenses.thisMonth")} />
+        ) : (
+          <Skeleton className="h-44 w-full rounded-2xl" />
+        )}
+      </div>
 
       {kpis.isError ? (
         <InlineError onRetry={() => void kpis.refetch()} />

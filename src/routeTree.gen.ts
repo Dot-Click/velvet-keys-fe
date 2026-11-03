@@ -36,12 +36,15 @@ import { Route as ConciergerieBookingsRouteImport } from './routes/conciergerie/
 import { Route as ConciergerieCalendarRouteImport } from './routes/conciergerie/calendar'
 import { Route as ConciergerieChannelsRouteImport } from './routes/conciergerie/channels'
 import { Route as ConciergerieCommissionRouteImport } from './routes/conciergerie/commission'
+import { Route as ConciergerieDemandRouteImport } from './routes/conciergerie/demand'
 import { Route as ConciergerieExpensesRouteImport } from './routes/conciergerie/expenses'
 import { Route as ConciergerieLeasesRouteRouteImport } from './routes/conciergerie/leases/route'
 import { Route as ConciergerieMaintenanceRouteImport } from './routes/conciergerie/maintenance'
+import { Route as ConciergerieOverviewRouteImport } from './routes/conciergerie/overview'
 import { Route as ConciergerieOwnersRouteRouteImport } from './routes/conciergerie/owners/route'
 import { Route as ConciergeriePropertiesRouteRouteImport } from './routes/conciergerie/properties/route'
 import { Route as ConciergerieRentInvoicesRouteImport } from './routes/conciergerie/rent-invoices'
+import { Route as ConciergerieReportsRouteImport } from './routes/conciergerie/reports'
 import { Route as ConciergerieTodayRouteImport } from './routes/conciergerie/today'
 import { Route as DevDesignSystemRouteImport } from './routes/dev/design-system'
 import { Route as DevTemplatesRouteImport } from './routes/dev/templates'
@@ -207,6 +210,11 @@ const ConciergerieCommissionRoute = ConciergerieCommissionRouteImport.update({
   path: '/commission',
   getParentRoute: () => ConciergerieRouteRoute,
 } as any)
+const ConciergerieDemandRoute = ConciergerieDemandRouteImport.update({
+  id: '/demand',
+  path: '/demand',
+  getParentRoute: () => ConciergerieRouteRoute,
+} as any)
 const ConciergerieExpensesRoute = ConciergerieExpensesRouteImport.update({
   id: '/expenses',
   path: '/expenses',
@@ -220,6 +228,11 @@ const ConciergerieLeasesRouteRoute = ConciergerieLeasesRouteRouteImport.update({
 const ConciergerieMaintenanceRoute = ConciergerieMaintenanceRouteImport.update({
   id: '/maintenance',
   path: '/maintenance',
+  getParentRoute: () => ConciergerieRouteRoute,
+} as any)
+const ConciergerieOverviewRoute = ConciergerieOverviewRouteImport.update({
+  id: '/overview',
+  path: '/overview',
   getParentRoute: () => ConciergerieRouteRoute,
 } as any)
 const ConciergerieOwnersRouteRoute = ConciergerieOwnersRouteRouteImport.update({
@@ -239,6 +252,11 @@ const ConciergerieRentInvoicesRoute =
     path: '/rent-invoices',
     getParentRoute: () => ConciergerieRouteRoute,
   } as any)
+const ConciergerieReportsRoute = ConciergerieReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => ConciergerieRouteRoute,
+} as any)
 const ConciergerieTodayRoute = ConciergerieTodayRouteImport.update({
   id: '/today',
   path: '/today',
@@ -420,9 +438,12 @@ export interface FileRoutesByFullPath {
   '/conciergerie/calendar': typeof ConciergerieCalendarRoute
   '/conciergerie/channels': typeof ConciergerieChannelsRoute
   '/conciergerie/commission': typeof ConciergerieCommissionRoute
+  '/conciergerie/demand': typeof ConciergerieDemandRoute
   '/conciergerie/expenses': typeof ConciergerieExpensesRoute
   '/conciergerie/maintenance': typeof ConciergerieMaintenanceRoute
+  '/conciergerie/overview': typeof ConciergerieOverviewRoute
   '/conciergerie/rent-invoices': typeof ConciergerieRentInvoicesRoute
+  '/conciergerie/reports': typeof ConciergerieReportsRoute
   '/conciergerie/today': typeof ConciergerieTodayRoute
   '/dev/design-system': typeof DevDesignSystemRoute
   '/dev/templates': typeof DevTemplatesRoute
@@ -476,9 +497,12 @@ export interface FileRoutesByTo {
   '/conciergerie/calendar': typeof ConciergerieCalendarRoute
   '/conciergerie/channels': typeof ConciergerieChannelsRoute
   '/conciergerie/commission': typeof ConciergerieCommissionRoute
+  '/conciergerie/demand': typeof ConciergerieDemandRoute
   '/conciergerie/expenses': typeof ConciergerieExpensesRoute
   '/conciergerie/maintenance': typeof ConciergerieMaintenanceRoute
+  '/conciergerie/overview': typeof ConciergerieOverviewRoute
   '/conciergerie/rent-invoices': typeof ConciergerieRentInvoicesRoute
+  '/conciergerie/reports': typeof ConciergerieReportsRoute
   '/conciergerie/today': typeof ConciergerieTodayRoute
   '/dev/design-system': typeof DevDesignSystemRoute
   '/dev/templates': typeof DevTemplatesRoute
@@ -541,9 +565,12 @@ export interface FileRoutesById {
   '/conciergerie/calendar': typeof ConciergerieCalendarRoute
   '/conciergerie/channels': typeof ConciergerieChannelsRoute
   '/conciergerie/commission': typeof ConciergerieCommissionRoute
+  '/conciergerie/demand': typeof ConciergerieDemandRoute
   '/conciergerie/expenses': typeof ConciergerieExpensesRoute
   '/conciergerie/maintenance': typeof ConciergerieMaintenanceRoute
+  '/conciergerie/overview': typeof ConciergerieOverviewRoute
   '/conciergerie/rent-invoices': typeof ConciergerieRentInvoicesRoute
+  '/conciergerie/reports': typeof ConciergerieReportsRoute
   '/conciergerie/today': typeof ConciergerieTodayRoute
   '/dev/design-system': typeof DevDesignSystemRoute
   '/dev/templates': typeof DevTemplatesRoute
@@ -606,9 +633,12 @@ export interface FileRouteTypes {
     | '/conciergerie/calendar'
     | '/conciergerie/channels'
     | '/conciergerie/commission'
+    | '/conciergerie/demand'
     | '/conciergerie/expenses'
     | '/conciergerie/maintenance'
+    | '/conciergerie/overview'
     | '/conciergerie/rent-invoices'
+    | '/conciergerie/reports'
     | '/conciergerie/today'
     | '/dev/design-system'
     | '/dev/templates'
@@ -662,9 +692,12 @@ export interface FileRouteTypes {
     | '/conciergerie/calendar'
     | '/conciergerie/channels'
     | '/conciergerie/commission'
+    | '/conciergerie/demand'
     | '/conciergerie/expenses'
     | '/conciergerie/maintenance'
+    | '/conciergerie/overview'
     | '/conciergerie/rent-invoices'
+    | '/conciergerie/reports'
     | '/conciergerie/today'
     | '/dev/design-system'
     | '/dev/templates'
@@ -726,9 +759,12 @@ export interface FileRouteTypes {
     | '/conciergerie/calendar'
     | '/conciergerie/channels'
     | '/conciergerie/commission'
+    | '/conciergerie/demand'
     | '/conciergerie/expenses'
     | '/conciergerie/maintenance'
+    | '/conciergerie/overview'
     | '/conciergerie/rent-invoices'
+    | '/conciergerie/reports'
     | '/conciergerie/today'
     | '/dev/design-system'
     | '/dev/templates'
@@ -972,6 +1008,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConciergerieCommissionRouteImport
       parentRoute: typeof ConciergerieRouteRoute
     }
+    '/conciergerie/demand': {
+      id: '/conciergerie/demand'
+      path: '/demand'
+      fullPath: '/conciergerie/demand'
+      preLoaderRoute: typeof ConciergerieDemandRouteImport
+      parentRoute: typeof ConciergerieRouteRoute
+    }
     '/conciergerie/expenses': {
       id: '/conciergerie/expenses'
       path: '/expenses'
@@ -993,6 +1036,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConciergerieMaintenanceRouteImport
       parentRoute: typeof ConciergerieRouteRoute
     }
+    '/conciergerie/overview': {
+      id: '/conciergerie/overview'
+      path: '/overview'
+      fullPath: '/conciergerie/overview'
+      preLoaderRoute: typeof ConciergerieOverviewRouteImport
+      parentRoute: typeof ConciergerieRouteRoute
+    }
     '/conciergerie/owners': {
       id: '/conciergerie/owners'
       path: '/owners'
@@ -1012,6 +1062,13 @@ declare module '@tanstack/react-router' {
       path: '/rent-invoices'
       fullPath: '/conciergerie/rent-invoices'
       preLoaderRoute: typeof ConciergerieRentInvoicesRouteImport
+      parentRoute: typeof ConciergerieRouteRoute
+    }
+    '/conciergerie/reports': {
+      id: '/conciergerie/reports'
+      path: '/reports'
+      fullPath: '/conciergerie/reports'
+      preLoaderRoute: typeof ConciergerieReportsRouteImport
       parentRoute: typeof ConciergerieRouteRoute
     }
     '/conciergerie/today': {
@@ -1328,9 +1385,12 @@ interface ConciergerieRouteRouteChildren {
   ConciergerieCalendarRoute: typeof ConciergerieCalendarRoute
   ConciergerieChannelsRoute: typeof ConciergerieChannelsRoute
   ConciergerieCommissionRoute: typeof ConciergerieCommissionRoute
+  ConciergerieDemandRoute: typeof ConciergerieDemandRoute
   ConciergerieExpensesRoute: typeof ConciergerieExpensesRoute
   ConciergerieMaintenanceRoute: typeof ConciergerieMaintenanceRoute
+  ConciergerieOverviewRoute: typeof ConciergerieOverviewRoute
   ConciergerieRentInvoicesRoute: typeof ConciergerieRentInvoicesRoute
+  ConciergerieReportsRoute: typeof ConciergerieReportsRoute
   ConciergerieTodayRoute: typeof ConciergerieTodayRoute
   ConciergerieIndexRoute: typeof ConciergerieIndexRoute
   ConciergerieSettingsIssuerRoute: typeof ConciergerieSettingsIssuerRoute
@@ -1346,9 +1406,12 @@ const ConciergerieRouteRouteChildren: ConciergerieRouteRouteChildren = {
   ConciergerieCalendarRoute: ConciergerieCalendarRoute,
   ConciergerieChannelsRoute: ConciergerieChannelsRoute,
   ConciergerieCommissionRoute: ConciergerieCommissionRoute,
+  ConciergerieDemandRoute: ConciergerieDemandRoute,
   ConciergerieExpensesRoute: ConciergerieExpensesRoute,
   ConciergerieMaintenanceRoute: ConciergerieMaintenanceRoute,
+  ConciergerieOverviewRoute: ConciergerieOverviewRoute,
   ConciergerieRentInvoicesRoute: ConciergerieRentInvoicesRoute,
+  ConciergerieReportsRoute: ConciergerieReportsRoute,
   ConciergerieTodayRoute: ConciergerieTodayRoute,
   ConciergerieIndexRoute: ConciergerieIndexRoute,
   ConciergerieSettingsIssuerRoute: ConciergerieSettingsIssuerRoute,

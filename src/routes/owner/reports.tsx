@@ -45,7 +45,7 @@ export const Route = createFileRoute("/owner/reports")({
 
 const money = (minor: number) => formatMoney(minor, ACCOUNT_CURRENCY);
 
-function OwnerReportsPage() {
+export function OwnerReportsPage() {
   const properties = useProperties();
 
   return (
